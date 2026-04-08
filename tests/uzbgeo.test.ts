@@ -69,6 +69,35 @@ describe("regions", () => {
     }
   });
 
+  test("every region has all 4 language titles populated", () => {
+    for (const r of getAllRegions()) {
+      expect(r.titles.en).toBeTruthy();
+      expect(r.titles.uz).toBeTruthy();
+      expect(r.titles.uzc).toBeTruthy();
+      expect(r.titles.ru).toBeTruthy();
+    }
+  });
+
+  test("Bukhara region has expected titles", () => {
+    const r = getRegion("bukhara");
+    expect(r?.titles.en).toBe("Bukhara Region");
+    expect(r?.titles.uz).toBe("Buxoro viloyati");
+    expect(r?.titles.uzc).toBe("Бухоро вилояти");
+    expect(r?.titles.ru).toBe("Бухарская область");
+  });
+
+  test("Karakalpakstan title uses 'Republic of' form", () => {
+    const r = getRegion("karakalpakstan");
+    expect(r?.titles.en).toBe("Republic of Karakalpakstan");
+    expect(r?.titles.ru).toBe("Республика Каракалпакстан");
+  });
+
+  test("Tashkent City title uses city form, not region form", () => {
+    const r = getRegion("tashkent_city");
+    expect(r?.titles.en).toBe("Tashkent City");
+    expect(r?.titles.ru).toBe("Город Ташкент");
+  });
+
   test("ISO codes are unique", () => {
     const isos = getAllRegions().map((r) => r.iso);
     expect(new Set(isos).size).toBe(isos.length);
@@ -142,13 +171,35 @@ describe("districts", () => {
     expect(total).toBe(175);
   });
 
-  test("every district has all 4 language names", () => {
+  test("every district has all 4 language names and titles", () => {
     for (const d of getAllDistricts()) {
       expect(d.names.en).toBeTruthy();
       expect(d.names.uz).toBeTruthy();
       expect(d.names.uzc).toBeTruthy();
       expect(d.names.ru).toBeTruthy();
+      expect(d.titles.en).toBeTruthy();
+      expect(d.titles.uz).toBeTruthy();
+      expect(d.titles.uzc).toBeTruthy();
+      expect(d.titles.ru).toBeTruthy();
     }
+  });
+
+  test("Izbaskan district has expected names and titles", () => {
+    const d = getDistrict("izbaskan");
+    expect(d?.names.en).toBe("Izbaskan");
+    expect(d?.names.uz).toBe("Izboskan");
+    expect(d?.names.uzc).toBe("Избоскан");
+    expect(d?.names.ru).toBe("Избаскан");
+    expect(d?.titles.en).toBe("Izbaskan District");
+    expect(d?.titles.uz).toBe("Izboskan tumani");
+    expect(d?.titles.uzc).toBe("Избоскан тумани");
+    expect(d?.titles.ru).toBe("Избасканский район");
+  });
+
+  test("districts use Russian noun form in names, adjective form in titles", () => {
+    const bukhara = getDistrict("bukhara");
+    expect(bukhara?.names.ru).toBe("Бухара");
+    expect(bukhara?.titles.ru).toBe("Бухарский район");
   });
 });
 
@@ -197,12 +248,32 @@ describe("cities of regional significance", () => {
     }
   });
 
-  test("every city has all 4 language names", () => {
+  test("every city has all 4 language names and titles", () => {
     for (const c of getAllCities()) {
       expect(c.names.en).toBeTruthy();
       expect(c.names.uz).toBeTruthy();
       expect(c.names.uzc).toBeTruthy();
       expect(c.names.ru).toBeTruthy();
+      expect(c.titles.en).toBeTruthy();
+      expect(c.titles.uz).toBeTruthy();
+      expect(c.titles.uzc).toBeTruthy();
+      expect(c.titles.ru).toBeTruthy();
+    }
+  });
+
+  test("Bukhara city has expected names and titles", () => {
+    const c = getCity("bukhara_city");
+    expect(c?.names.en).toBe("Bukhara");
+    expect(c?.names.ru).toBe("Бухара");
+    expect(c?.titles.en).toBe("Bukhara City");
+    expect(c?.titles.uz).toBe("Buxoro shahri");
+    expect(c?.titles.uzc).toBe("Бухоро шаҳри");
+    expect(c?.titles.ru).toBe("Город Бухара");
+  });
+
+  test("Russian city titles use capital 'Город' (PDF form)", () => {
+    for (const c of getAllCities()) {
+      expect(c.titles.ru.startsWith("Город ")).toBe(true);
     }
   });
 });

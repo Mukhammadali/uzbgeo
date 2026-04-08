@@ -2,7 +2,7 @@
 
 [English](./README.md) · **O'zbekcha** · [Русский](./README.ru.md)
 
-O'zbekiston Respublikasining geografik ma'lumotlari — viloyatlar, tumanlar va viloyat ahamiyatiga molik shaharlar, har biri 4 tilda (ingliz, o'zbek lotin, o'zbek kirill, rus) nomlangan.
+O'zbekiston Respublikasining geografik ma'lumotlari — viloyatlar, tumanlar va viloyat ahamiyatiga molik shaharlar, har biri 4 tilda (ingliz, o'zbek lotin, o'zbek kirill, rus) **qisqa nomlari** va **to'liq rasmiy unvonlari** bilan.
 
 - **14** ta yuqori darajadagi ma'muriy birlik (12 viloyat + Qoraqalpog'iston + Toshkent shahri)
 - **175** ta tuman
@@ -53,6 +53,14 @@ console.log(bukhara?.names);
 //   ru:  "Бухара"
 // }
 
+console.log(bukhara?.titles);
+// {
+//   en:  "Bukhara Region",
+//   uz:  "Buxoro viloyati",
+//   uzc: "Бухоро вилояти",
+//   ru:  "Бухарская область"
+// }
+
 const bukharaDistricts = getDistrictsByRegionId("bukhara");
 console.log(bukharaDistricts.length); // 11
 
@@ -100,6 +108,8 @@ Bu shaharlar tumanlar bilan ma'muriy jihatdan bir xil darajada bo'lib, ularning 
 
 ## Ma'lumotlar tuzilishi
 
+Har bir obyekt ikki maydonga ega: `names` (qisqa, ot shaklidagi nomlar — yorliqlar, dropdownlar, qisqa sarlavhalar uchun) va `titles` (to'liq rasmiy ma'muriy unvon — sarlavhalar, manzillar, SEO uchun).
+
 ```ts
 interface Names {
   en: string;   // Ingliz
@@ -112,15 +122,17 @@ interface Region {
   slug: string;                       // "bukhara"
   iso: string;                        // "UZ-BU"
   category: "region" | "republic" | "city";
-  names: Names;
+  names: Names;                       // { en: "Bukhara", ru: "Бухара", ... }
+  titles: Names;                      // { en: "Bukhara Region", ru: "Бухарская область", ... }
 }
 
 interface District {
-  slug: string;                       // "shakhrikhan"
+  slug: string;                       // "izbaskan"
   type: "district";
   regionSlug: string;                 // "andijan"
   regionIso: string;                  // "UZ-AN"
-  names: Names;
+  names: Names;                       // { en: "Izbaskan", ru: "Избаскан", ... }
+  titles: Names;                      // { en: "Izbaskan District", ru: "Избасканский район", ... }
 }
 
 interface RegionalCity {
@@ -128,9 +140,17 @@ interface RegionalCity {
   type: "city";
   regionSlug: string;                 // "bukhara"
   regionIso: string;                  // "UZ-BU"
-  names: Names;
+  names: Names;                       // { en: "Bukhara", ru: "Бухара", ... }
+  titles: Names;                      // { en: "Bukhara City", ru: "Город Бухара", ... }
 }
 ```
+
+### `names` va `titles` qachon ishlatiladi
+
+- **`names`** — qisqa ot, tur so'zisiz. Dropdownlar, breadcrumblar, ro'yxat yorliqlari uchun.
+- **`titles`** — to'liq rasmiy nom, tur so'zi bilan. Sahifa sarlavhalari, manzil satrlari, SEO meta-teglar uchun.
+
+`titles` maydoni ayniqsa rus tilida foydali, chunki to'liq ma'muriy shakl sifatdosh morfologiyasini talab qiladi (`Бухарская область`, `Бухарский район`), foydalanuvchilar buni ot shaklidan (`Бухара`) o'zlari osongina hosil qila olmaydilar.
 
 ## Viloyatlar ro'yxati
 

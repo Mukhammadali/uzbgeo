@@ -3,9 +3,9 @@ import type { Region } from "../types";
 /**
  * The 14 top-level administrative units of the Republic of Uzbekistan.
  *
- * Sorted by ISO 3166-2:UZ code for stability. Names are sourced from the
- * official SDMX dataset 2.01.01.0036 published by the State Statistics
- * Committee of the Republic of Uzbekistan.
+ * Sorted by ISO 3166-2:UZ code for stability. Names and titles are sourced
+ * from the official SDMX dataset 2.01.01.0036 published by the State
+ * Statistics Committee of the Republic of Uzbekistan.
  *
  * @see https://api.siat.stat.uz/media/uploads/sdmx/sdmx_data_307.pdf
  * @see https://en.wikipedia.org/wiki/ISO_3166-2:UZ
@@ -21,6 +21,12 @@ export const regions = [
       uzc: "Андижон",
       ru: "Андижан",
     },
+    titles: {
+      en: "Andijan Region",
+      uz: "Andijon viloyati",
+      uzc: "Андижон вилояти",
+      ru: "Андижанская область",
+    },
   },
   {
     slug: "bukhara",
@@ -31,6 +37,12 @@ export const regions = [
       uz: "Buxoro",
       uzc: "Бухоро",
       ru: "Бухара",
+    },
+    titles: {
+      en: "Bukhara Region",
+      uz: "Buxoro viloyati",
+      uzc: "Бухоро вилояти",
+      ru: "Бухарская область",
     },
   },
   {
@@ -43,6 +55,12 @@ export const regions = [
       uzc: "Фарғона",
       ru: "Фергана",
     },
+    titles: {
+      en: "Fergana Region",
+      uz: "Farg'ona viloyati",
+      uzc: "Фарғона вилояти",
+      ru: "Ферганская область",
+    },
   },
   {
     slug: "jizzakh",
@@ -53,6 +71,12 @@ export const regions = [
       uz: "Jizzax",
       uzc: "Жиззах",
       ru: "Джизак",
+    },
+    titles: {
+      en: "Jizzakh Region",
+      uz: "Jizzax viloyati",
+      uzc: "Жиззах вилояти",
+      ru: "Джизакская область",
     },
   },
   {
@@ -65,6 +89,12 @@ export const regions = [
       uzc: "Наманган",
       ru: "Наманган",
     },
+    titles: {
+      en: "Namangan Region",
+      uz: "Namangan viloyati",
+      uzc: "Наманган вилояти",
+      ru: "Наманганская область",
+    },
   },
   {
     slug: "navoi",
@@ -75,6 +105,12 @@ export const regions = [
       uz: "Navoiy",
       uzc: "Навоий",
       ru: "Навои",
+    },
+    titles: {
+      en: "Navoi Region",
+      uz: "Navoiy viloyati",
+      uzc: "Навоий вилояти",
+      ru: "Навоийская область",
     },
   },
   {
@@ -87,6 +123,12 @@ export const regions = [
       uzc: "Қашқадарё",
       ru: "Кашкадарья",
     },
+    titles: {
+      en: "Kashkadarya Region",
+      uz: "Qashqadaryo viloyati",
+      uzc: "Қашқадарё вилояти",
+      ru: "Кашкадарьинская область",
+    },
   },
   {
     slug: "karakalpakstan",
@@ -97,6 +139,12 @@ export const regions = [
       uz: "Qoraqalpog'iston",
       uzc: "Қорақалпоғистон",
       ru: "Каракалпакстан",
+    },
+    titles: {
+      en: "Republic of Karakalpakstan",
+      uz: "Qoraqalpog'iston Respublikasi",
+      uzc: "Қорақалпоғистон Республикаси",
+      ru: "Республика Каракалпакстан",
     },
   },
   {
@@ -109,6 +157,12 @@ export const regions = [
       uzc: "Самарқанд",
       ru: "Самарканд",
     },
+    titles: {
+      en: "Samarkand Region",
+      uz: "Samarqand viloyati",
+      uzc: "Самарқанд вилояти",
+      ru: "Самаркандская область",
+    },
   },
   {
     slug: "syrdarya",
@@ -119,6 +173,12 @@ export const regions = [
       uz: "Sirdaryo",
       uzc: "Сирдарё",
       ru: "Сырдарья",
+    },
+    titles: {
+      en: "Syrdarya Region",
+      uz: "Sirdaryo viloyati",
+      uzc: "Сирдарё вилояти",
+      ru: "Сырдарьинская область",
     },
   },
   {
@@ -131,6 +191,12 @@ export const regions = [
       uzc: "Сурхондарё",
       ru: "Сурхандарья",
     },
+    titles: {
+      en: "Surkhandarya Region",
+      uz: "Surxondaryo viloyati",
+      uzc: "Сурхондарё вилояти",
+      ru: "Сурхандарьинская область",
+    },
   },
   {
     slug: "tashkent_city",
@@ -141,6 +207,12 @@ export const regions = [
       uz: "Toshkent",
       uzc: "Тошкент",
       ru: "Ташкент",
+    },
+    titles: {
+      en: "Tashkent City",
+      uz: "Toshkent shahri",
+      uzc: "Тошкент шаҳри",
+      ru: "Город Ташкент",
     },
   },
   {
@@ -153,6 +225,12 @@ export const regions = [
       uzc: "Тошкент",
       ru: "Ташкент",
     },
+    titles: {
+      en: "Tashkent Region",
+      uz: "Toshkent viloyati",
+      uzc: "Тошкент вилояти",
+      ru: "Ташкентская область",
+    },
   },
   {
     slug: "khorezm",
@@ -163,6 +241,12 @@ export const regions = [
       uz: "Xorazm",
       uzc: "Хоразм",
       ru: "Хорезм",
+    },
+    titles: {
+      en: "Khorezm Region",
+      uz: "Xorazm viloyati",
+      uzc: "Хоразм вилояти",
+      ru: "Хорезмская область",
     },
   },
 ] as const satisfies readonly Region[];

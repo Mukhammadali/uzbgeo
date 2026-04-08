@@ -112,21 +112,31 @@ for (const c of cities) {
   }
 }
 
-// ---- name completeness ----
-const checkNames = (
+// ---- name + title completeness ----
+const checkLocalized = (
   kind: string,
   slug: string,
-  names: { en: string; uz: string; uzc: string; ru: string },
+  field: "names" | "titles",
+  bag: { en: string; uz: string; uzc: string; ru: string },
 ): void => {
   for (const lang of ["en", "uz", "uzc", "ru"] as const) {
-    if (!names[lang] || names[lang].trim().length === 0) {
-      fail(`${kind} "${slug}" is missing the ${lang} name`);
+    if (!bag[lang] || bag[lang].trim().length === 0) {
+      fail(`${kind} "${slug}" is missing the ${lang} entry in ${field}`);
     }
   }
 };
-for (const r of regions) checkNames("Region", r.slug, r.names);
-for (const d of districts) checkNames("District", d.slug, d.names);
-for (const c of cities) checkNames("City", c.slug, c.names);
+for (const r of regions) {
+  checkLocalized("Region", r.slug, "names", r.names);
+  checkLocalized("Region", r.slug, "titles", r.titles);
+}
+for (const d of districts) {
+  checkLocalized("District", d.slug, "names", d.names);
+  checkLocalized("District", d.slug, "titles", d.titles);
+}
+for (const c of cities) {
+  checkLocalized("City", c.slug, "names", c.names);
+  checkLocalized("City", c.slug, "titles", c.titles);
+}
 
 // ---- report ----
 if (errors.length > 0) {

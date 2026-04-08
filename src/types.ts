@@ -43,8 +43,18 @@ export interface Region {
   iso: string;
   /** Official category per ISO 3166-2 and Uzbek classification. */
   category: RegionCategory;
-  /** Names in the four working languages. */
+  /**
+   * Short noun forms for use as labels, dropdown items, or short headings.
+   * Example: `{ en: "Bukhara", uz: "Buxoro", uzc: "Бухоро", ru: "Бухара" }`.
+   */
   names: Names;
+  /**
+   * Full official administrative titles, as they appear in the SDMX dataset.
+   * Use these for headings, addresses, SEO, and any context where the type
+   * word ("Region", "viloyati", "область", etc.) belongs in the name.
+   * Example: `{ en: "Bukhara Region", uz: "Buxoro viloyati", uzc: "Бухоро вилояти", ru: "Бухарская область" }`.
+   */
+  titles: Names;
 }
 
 /**
@@ -62,8 +72,19 @@ interface SubdivisionBase {
   regionSlug: string;
   /** ISO 3166-2:UZ code of the parent region (e.g., `"UZ-BU"`). */
   regionIso: string;
-  /** Names in the four working languages. */
+  /**
+   * Short noun forms for use as labels, dropdown items, or short headings.
+   * Example: `{ en: "Izbaskan", uz: "Izboskan", uzc: "Избоскан", ru: "Избаскан" }`.
+   */
   names: Names;
+  /**
+   * Full official administrative titles, as they appear in the SDMX dataset.
+   * Use these for headings, addresses, SEO, and any context where the type
+   * word ("District", "tumani", "район", "city", "shahri", "город", etc.)
+   * belongs in the name.
+   * Example: `{ en: "Izbaskan District", uz: "Izboskan tumani", uzc: "Избоскан тумани", ru: "Избасканский район" }`.
+   */
+  titles: Names;
 }
 
 /** A district (tuman) of a region. */

@@ -2,7 +2,7 @@
 
 [English](./README.md) · [O'zbekcha](./README.uz.md) · **Русский**
 
-Географические данные Республики Узбекистан — области, районы и города областного подчинения, с названиями на 4 языках (английский, узбекский латиница, узбекский кириллица, русский).
+Географические данные Республики Узбекистан — области, районы и города областного подчинения, с **краткими названиями** и **полными официальными наименованиями** на 4 языках (английский, узбекский латиница, узбекский кириллица, русский).
 
 - **14** административно-территориальных единиц первого уровня (12 областей + Каракалпакстан + город Ташкент)
 - **175** районов (`tumani`)
@@ -53,6 +53,14 @@ console.log(bukhara?.names);
 //   ru:  "Бухара"
 // }
 
+console.log(bukhara?.titles);
+// {
+//   en:  "Bukhara Region",
+//   uz:  "Buxoro viloyati",
+//   uzc: "Бухоро вилояти",
+//   ru:  "Бухарская область"
+// }
+
 const bukharaDistricts = getDistrictsByRegionId("bukhara");
 console.log(bukharaDistricts.length); // 11
 
@@ -100,6 +108,8 @@ const fergana = getDistrictsByRegionId("fergana");
 
 ## Структура данных
 
+Каждый объект содержит два поля: `names` (краткие формы существительных — для меток, выпадающих списков, коротких заголовков) и `titles` (полное официальное административное название — для заголовков, адресов, SEO).
+
 ```ts
 interface Names {
   en: string;   // Английский
@@ -112,15 +122,17 @@ interface Region {
   slug: string;                       // "bukhara"
   iso: string;                        // "UZ-BU"
   category: "region" | "republic" | "city";
-  names: Names;
+  names: Names;                       // { en: "Bukhara", ru: "Бухара", ... }
+  titles: Names;                      // { en: "Bukhara Region", ru: "Бухарская область", ... }
 }
 
 interface District {
-  slug: string;                       // "shakhrikhan"
+  slug: string;                       // "izbaskan"
   type: "district";
   regionSlug: string;                 // "andijan"
   regionIso: string;                  // "UZ-AN"
-  names: Names;
+  names: Names;                       // { en: "Izbaskan", ru: "Избаскан", ... }
+  titles: Names;                      // { en: "Izbaskan District", ru: "Избасканский район", ... }
 }
 
 interface RegionalCity {
@@ -128,9 +140,17 @@ interface RegionalCity {
   type: "city";
   regionSlug: string;                 // "bukhara"
   regionIso: string;                  // "UZ-BU"
-  names: Names;
+  names: Names;                       // { en: "Bukhara", ru: "Бухара", ... }
+  titles: Names;                      // { en: "Bukhara City", ru: "Город Бухара", ... }
 }
 ```
+
+### Когда использовать `names`, а когда `titles`
+
+- **`names`** — краткое существительное, без типового слова. Для выпадающих списков, хлебных крошек, меток в `<option>`. Например: `"Бухара"`.
+- **`titles`** — полное официальное название с типовым словом. Для заголовков страниц, адресных строк, SEO meta-тегов. Например: `"Бухарская область"`, `"Бухарский район"`.
+
+Поле `titles` особенно полезно для русского языка, где полная административная форма требует знания морфологии прилагательных (`Бухарская область`, `Бухарский район`), и потребители не могут легко вывести её из существительного (`Бухара`).
 
 ## Список областей
 
