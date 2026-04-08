@@ -10,7 +10,7 @@ import type { Region } from "../types";
  * @see https://api.siat.stat.uz/media/uploads/sdmx/sdmx_data_307.pdf
  * @see https://en.wikipedia.org/wiki/ISO_3166-2:UZ
  */
-export const regions = [
+export const regions: readonly Region[] = [
   {
     slug: "andijan",
     iso: "UZ-AN",
@@ -249,4 +249,4 @@ export const regions = [
       ru: "Хорезмская область",
     },
   },
-] as const satisfies readonly Region[];
+];

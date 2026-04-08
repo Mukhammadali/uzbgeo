@@ -16,7 +16,7 @@ import type { RegionalCity } from "../types";
  *
  * @see https://api.siat.stat.uz/media/uploads/sdmx/sdmx_data_307.pdf
  */
-export const cities = [
+export const cities: readonly RegionalCity[] = [
   // ===== Andijan (UZ-AN) — 2 cities =====
   {
     slug: "andijan_city",
@@ -445,4 +445,4 @@ export const cities = [
       ru: "Город Хива",
     },
   },
-] as const satisfies readonly RegionalCity[];
+];

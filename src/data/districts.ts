@@ -8,7 +8,7 @@ import type { District } from "../types";
  *
  * @see https://api.siat.stat.uz/media/uploads/sdmx/sdmx_data_307.pdf
  */
-export const districts = [
+export const districts: readonly District[] = [
   // ===== Andijan (UZ-AN) — 14 districts =====
   {
     slug: "altynkul",
@@ -1436,4 +1436,4 @@ export const districts = [
     names: { en: "Yangibazar", uz: "Yangibozor", uzc: "Янгибозор", ru: "Янгибазар" },
     titles: { en: "Yangibazar District", uz: "Yangibozor tumani", uzc: "Янгибозор тумани", ru: "Янгибазарский район" },
   },
-] as const satisfies readonly District[];
+];
