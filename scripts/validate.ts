@@ -15,10 +15,17 @@
 import { regions } from "../src/data/regions";
 import { districts } from "../src/data/districts";
 import { cities } from "../src/data/cities";
+import { LINES } from "../src/metro/data/lines";
+import { STATIONS_BY_LINE } from "../src/metro/data/stations";
+import { TRANSFER_PAIRS } from "../src/metro/data/transfers";
+import type { LineId } from "../src/metro/types";
 
 const EXPECTED_REGIONS = 14;
 const EXPECTED_DISTRICTS = 175;
 const EXPECTED_CITIES = 31;
+const EXPECTED_METRO_LINES = 4;
+const EXPECTED_METRO_STATIONS = 50;
+const EXPECTED_METRO_TRANSFER_PAIRS = 5;
 
 const ISO_RE = /^UZ-[A-Z]{2}$/;
 const SLUG_RE = /^[a-z][a-z0-9_]*$/;
@@ -138,6 +145,99 @@ for (const c of cities) {
   checkLocalized("City", c.slug, "titles", c.titles);
 }
 
+// ---- metro: lines ----
+const LINE_IDS: readonly LineId[] = [
+  "chilanzar",
+  "uzbekistan",
+  "yunusabad",
+  "ring",
+];
+
+const lineKeys = Object.keys(LINES) as LineId[];
+if (lineKeys.length !== EXPECTED_METRO_LINES) {
+  fail(`Expected ${EXPECTED_METRO_LINES} metro lines, got ${lineKeys.length}`);
+}
+for (const id of LINE_IDS) {
+  const line = LINES[id];
+  if (!line) {
+    fail(`Metro line "${id}" is missing from LINES`);
+    continue;
+  }
+  if (line.id !== id) {
+    fail(`Metro line "${id}" has mismatched id: ${line.id}`);
+  }
+  for (const lang of ["en", "uz", "uzc", "ru"] as const) {
+    if (!line.names[lang] || line.names[lang].trim().length === 0) {
+      fail(`Metro line "${id}" is missing the ${lang} entry in names`);
+    }
+  }
+  if (!/^#[0-9A-Fa-f]{6}$/.test(line.color)) {
+    fail(`Metro line "${id}" has invalid color: ${line.color}`);
+  }
+}
+
+// ---- metro: stations ----
+const stationSlugs = new Set<string>();
+const stationsByLineCount: Record<string, number> = {};
+let totalStations = 0;
+
+for (const id of LINE_IDS) {
+  const stations = STATIONS_BY_LINE[id];
+  if (!stations) {
+    fail(`Metro line "${id}" has no stations list`);
+    continue;
+  }
+  stationsByLineCount[id] = stations.length;
+  totalStations += stations.length;
+
+  for (const s of stations) {
+    if (!SLUG_RE.test(s.id)) {
+      fail(`Metro station "${s.id}" has invalid slug format`);
+    }
+    if (stationSlugs.has(s.id)) {
+      fail(`Duplicate metro station slug across lines: ${s.id}`);
+    }
+    stationSlugs.add(s.id);
+
+    if (s.subway_line !== id) {
+      fail(
+        `Metro station "${s.id}" is grouped under "${id}" but subway_line is "${s.subway_line}"`,
+      );
+    }
+
+    checkLocalized("Metro station", s.id, "names", s.names);
+    checkLocalized("Metro station", s.id, "titles", s.titles);
+  }
+}
+
+if (totalStations !== EXPECTED_METRO_STATIONS) {
+  fail(`Expected ${EXPECTED_METRO_STATIONS} metro stations, got ${totalStations}`);
+}
+
+// ---- metro: transfers ----
+if (TRANSFER_PAIRS.length !== EXPECTED_METRO_TRANSFER_PAIRS) {
+  fail(
+    `Expected ${EXPECTED_METRO_TRANSFER_PAIRS} metro transfer pairs, got ${TRANSFER_PAIRS.length}`,
+  );
+}
+const seenTransferPairs = new Set<string>();
+for (const [a, b] of TRANSFER_PAIRS) {
+  if (!stationSlugs.has(a)) {
+    fail(`Metro transfer references unknown station: ${a}`);
+  }
+  if (!stationSlugs.has(b)) {
+    fail(`Metro transfer references unknown station: ${b}`);
+  }
+  if (a === b) {
+    fail(`Metro transfer pair has identical endpoints: ${a}`);
+  }
+  const key = [a, b].sort().join("↔");
+  if (seenTransferPairs.has(key)) {
+    fail(`Duplicate metro transfer pair: ${a} ↔ ${b}`);
+  }
+  seenTransferPairs.add(key);
+}
+
 // ---- report ----
 if (errors.length > 0) {
   console.error(`\nuzbgeo: validation failed with ${errors.length} error(s):\n`);
@@ -150,3 +250,9 @@ console.log(`  regions:   ${regions.length}`);
 console.log(`  districts: ${districts.length}`);
 console.log(`  cities:    ${cities.length}`);
 console.log(`  total subdivisions: ${districts.length + cities.length}`);
+console.log(`  metro lines:     ${lineKeys.length}`);
+console.log(`  metro stations:  ${totalStations}`);
+for (const id of LINE_IDS) {
+  console.log(`    ${id}: ${stationsByLineCount[id]}`);
+}
+console.log(`  metro transfers: ${TRANSFER_PAIRS.length}`);

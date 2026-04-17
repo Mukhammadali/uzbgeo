@@ -1,7 +1,7 @@
 {
   "name": "uzbgeo",
-  "version": "1.0.0",
-  "description": "Uzbekistan geographical data — regions, districts, and cities of regional significance with names in 4 languages (English, Uzbek Latin, Uzbek Cyrillic, Russian)",
+  "version": "1.1.0",
+  "description": "Uzbekistan geographical data — regions, districts, cities, and the Tashkent Metro, with names in 4 languages (English, Uzbek Latin, Uzbek Cyrillic, Russian)",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -11,6 +11,11 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
+    },
+    "./metro": {
+      "types": "./dist/metro/index.d.ts",
+      "import": "./dist/metro/index.js",
+      "require": "./dist/metro/index.cjs"
     }
   },
   "files": [
@@ -22,8 +27,10 @@
     "validate": "bun run scripts/validate.ts",
     "build:js:esm": "bun build ./src/index.ts --outdir dist --format esm --target node",
     "build:js:cjs": "bun build ./src/index.ts --outdir dist --format cjs --target node --entry-naming [name].cjs",
+    "build:js:esm:metro": "bun build ./src/metro/index.ts --outdir dist/metro --format esm --target node",
+    "build:js:cjs:metro": "bun build ./src/metro/index.ts --outdir dist/metro --format cjs --target node --entry-naming [name].cjs",
     "build:types": "tsc --emitDeclarationOnly --declaration --outDir dist",
-    "build": "bun run validate && bun run build:js:esm && bun run build:js:cjs && bun run build:types",
+    "build": "bun run validate && bun run build:js:esm && bun run build:js:cjs && bun run build:js:esm:metro && bun run build:js:cjs:metro && bun run build:types",
     "test": "bun test",
     "prepublishOnly": "bun run build && bun test"
   },
@@ -38,7 +45,11 @@
     "tuman",
     "shahar",
     "administrative-divisions",
-    "iso-3166-2"
+    "iso-3166-2",
+    "tashkent-metro",
+    "metro",
+    "subway",
+    "tashkent"
   ],
   "author": "Mukhammadali",
   "license": "MIT",

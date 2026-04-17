@@ -7,6 +7,7 @@ O'zbekiston Respublikasining geografik ma'lumotlari — viloyatlar, tumanlar va 
 - **14** ta yuqori darajadagi ma'muriy birlik (12 viloyat + Qoraqalpog'iston + Toshkent shahri)
 - **175** ta tuman
 - **31** ta viloyat ahamiyatiga molik shahar
+- **Toshkent metropoliteni** — 4 ta yo'l, 50 ta bekat, yo'llararo o'tish joylari ([METRO.md](./METRO.md) ga qarang)
 - Barcha viloyatlar uchun **ISO 3166-2:UZ** kodlari
 - **Hech qanday runtime bog'liqliklar yo'q**, brauzerda ishlaydi, ESM + CJS, TypeScript'da yozilgan
 
@@ -172,6 +173,22 @@ interface RegionalCity {
 | UZ-XO | `khorezm` | Khorezm | Xorazm |
 
 Inglizcha nomlar O'zbekiston Respublikasi Milliy statistika qo'mitasi tomonidan chop etilgan rasmiy tarjimalarga asoslangan (quyidagi SDMX manbasiga qarang).
+
+## Toshkent metropoliteni
+
+Metro ma'lumotlari alohida subpath orqali eksport qilinadi — faqat hududiy ma'lumotlardan foydalanadigan iste'molchilar uni yuklamaydi.
+
+```ts
+import { getAllStations, getStationsByLine, neighborsOnLine } from "uzbgeo/metro";
+
+const chilanzar = getStationsByLine("chilanzar");
+console.log(chilanzar[0]?.names.uz);     // "Buyuk Ipak Yo'li"
+
+const { prev, next } = neighborsOnLine("texnopark", "ring");
+console.log(prev?.id, next?.id);         // "choshtepa" "yashnobod" — halqa yopiladi
+```
+
+To'liq API, ma'lumotlar tuzilishi, yo'llar va o'tish joylari ro'yxati uchun **[METRO.md](./METRO.md)** ga qarang.
 
 ## Ma'lumotlar manbalari
 

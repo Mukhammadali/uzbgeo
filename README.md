@@ -7,6 +7,7 @@ Geographical data for the Republic of Uzbekistan — regions, districts, and cit
 - **14** top-level administrative units (12 viloyats + Karakalpakstan + Tashkent City)
 - **175** districts (`tumani`)
 - **31** cities of regional significance (`shahar`)
+- **Tashkent Metro** — 4 lines, 50 stations, cross-line transfers (see [METRO.md](./METRO.md))
 - **ISO 3166-2:UZ** codes for all regions
 - **Zero runtime dependencies**, browser-safe, ESM + CJS, written in TypeScript
 
@@ -172,6 +173,22 @@ The `titles` field is especially useful for Russian, where the full administrati
 | UZ-XO | `khorezm` | Khorezm | Xorazm |
 
 English forms follow the official translations published by the Uzbek State Statistics Committee (the SDMX dataset linked below).
+
+## Tashkent Metro
+
+Metro data ships behind a subpath export so consumers who only want regional data don't pull it in.
+
+```ts
+import { getAllStations, getStationsByLine, neighborsOnLine } from "uzbgeo/metro";
+
+const chilanzar = getStationsByLine("chilanzar");
+console.log(chilanzar[0]?.names.en);     // "Buyuk Ipak Yoli"
+
+const { prev, next } = neighborsOnLine("texnopark", "ring");
+console.log(prev?.id, next?.id);         // "choshtepa" "yashnobod" — ring wraps
+```
+
+See **[METRO.md](./METRO.md)** for the full API, data shape, line/transfer reference, and design notes.
 
 ## Data sources
 
