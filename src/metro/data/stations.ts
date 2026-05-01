@@ -19,7 +19,9 @@ import type { LineId, StationSeed } from "../types";
  * - `uzc`: "{name} бекати"
  * - `ru`: "Станция {name}"
  */
-export const STATIONS_BY_LINE: Readonly<Record<LineId, readonly StationSeed[]>> = {
+export const STATIONS_BY_LINE: Readonly<
+  Record<LineId, readonly StationSeed[]>
+> = {
   // -------------------- Line 1: Chilanzar (red) --------------------
   chilanzar: [
     {
@@ -100,7 +102,12 @@ export const STATIONS_BY_LINE: Readonly<Record<LineId, readonly StationSeed[]>> 
     {
       id: "paxtakor",
       subway_line: "chilanzar",
-      names: { en: "Paxtakor", uz: "Paxtakor", uzc: "Пахтакор", ru: "Пахтакор" },
+      names: {
+        en: "Paxtakor",
+        uz: "Paxtakor",
+        uzc: "Пахтакор",
+        ru: "Пахтакор",
+      },
       titles: {
         en: "Paxtakor Station",
         uz: "Paxtakor bekati",
@@ -170,7 +177,12 @@ export const STATIONS_BY_LINE: Readonly<Record<LineId, readonly StationSeed[]>> 
     {
       id: "chilonzor",
       subway_line: "chilanzar",
-      names: { en: "Chilanzar", uz: "Chilonzor", uzc: "Чилонзор", ru: "Чиланзар" },
+      names: {
+        en: "Chilanzar",
+        uz: "Chilonzor",
+        uzc: "Чилонзор",
+        ru: "Чиланзар",
+      },
       titles: {
         en: "Chilanzar Station",
         uz: "Chilonzor bekati",
@@ -346,7 +358,12 @@ export const STATIONS_BY_LINE: Readonly<Record<LineId, readonly StationSeed[]>> 
     {
       id: "turkiston",
       subway_line: "yunusabad",
-      names: { en: "Turkistan", uz: "Turkiston", uzc: "Туркистон", ru: "Туркистон" },
+      names: {
+        en: "Turkistan",
+        uz: "Turkiston",
+        uzc: "Туркистон",
+        ru: "Туркистон",
+      },
       titles: {
         en: "Turkistan Station",
         uz: "Turkiston bekati",
@@ -357,7 +374,12 @@ export const STATIONS_BY_LINE: Readonly<Record<LineId, readonly StationSeed[]>> 
     {
       id: "yunusobod",
       subway_line: "yunusabad",
-      names: { en: "Yunusabad", uz: "Yunusobod", uzc: "Юнусобод", ru: "Юнусабад" },
+      names: {
+        en: "Yunusabad",
+        uz: "Yunusobod",
+        uzc: "Юнусобод",
+        ru: "Юнусабад",
+      },
       titles: {
         en: "Yunusabad Station",
         uz: "Yunusobod bekati",
@@ -384,7 +406,12 @@ export const STATIONS_BY_LINE: Readonly<Record<LineId, readonly StationSeed[]>> 
     {
       id: "bodomzor",
       subway_line: "yunusabad",
-      names: { en: "Bodomzor", uz: "Bodomzor", uzc: "Бодомзор", ru: "Бадамзар" },
+      names: {
+        en: "Bodomzor",
+        uz: "Bodomzor",
+        uzc: "Бодомзор",
+        ru: "Бадамзар",
+      },
       titles: {
         en: "Bodomzor Station",
         uz: "Bodomzor bekati",
@@ -458,7 +485,12 @@ export const STATIONS_BY_LINE: Readonly<Record<LineId, readonly StationSeed[]>> 
     {
       id: "texnopark",
       subway_line: "ring",
-      names: { en: "Technopark", uz: "Texnopark", uzc: "Технопарк", ru: "Технопарк" },
+      names: {
+        en: "Technopark",
+        uz: "Texnopark",
+        uzc: "Технопарк",
+        ru: "Технопарк",
+      },
       titles: {
         en: "Technopark Station",
         uz: "Texnopark bekati",
@@ -469,7 +501,12 @@ export const STATIONS_BY_LINE: Readonly<Record<LineId, readonly StationSeed[]>> 
     {
       id: "yashnobod",
       subway_line: "ring",
-      names: { en: "Yashnobod", uz: "Yashnobod", uzc: "Яшнобод", ru: "Яшнобод" },
+      names: {
+        en: "Yashnobod",
+        uz: "Yashnobod",
+        uzc: "Яшнобод",
+        ru: "Яшнобод",
+      },
       titles: {
         en: "Yashnobod Station",
         uz: "Yashnobod bekati",
@@ -513,7 +550,12 @@ export const STATIONS_BY_LINE: Readonly<Record<LineId, readonly StationSeed[]>> 
     {
       id: "yangiobod",
       subway_line: "ring",
-      names: { en: "Yangiobod", uz: "Yangiobod", uzc: "Янгиобод", ru: "Янгиабад" },
+      names: {
+        en: "Yangiobod",
+        uz: "Yangiobod",
+        uzc: "Янгиобод",
+        ru: "Янгиабад",
+      },
       titles: {
         en: "Yangiobod Station",
         uz: "Yangiobod bekati",
@@ -666,11 +708,16 @@ export const STATIONS_BY_LINE: Readonly<Record<LineId, readonly StationSeed[]>> 
     {
       id: "choshtepa",
       subway_line: "ring",
-      names: { en: "Choshtepa", uz: "Cho'shtepa", uzc: "Чўштепа", ru: "Чоштепа" },
+      names: {
+        en: "Choshtepa",
+        uz: "Choshtepa",
+        uzc: "Чоштепа",
+        ru: "Чоштепа",
+      },
       titles: {
         en: "Choshtepa Station",
-        uz: "Cho'shtepa bekati",
-        uzc: "Чўштепа бекати",
+        uz: "Choshtepa bekati",
+        uzc: "Чоштепа бекати",
         ru: "Станция Чоштепа",
       },
     },

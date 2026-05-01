@@ -1,6 +1,6 @@
 {
   "name": "uzbgeo",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Uzbekistan geographical data — regions, districts, cities, and the Tashkent Metro, with names in 4 languages (English, Uzbek Latin, Uzbek Cyrillic, Russian)",
   "type": "module",
   "main": "./dist/index.cjs",
