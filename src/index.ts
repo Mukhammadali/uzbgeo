@@ -4,7 +4,9 @@ import { cities } from "./data/cities";
 import type {
   Region,
   District,
+  City,
   RegionalCity,
+  CitySubordination,
   Subdivision,
   Names,
   LanguageCode,
@@ -16,7 +18,9 @@ import type {
 export type {
   Region,
   District,
+  City,
   RegionalCity,
+  CitySubordination,
   Subdivision,
   Names,
   LanguageCode,
@@ -75,38 +79,57 @@ export function getDistrictsByRegionId(regionId: string): readonly District[] {
 }
 
 // ============================================================================
-// Cities of regional significance (shahar)
+// Cities (shahar)
 // ============================================================================
 
 /**
- * Returns all 31 cities of regional significance (shahar). These are
- * administratively parallel to districts, not nested within them.
+ * Returns ALL cities (shahar) of Uzbekistan — both cities of regional
+ * significance and cities of district subordination.
+ *
+ * NOTE (v2 change): this previously returned only the 31 cities of regional
+ * significance. For that exact set, use {@link getRegionalCities}.
  *
  * The city of Tashkent is NOT in this list — it is itself a top-level
  * administrative unit and is returned by `getAllRegions()`.
  */
-export function getAllCities(): readonly RegionalCity[] {
+export function getAllCities(): readonly City[] {
   return cities;
 }
 
 /**
- * Look up a city of regional significance by its snake_case slug (e.g.,
- * `"bukhara_city"`). City slugs are suffixed with `_city` to make them
+ * Returns the 31 cities of regional significance (shahar) — those
+ * administratively parallel to districts, not nested within one. This is the
+ * set that `getAllCities()` returned prior to v2.
+ */
+export function getRegionalCities(): readonly City[] {
+  return cities.filter((c) => c.subordination === "regional");
+}
+
+/**
+ * Look up a city by its snake_case slug (e.g., `"bukhara_city"`,
+ * `"gazalkent_city"`). City slugs are suffixed with `_city` to make them
  * self-disclosing. Returns `undefined` if no match.
  */
-export function getCity(slug: string): RegionalCity | undefined {
+export function getCity(slug: string): City | undefined {
   return cities.find((c) => c.slug === slug);
 }
 
 /**
- * Returns all cities of regional significance in the given region, identified
- * by either its snake_case slug or its ISO 3166-2:UZ code. Returns an empty
- * array if no region matches.
+ * Returns all cities in the given region — both regional and
+ * district-subordinate — identified by either its snake_case slug or its
+ * ISO 3166-2:UZ code. Returns an empty array if no region matches.
  */
-export function getCitiesByRegionId(
-  regionId: string,
-): readonly RegionalCity[] {
+export function getCitiesByRegionId(regionId: string): readonly City[] {
   return cities.filter(
     (c) => c.regionSlug === regionId || c.regionIso === regionId,
   );
+}
+
+/**
+ * Returns all cities of district subordination that belong to the given
+ * district, identified by its snake_case slug (e.g., `"bostanlyk"` →
+ * `[gazalkent_city]`). Returns an empty array if no such cities exist.
+ */
+export function getCitiesByDistrictId(districtId: string): readonly City[] {
+  return cities.filter((c) => c.districtSlug === districtId);
 }

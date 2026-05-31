@@ -2,11 +2,11 @@
 
 [English](./README.md) · **O'zbekcha** · [Русский](./README.ru.md)
 
-O'zbekiston Respublikasining geografik ma'lumotlari — viloyatlar, tumanlar va viloyat ahamiyatiga molik shaharlar, har biri 4 tilda (ingliz, o'zbek lotin, o'zbek kirill, rus) **qisqa nomlari** va **to'liq rasmiy unvonlari** bilan.
+O'zbekiston Respublikasining geografik ma'lumotlari — viloyatlar, tumanlar va shaharlar, har biri 4 tilda (ingliz, o'zbek lotin, o'zbek kirill, rus) **qisqa nomlari** va **to'liq rasmiy unvonlari** bilan.
 
 - **14** ta yuqori darajadagi ma'muriy birlik (12 viloyat + Qoraqalpog'iston + Toshkent shahri)
 - **175** ta tuman
-- **31** ta viloyat ahamiyatiga molik shahar
+- **109** ta shahar — **31** ta viloyat ahamiyatiga molik + **78** ta tuman bo'ysunuvidagi
 - **Toshkent metropoliteni** — 4 ta yo'l, 50 ta bekat, yo'llararo o'tish joylari ([METRO.md](./METRO.md) ga qarang)
 - Barcha viloyatlar uchun **ISO 3166-2:UZ** kodlari
 - **Hech qanday runtime bog'liqliklar yo'q**, brauzerda ishlaydi, ESM + CJS, TypeScript'da yozilgan
@@ -35,8 +35,10 @@ import {
   getDistrict,
   getDistrictsByRegionId,
   getAllCities,
+  getRegionalCities,
   getCity,
   getCitiesByRegionId,
+  getCitiesByDistrictId,
 } from "uzbgeo";
 
 const regions = getAllRegions();
@@ -67,6 +69,18 @@ console.log(bukharaDistricts.length); // 11
 
 const tashkentCityDistricts = getDistrictsByRegionId("tashkent_city");
 console.log(tashkentCityDistricts.length); // 12
+
+// Shaharlar ikki darajada — viloyat ahamiyatiga molik va tuman bo'ysunuvidagi.
+console.log(getAllCities().length);        // 109 (barcha shaharlar)
+console.log(getRegionalCities().length);   // 31  (viloyat ahamiyatiga molik qism)
+
+// Tuman bo'ysunuvidagi shaharlar o'z tumanini biladi:
+const gazalkent = getCity("gazalkent_city");
+console.log(gazalkent?.subordination);     // "district"
+console.log(gazalkent?.districtSlug);      // "bostanlyk"
+
+// Shaharlarni ota-tuman bo'yicha qidirish:
+console.log(getCitiesByDistrictId("bostanlyk").map((c) => c.slug)); // ["gazalkent_city"]
 ```
 
 ### CommonJS
@@ -97,15 +111,26 @@ Barcha funksiyalar sof (pure) bo'lib, muzlatilgan ma'lumotlar ustida ishlaydi. V
 | `getDistrict(slug)` | Bitta tuman yoki `undefined` |
 | `getDistrictsByRegionId(slugOrIso)` | Berilgan viloyatdagi barcha tumanlar |
 
-### Viloyat ahamiyatiga molik shaharlar
+### Shaharlar
 
-Bu shaharlar tumanlar bilan ma'muriy jihatdan bir xil darajada bo'lib, ularning ichida joylashmagan. Slug nomlariga `_city` qo'shimchasi qo'shilgan, bu esa ularni bir xil nomdagi tumanlardan farqlash uchun (masalan, `bukhara_city` va `bukhara`).
+Shaharlar `subordination` maydoni orqali ajraladigan ikki ma'muriy darajada bo'ladi:
+
+- **`"regional"`** — viloyat ahamiyatiga molik shaharlar, tumanlar bilan bir xil darajada (mamlakat bo'ylab 31 ta).
+- **`"district"`** — tuman bo'ysunuvidagi shaharlar, tuman ichida joylashgan (`parentSlug`/`districtSlug` ota-tumanga ishora qiladi).
+
+Slug nomlariga `_city` qo'shimchasi qo'shilgan, bu esa ularni bir xil nomdagi tumanlardan farqlash uchun (masalan, `bukhara_city` va `bukhara`).
 
 | Funksiya | Qaytaradi |
 |---|---|
-| `getAllCities()` | Barcha 31 ta viloyat ahamiyatiga molik shahar |
+| `getAllCities()` | **Barcha 109 ta shahar** (ikkala daraja) |
+| `getRegionalCities()` | 31 ta viloyat ahamiyatiga molik shahar |
 | `getCity(slug)` | Bitta shahar yoki `undefined` |
-| `getCitiesByRegionId(slugOrIso)` | Berilgan viloyatdagi barcha shaharlar |
+| `getCitiesByRegionId(slugOrIso)` | Viloyatdagi barcha shaharlar (ikkala daraja) |
+| `getCitiesByDistrictId(slug)` | Tuman ichidagi tuman bo'ysunuvidagi shaharlar |
+
+> **v1 dan ko'chish:** ilgari `getAllCities()` faqat 31 ta viloyat ahamiyatiga molik shaharni qaytarardi. v2 da u **barcha** shaharlarni qaytaradi; eski xatti-harakat uchun **`getRegionalCities()`** ni chaqiring. [CHANGELOG](./CHANGELOG.md) ga qarang.
+
+> **Qamrov haqida eslatma:** tuman bo'ysunuvidagi shaharlarga faqat yuqori ishonchli yozuvlar kiritilgan. Holati bahsli bo'lgan bir nechta shahar (masalan, 2025-yilgi Xorazm islohotidagi Xonqa/Shovot/Gurlan/Qoʻshkoʻpir yoki Yangiobodning bahsli tumani) tasdiqlangunga qadar kiritilmagan — [CHANGELOG](./CHANGELOG.md) ga qarang.
 
 ## Ma'lumotlar tuzilishi
 
@@ -130,21 +155,27 @@ interface Region {
 interface District {
   slug: string;                       // "izbaskan"
   type: "district";
+  parentSlug: string;                 // "andijan" (viloyat)
   regionSlug: string;                 // "andijan"
   regionIso: string;                  // "UZ-AN"
   names: Names;                       // { en: "Izbaskan", ru: "Избаскан", ... }
   titles: Names;                      // { en: "Izbaskan District", ru: "Избасканский район", ... }
 }
 
-interface RegionalCity {
-  slug: string;                       // "bukhara_city"
+interface City {
+  slug: string;                       // "bukhara_city" | "gazalkent_city"
   type: "city";
-  regionSlug: string;                 // "bukhara"
-  regionIso: string;                  // "UZ-BU"
+  subordination: "regional" | "district";
+  parentSlug: string;                 // viloyat slug (regional) YOKI tuman slug (district)
+  districtSlug?: string;              // faqat subordination === "district" bo'lganda
+  regionSlug: string;                 // "bukhara" | "tashkent"
+  regionIso: string;                  // "UZ-BU" | "UZ-TO"
   names: Names;                       // { en: "Bukhara", ru: "Бухара", ... }
   titles: Names;                      // { en: "Bukhara City", ru: "Город Бухара", ... }
 }
 ```
+
+Iyerarxiya `parentSlug` orqali ifodalanadi: tumanning ota-birligi — viloyat, viloyat ahamiyatiga molik shaharning ota-birligi — viloyat, tuman bo'ysunuvidagi shaharning ota-birligi — tuman. Uni `getDistrict()` / `getRegion()` orqali yuqoriga ko'tarib boring. (`RegionalCity` `City` ning eskirgan (deprecated) sinonimi sifatida saqlanib qoladi.)
 
 ### `names` va `titles` qachon ishlatiladi
 

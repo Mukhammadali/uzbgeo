@@ -6,6 +6,8 @@
  *   - All slugs are unique within their type and follow the snake_case rule
  *   - All ISO 3166-2:UZ codes are well-formed and unique
  *   - Every district/city points at a real parent region
+ *   - Every subdivision's parentSlug resolves to a real region or district
+ *   - City subordination and districtSlug are mutually consistent
  *   - regionSlug and regionIso on every subdivision are consistent
  *
  * Run via `bun run validate` (also runs as the first step of `bun run build`).
@@ -22,7 +24,8 @@ import type { LineId } from "../src/metro/types";
 
 const EXPECTED_REGIONS = 14;
 const EXPECTED_DISTRICTS = 175;
-const EXPECTED_CITIES = 31;
+const EXPECTED_CITIES = 109;
+const EXPECTED_REGIONAL_CITIES = 31;
 const EXPECTED_METRO_LINES = 4;
 const EXPECTED_METRO_STATIONS = 50;
 const EXPECTED_METRO_TRANSFER_PAIRS = 5;
@@ -44,6 +47,14 @@ if (districts.length !== EXPECTED_DISTRICTS) {
 }
 if (cities.length !== EXPECTED_CITIES) {
   fail(`Expected ${EXPECTED_CITIES} cities, got ${cities.length}`);
+}
+const regionalCityCount = cities.filter(
+  (c) => c.subordination === "regional",
+).length;
+if (regionalCityCount !== EXPECTED_REGIONAL_CITIES) {
+  fail(
+    `Expected ${EXPECTED_REGIONAL_CITIES} regional-significance cities, got ${regionalCityCount}`,
+  );
 }
 
 // ---- region slug + ISO uniqueness and format ----
@@ -92,6 +103,12 @@ for (const d of districts) {
       `District "${d.slug}" has inconsistent regionSlug/regionIso: ${d.regionSlug} maps to ${expectedIso}, but regionIso is ${d.regionIso}`,
     );
   }
+  // A district's parent is always its region.
+  if (d.parentSlug !== d.regionSlug) {
+    fail(
+      `District "${d.slug}" has parentSlug "${d.parentSlug}" but should equal its regionSlug "${d.regionSlug}"`,
+    );
+  }
 }
 
 // ---- city slug uniqueness, format, and parent integrity ----
@@ -116,6 +133,43 @@ for (const c of cities) {
     fail(
       `City "${c.slug}" has inconsistent regionSlug/regionIso: ${c.regionSlug} maps to ${expectedIso}, but regionIso is ${c.regionIso}`,
     );
+  }
+
+  if (c.subordination === "regional") {
+    // Regional cities are parallel to districts: parent is the region, no districtSlug.
+    if (c.parentSlug !== c.regionSlug) {
+      fail(
+        `Regional city "${c.slug}" has parentSlug "${c.parentSlug}" but should equal its regionSlug "${c.regionSlug}"`,
+      );
+    }
+    if (c.districtSlug !== undefined) {
+      fail(`Regional city "${c.slug}" must not have a districtSlug`);
+    }
+  } else if (c.subordination === "district") {
+    // District-subordinate cities are nested inside a district.
+    if (c.districtSlug === undefined) {
+      fail(`District-subordinate city "${c.slug}" is missing districtSlug`);
+    } else {
+      if (!districtSlugs.has(c.districtSlug)) {
+        fail(
+          `City "${c.slug}" references unknown districtSlug: ${c.districtSlug}`,
+        );
+      }
+      if (c.parentSlug !== c.districtSlug) {
+        fail(
+          `District-subordinate city "${c.slug}" has parentSlug "${c.parentSlug}" but should equal its districtSlug "${c.districtSlug}"`,
+        );
+      }
+      // The parent district must live in the same region as the city.
+      const parentDistrict = districts.find((d) => d.slug === c.districtSlug);
+      if (parentDistrict && parentDistrict.regionSlug !== c.regionSlug) {
+        fail(
+          `City "${c.slug}" is in region "${c.regionSlug}" but its district "${c.districtSlug}" is in region "${parentDistrict.regionSlug}"`,
+        );
+      }
+    }
+  } else {
+    fail(`City "${c.slug}" has invalid subordination: ${c.subordination}`);
   }
 }
 
@@ -248,7 +302,9 @@ if (errors.length > 0) {
 console.log(`uzbgeo: data validated successfully`);
 console.log(`  regions:   ${regions.length}`);
 console.log(`  districts: ${districts.length}`);
-console.log(`  cities:    ${cities.length}`);
+console.log(
+  `  cities:    ${cities.length} (${regionalCityCount} regional, ${cities.length - regionalCityCount} district-subordinate)`,
+);
 console.log(`  total subdivisions: ${districts.length + cities.length}`);
 console.log(`  metro lines:     ${lineKeys.length}`);
 console.log(`  metro stations:  ${totalStations}`);

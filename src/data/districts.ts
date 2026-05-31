@@ -13,6 +13,7 @@ export const districts: readonly District[] = [
   {
     slug: "altynkul",
     type: "district",
+    parentSlug: "andijan",
     regionSlug: "andijan",
     regionIso: "UZ-AN",
     names: { en: "Altynkul", uz: "Oltinko'l", uzc: "Олтинкўл", ru: "Алтынкуль" },
@@ -21,6 +22,7 @@ export const districts: readonly District[] = [
   {
     slug: "andijan",
     type: "district",
+    parentSlug: "andijan",
     regionSlug: "andijan",
     regionIso: "UZ-AN",
     names: { en: "Andijan", uz: "Andijon", uzc: "Андижон", ru: "Андижан" },
@@ -29,6 +31,7 @@ export const districts: readonly District[] = [
   {
     slug: "balykchi",
     type: "district",
+    parentSlug: "andijan",
     regionSlug: "andijan",
     regionIso: "UZ-AN",
     names: { en: "Balykchi", uz: "Baliqchi", uzc: "Балиқчи", ru: "Балыкчи" },
@@ -37,6 +40,7 @@ export const districts: readonly District[] = [
   {
     slug: "bustan",
     type: "district",
+    parentSlug: "andijan",
     regionSlug: "andijan",
     regionIso: "UZ-AN",
     names: { en: "Bustan", uz: "Bo'ston", uzc: "Бўстон", ru: "Бустон" },
@@ -45,6 +49,7 @@ export const districts: readonly District[] = [
   {
     slug: "bulakbashi",
     type: "district",
+    parentSlug: "andijan",
     regionSlug: "andijan",
     regionIso: "UZ-AN",
     names: { en: "Bulakbashi", uz: "Buloqboshi", uzc: "Булоқбоши", ru: "Булакбаши" },
@@ -53,6 +58,7 @@ export const districts: readonly District[] = [
   {
     slug: "jalaquduk",
     type: "district",
+    parentSlug: "andijan",
     regionSlug: "andijan",
     regionIso: "UZ-AN",
     names: { en: "Jalaquduk", uz: "Jalaquduq", uzc: "Жалақудуқ", ru: "Жалакудук" },
@@ -61,6 +67,7 @@ export const districts: readonly District[] = [
   {
     slug: "izbaskan",
     type: "district",
+    parentSlug: "andijan",
     regionSlug: "andijan",
     regionIso: "UZ-AN",
     names: { en: "Izbaskan", uz: "Izboskan", uzc: "Избоскан", ru: "Избаскан" },
@@ -69,6 +76,7 @@ export const districts: readonly District[] = [
   {
     slug: "ulugnor",
     type: "district",
+    parentSlug: "andijan",
     regionSlug: "andijan",
     regionIso: "UZ-AN",
     names: { en: "Ulugnor", uz: "Ulug'nor", uzc: "Улуғнор", ru: "Улугнор" },
@@ -77,6 +85,7 @@ export const districts: readonly District[] = [
   {
     slug: "kurgantepa",
     type: "district",
+    parentSlug: "andijan",
     regionSlug: "andijan",
     regionIso: "UZ-AN",
     names: { en: "Kurgantepa", uz: "Qo'rg'ontepa", uzc: "Қўрғонтепа", ru: "Кургантепа" },
@@ -85,6 +94,7 @@ export const districts: readonly District[] = [
   {
     slug: "asaka",
     type: "district",
+    parentSlug: "andijan",
     regionSlug: "andijan",
     regionIso: "UZ-AN",
     names: { en: "Asaka", uz: "Asaka", uzc: "Асака", ru: "Асака" },
@@ -93,6 +103,7 @@ export const districts: readonly District[] = [
   {
     slug: "markhamat",
     type: "district",
+    parentSlug: "andijan",
     regionSlug: "andijan",
     regionIso: "UZ-AN",
     names: { en: "Markhamat", uz: "Marxamat", uzc: "Мархамат", ru: "Мархамат" },
@@ -101,6 +112,7 @@ export const districts: readonly District[] = [
   {
     slug: "shakhrikhan",
     type: "district",
+    parentSlug: "andijan",
     regionSlug: "andijan",
     regionIso: "UZ-AN",
     names: { en: "Shakhrikhan", uz: "Shaxrixon", uzc: "Шахрихон", ru: "Шахрихан" },
@@ -109,6 +121,7 @@ export const districts: readonly District[] = [
   {
     slug: "pakhtaabad",
     type: "district",
+    parentSlug: "andijan",
     regionSlug: "andijan",
     regionIso: "UZ-AN",
     names: { en: "Pakhtaabad", uz: "Paxtaobod", uzc: "Пахтаобод", ru: "Пахтаабад" },
@@ -117,6 +130,7 @@ export const districts: readonly District[] = [
   {
     slug: "khojaabad",
     type: "district",
+    parentSlug: "andijan",
     regionSlug: "andijan",
     regionIso: "UZ-AN",
     names: { en: "Khojaabad", uz: "Xo'jaobod", uzc: "Хўжаобод", ru: "Ходжаабад" },
@@ -127,6 +141,7 @@ export const districts: readonly District[] = [
   {
     slug: "alat",
     type: "district",
+    parentSlug: "bukhara",
     regionSlug: "bukhara",
     regionIso: "UZ-BU",
     names: { en: "Alat", uz: "Olot", uzc: "Олот", ru: "Алат" },
@@ -135,6 +150,7 @@ export const districts: readonly District[] = [
   {
     slug: "bukhara",
     type: "district",
+    parentSlug: "bukhara",
     regionSlug: "bukhara",
     regionIso: "UZ-BU",
     names: { en: "Bukhara", uz: "Buxoro", uzc: "Бухоро", ru: "Бухара" },
@@ -143,6 +159,7 @@ export const districts: readonly District[] = [
   {
     slug: "vobkent",
     type: "district",
+    parentSlug: "bukhara",
     regionSlug: "bukhara",
     regionIso: "UZ-BU",
     names: { en: "Vobkent", uz: "Vobkent", uzc: "Вобкент", ru: "Вабкент" },
@@ -151,6 +168,7 @@ export const districts: readonly District[] = [
   {
     slug: "gijduvan",
     type: "district",
+    parentSlug: "bukhara",
     regionSlug: "bukhara",
     regionIso: "UZ-BU",
     names: { en: "Gijduvan", uz: "G'ijduvon", uzc: "Ғиждувон", ru: "Гиждуван" },
@@ -159,6 +177,7 @@ export const districts: readonly District[] = [
   {
     slug: "kagan",
     type: "district",
+    parentSlug: "bukhara",
     regionSlug: "bukhara",
     regionIso: "UZ-BU",
     names: { en: "Kagan", uz: "Kogon", uzc: "Когон", ru: "Каган" },
@@ -167,6 +186,7 @@ export const districts: readonly District[] = [
   {
     slug: "karakul",
     type: "district",
+    parentSlug: "bukhara",
     regionSlug: "bukhara",
     regionIso: "UZ-BU",
     names: { en: "Karakul", uz: "Qorako'l", uzc: "Қоракўл", ru: "Каракуль" },
@@ -175,6 +195,7 @@ export const districts: readonly District[] = [
   {
     slug: "qorovulbozor",
     type: "district",
+    parentSlug: "bukhara",
     regionSlug: "bukhara",
     regionIso: "UZ-BU",
     names: { en: "Qorovulbozor", uz: "Qorovulbozor", uzc: "Қоровулбозор", ru: "Караулбазар" },
@@ -183,6 +204,7 @@ export const districts: readonly District[] = [
   {
     slug: "peshkun",
     type: "district",
+    parentSlug: "bukhara",
     regionSlug: "bukhara",
     regionIso: "UZ-BU",
     names: { en: "Peshkun", uz: "Peshku", uzc: "Пешку", ru: "Пешкун" },
@@ -191,6 +213,7 @@ export const districts: readonly District[] = [
   {
     slug: "romitan",
     type: "district",
+    parentSlug: "bukhara",
     regionSlug: "bukhara",
     regionIso: "UZ-BU",
     names: { en: "Romitan", uz: "Romitan", uzc: "Ромитан", ru: "Ромитан" },
@@ -199,6 +222,7 @@ export const districts: readonly District[] = [
   {
     slug: "jondor",
     type: "district",
+    parentSlug: "bukhara",
     regionSlug: "bukhara",
     regionIso: "UZ-BU",
     names: { en: "Jondor", uz: "Jondor", uzc: "Жондор", ru: "Жондор" },
@@ -207,6 +231,7 @@ export const districts: readonly District[] = [
   {
     slug: "shafirkan",
     type: "district",
+    parentSlug: "bukhara",
     regionSlug: "bukhara",
     regionIso: "UZ-BU",
     names: { en: "Shafirkan", uz: "Shofirkon", uzc: "Шофиркон", ru: "Шафиркан" },
@@ -217,6 +242,7 @@ export const districts: readonly District[] = [
   {
     slug: "arnasay",
     type: "district",
+    parentSlug: "jizzakh",
     regionSlug: "jizzakh",
     regionIso: "UZ-JI",
     names: { en: "Arnasay", uz: "Arnasoy", uzc: "Арнасой", ru: "Арнасай" },
@@ -225,6 +251,7 @@ export const districts: readonly District[] = [
   {
     slug: "bakhmal",
     type: "district",
+    parentSlug: "jizzakh",
     regionSlug: "jizzakh",
     regionIso: "UZ-JI",
     names: { en: "Bakhmal", uz: "Baxmal", uzc: "Бахмал", ru: "Бахмал" },
@@ -233,6 +260,7 @@ export const districts: readonly District[] = [
   {
     slug: "gallaaral",
     type: "district",
+    parentSlug: "jizzakh",
     regionSlug: "jizzakh",
     regionIso: "UZ-JI",
     names: { en: "Gallaaral", uz: "G'allaorol", uzc: "Ғаллаорол", ru: "Галляарал" },
@@ -241,6 +269,7 @@ export const districts: readonly District[] = [
   {
     slug: "sharof_rashidov",
     type: "district",
+    parentSlug: "jizzakh",
     regionSlug: "jizzakh",
     regionIso: "UZ-JI",
     names: { en: "Sharof Rashidov", uz: "Sharof Rashidov", uzc: "Шароф Рашидов", ru: "Шароф Рашидов" },
@@ -249,6 +278,7 @@ export const districts: readonly District[] = [
   {
     slug: "dustlik",
     type: "district",
+    parentSlug: "jizzakh",
     regionSlug: "jizzakh",
     regionIso: "UZ-JI",
     names: { en: "Dustlik", uz: "Do'stlik", uzc: "Дўстлик", ru: "Дустлик" },
@@ -257,6 +287,7 @@ export const districts: readonly District[] = [
   {
     slug: "zomin",
     type: "district",
+    parentSlug: "jizzakh",
     regionSlug: "jizzakh",
     regionIso: "UZ-JI",
     names: { en: "Zomin", uz: "Zomin", uzc: "Зомин", ru: "Заамин" },
@@ -265,6 +296,7 @@ export const districts: readonly District[] = [
   {
     slug: "zarbdar",
     type: "district",
+    parentSlug: "jizzakh",
     regionSlug: "jizzakh",
     regionIso: "UZ-JI",
     names: { en: "Zarbdar", uz: "Zarbdor", uzc: "Зарбдор", ru: "Зарбдар" },
@@ -273,6 +305,7 @@ export const districts: readonly District[] = [
   {
     slug: "mirzachul",
     type: "district",
+    parentSlug: "jizzakh",
     regionSlug: "jizzakh",
     regionIso: "UZ-JI",
     names: { en: "Mirzachul", uz: "Mirzacho'l", uzc: "Мирзачўл", ru: "Мирзачуль" },
@@ -281,6 +314,7 @@ export const districts: readonly District[] = [
   {
     slug: "zafarabad",
     type: "district",
+    parentSlug: "jizzakh",
     regionSlug: "jizzakh",
     regionIso: "UZ-JI",
     names: { en: "Zafarabad", uz: "Zafarobod", uzc: "Зафаробод", ru: "Зафарабад" },
@@ -289,6 +323,7 @@ export const districts: readonly District[] = [
   {
     slug: "pakhtakor",
     type: "district",
+    parentSlug: "jizzakh",
     regionSlug: "jizzakh",
     regionIso: "UZ-JI",
     names: { en: "Pakhtakor", uz: "Paxtakor", uzc: "Пахтакор", ru: "Пахтакор" },
@@ -297,6 +332,7 @@ export const districts: readonly District[] = [
   {
     slug: "farish",
     type: "district",
+    parentSlug: "jizzakh",
     regionSlug: "jizzakh",
     regionIso: "UZ-JI",
     names: { en: "Farish", uz: "Forish", uzc: "Фориш", ru: "Фариш" },
@@ -305,6 +341,7 @@ export const districts: readonly District[] = [
   {
     slug: "yangiabad",
     type: "district",
+    parentSlug: "jizzakh",
     regionSlug: "jizzakh",
     regionIso: "UZ-JI",
     names: { en: "Yangiabad", uz: "Yangiobod", uzc: "Янгиобод", ru: "Янгиабад" },
@@ -315,6 +352,7 @@ export const districts: readonly District[] = [
   {
     slug: "kukdala",
     type: "district",
+    parentSlug: "kashkadarya",
     regionSlug: "kashkadarya",
     regionIso: "UZ-QA",
     names: { en: "Kukdala", uz: "Ko'kdala", uzc: "Кўкдала", ru: "Кукдала" },
@@ -323,6 +361,7 @@ export const districts: readonly District[] = [
   {
     slug: "guzar",
     type: "district",
+    parentSlug: "kashkadarya",
     regionSlug: "kashkadarya",
     regionIso: "UZ-QA",
     names: { en: "Guzar", uz: "G'uzor", uzc: "Ғузор", ru: "Гузар" },
@@ -331,6 +370,7 @@ export const districts: readonly District[] = [
   {
     slug: "dehkanabad",
     type: "district",
+    parentSlug: "kashkadarya",
     regionSlug: "kashkadarya",
     regionIso: "UZ-QA",
     names: { en: "Dehkanabad", uz: "Dehqonobod", uzc: "Деҳқонобод", ru: "Дехканабад" },
@@ -339,6 +379,7 @@ export const districts: readonly District[] = [
   {
     slug: "kamashi",
     type: "district",
+    parentSlug: "kashkadarya",
     regionSlug: "kashkadarya",
     regionIso: "UZ-QA",
     names: { en: "Kamashi", uz: "Qamashi", uzc: "Қамаши", ru: "Камаши" },
@@ -347,6 +388,7 @@ export const districts: readonly District[] = [
   {
     slug: "karshi",
     type: "district",
+    parentSlug: "kashkadarya",
     regionSlug: "kashkadarya",
     regionIso: "UZ-QA",
     names: { en: "Karshi", uz: "Qarshi", uzc: "Қарши", ru: "Карши" },
@@ -355,6 +397,7 @@ export const districts: readonly District[] = [
   {
     slug: "kasan",
     type: "district",
+    parentSlug: "kashkadarya",
     regionSlug: "kashkadarya",
     regionIso: "UZ-QA",
     names: { en: "Kasan", uz: "Koson", uzc: "Косон", ru: "Касан" },
@@ -363,6 +406,7 @@ export const districts: readonly District[] = [
   {
     slug: "kitab",
     type: "district",
+    parentSlug: "kashkadarya",
     regionSlug: "kashkadarya",
     regionIso: "UZ-QA",
     names: { en: "Kitab", uz: "Kitob", uzc: "Китоб", ru: "Китаб" },
@@ -371,6 +415,7 @@ export const districts: readonly District[] = [
   {
     slug: "mirishkor",
     type: "district",
+    parentSlug: "kashkadarya",
     regionSlug: "kashkadarya",
     regionIso: "UZ-QA",
     names: { en: "Mirishkor", uz: "Mirishkor", uzc: "Миришкор", ru: "Миришкор" },
@@ -379,6 +424,7 @@ export const districts: readonly District[] = [
   {
     slug: "mubarek",
     type: "district",
+    parentSlug: "kashkadarya",
     regionSlug: "kashkadarya",
     regionIso: "UZ-QA",
     names: { en: "Mubarek", uz: "Muborak", uzc: "Муборак", ru: "Мубарек" },
@@ -387,6 +433,7 @@ export const districts: readonly District[] = [
   {
     slug: "nishon",
     type: "district",
+    parentSlug: "kashkadarya",
     regionSlug: "kashkadarya",
     regionIso: "UZ-QA",
     names: { en: "Nishon", uz: "Nishon", uzc: "Нишон", ru: "Нишан" },
@@ -395,6 +442,7 @@ export const districts: readonly District[] = [
   {
     slug: "kasbi",
     type: "district",
+    parentSlug: "kashkadarya",
     regionSlug: "kashkadarya",
     regionIso: "UZ-QA",
     names: { en: "Kasbi", uz: "Kasbi", uzc: "Касби", ru: "Касби" },
@@ -403,6 +451,7 @@ export const districts: readonly District[] = [
   {
     slug: "chirakchi",
     type: "district",
+    parentSlug: "kashkadarya",
     regionSlug: "kashkadarya",
     regionIso: "UZ-QA",
     names: { en: "Chirakchi", uz: "Chiroqchi", uzc: "Чироқчи", ru: "Чиракчи" },
@@ -411,6 +460,7 @@ export const districts: readonly District[] = [
   {
     slug: "shakhrisabz",
     type: "district",
+    parentSlug: "kashkadarya",
     regionSlug: "kashkadarya",
     regionIso: "UZ-QA",
     names: { en: "Shakhrisabz", uz: "Shahrisabz", uzc: "Шаҳрисабз", ru: "Шахрисабз" },
@@ -419,6 +469,7 @@ export const districts: readonly District[] = [
   {
     slug: "yakkabag",
     type: "district",
+    parentSlug: "kashkadarya",
     regionSlug: "kashkadarya",
     regionIso: "UZ-QA",
     names: { en: "Yakkabag", uz: "Yakkabog'", uzc: "Яккабоғ", ru: "Яккабаг" },
@@ -429,6 +480,7 @@ export const districts: readonly District[] = [
   {
     slug: "amudarya",
     type: "district",
+    parentSlug: "karakalpakstan",
     regionSlug: "karakalpakstan",
     regionIso: "UZ-QR",
     names: { en: "Amudarya", uz: "Amudaryo", uzc: "Амударё", ru: "Амударья" },
@@ -437,6 +489,7 @@ export const districts: readonly District[] = [
   {
     slug: "beruniy",
     type: "district",
+    parentSlug: "karakalpakstan",
     regionSlug: "karakalpakstan",
     regionIso: "UZ-QR",
     names: { en: "Beruniy", uz: "Beruniy", uzc: "Беруний", ru: "Беруни" },
@@ -445,6 +498,7 @@ export const districts: readonly District[] = [
   {
     slug: "bozatau",
     type: "district",
+    parentSlug: "karakalpakstan",
     regionSlug: "karakalpakstan",
     regionIso: "UZ-QR",
     names: { en: "Bozatau", uz: "Bo'zatov", uzc: "Бўзатов", ru: "Бозатау" },
@@ -453,6 +507,7 @@ export const districts: readonly District[] = [
   {
     slug: "karauzak",
     type: "district",
+    parentSlug: "karakalpakstan",
     regionSlug: "karakalpakstan",
     regionIso: "UZ-QR",
     names: { en: "Karauzak", uz: "Qorao'zak", uzc: "Қораўзак", ru: "Караузяк" },
@@ -461,6 +516,7 @@ export const districts: readonly District[] = [
   {
     slug: "kegeyli",
     type: "district",
+    parentSlug: "karakalpakstan",
     regionSlug: "karakalpakstan",
     regionIso: "UZ-QR",
     names: { en: "Kegeyli", uz: "Kegeyli", uzc: "Кегейли", ru: "Кегейли" },
@@ -469,6 +525,7 @@ export const districts: readonly District[] = [
   {
     slug: "kungrad",
     type: "district",
+    parentSlug: "karakalpakstan",
     regionSlug: "karakalpakstan",
     regionIso: "UZ-QR",
     names: { en: "Kungrad", uz: "Qo'ng'irot", uzc: "Қўнғирот", ru: "Кунград" },
@@ -477,6 +534,7 @@ export const districts: readonly District[] = [
   {
     slug: "kanlykul",
     type: "district",
+    parentSlug: "karakalpakstan",
     regionSlug: "karakalpakstan",
     regionIso: "UZ-QR",
     names: { en: "Kanlykul", uz: "Qanliko'l", uzc: "Қанликўл", ru: "Канлыкуль" },
@@ -485,6 +543,7 @@ export const districts: readonly District[] = [
   {
     slug: "muynak",
     type: "district",
+    parentSlug: "karakalpakstan",
     regionSlug: "karakalpakstan",
     regionIso: "UZ-QR",
     names: { en: "Muynak", uz: "Mo'ynoq", uzc: "Мўйноқ", ru: "Муйнак" },
@@ -493,6 +552,7 @@ export const districts: readonly District[] = [
   {
     slug: "nukus",
     type: "district",
+    parentSlug: "karakalpakstan",
     regionSlug: "karakalpakstan",
     regionIso: "UZ-QR",
     names: { en: "Nukus", uz: "Nukus", uzc: "Нукус", ru: "Нукус" },
@@ -501,6 +561,7 @@ export const districts: readonly District[] = [
   {
     slug: "takhiatash",
     type: "district",
+    parentSlug: "karakalpakstan",
     regionSlug: "karakalpakstan",
     regionIso: "UZ-QR",
     names: { en: "Takhiatash", uz: "Taxiatosh", uzc: "Тахиатош", ru: "Тахиаташ" },
@@ -509,6 +570,7 @@ export const districts: readonly District[] = [
   {
     slug: "takhtakupyr",
     type: "district",
+    parentSlug: "karakalpakstan",
     regionSlug: "karakalpakstan",
     regionIso: "UZ-QR",
     names: { en: "Takhtakupyr", uz: "Taxtako'pir", uzc: "Тахтакўпир", ru: "Тахтакупыр" },
@@ -517,6 +579,7 @@ export const districts: readonly District[] = [
   {
     slug: "turtkul",
     type: "district",
+    parentSlug: "karakalpakstan",
     regionSlug: "karakalpakstan",
     regionIso: "UZ-QR",
     names: { en: "Turtkul", uz: "To'rtko'l", uzc: "Тўрткўл", ru: "Турткуль" },
@@ -525,6 +588,7 @@ export const districts: readonly District[] = [
   {
     slug: "khojeyli",
     type: "district",
+    parentSlug: "karakalpakstan",
     regionSlug: "karakalpakstan",
     regionIso: "UZ-QR",
     names: { en: "Khojeyli", uz: "Xo'jayli", uzc: "Хўжайли", ru: "Ходжейли" },
@@ -533,6 +597,7 @@ export const districts: readonly District[] = [
   {
     slug: "chimbay",
     type: "district",
+    parentSlug: "karakalpakstan",
     regionSlug: "karakalpakstan",
     regionIso: "UZ-QR",
     names: { en: "Chimbay", uz: "Chimboy", uzc: "Чимбой", ru: "Чимбай" },
@@ -541,6 +606,7 @@ export const districts: readonly District[] = [
   {
     slug: "shumanai",
     type: "district",
+    parentSlug: "karakalpakstan",
     regionSlug: "karakalpakstan",
     regionIso: "UZ-QR",
     names: { en: "Shumanai", uz: "Shumanay", uzc: "Шуманай", ru: "Шуманай" },
@@ -549,6 +615,7 @@ export const districts: readonly District[] = [
   {
     slug: "ellikkala",
     type: "district",
+    parentSlug: "karakalpakstan",
     regionSlug: "karakalpakstan",
     regionIso: "UZ-QR",
     names: { en: "Ellikkala", uz: "Ellikkala", uzc: "Елликкала", ru: "Элликкала" },
@@ -559,6 +626,7 @@ export const districts: readonly District[] = [
   {
     slug: "akdarya",
     type: "district",
+    parentSlug: "samarkand",
     regionSlug: "samarkand",
     regionIso: "UZ-SA",
     names: { en: "Akdarya", uz: "Oqdaryo", uzc: "Оқдарё", ru: "Акдарья" },
@@ -567,6 +635,7 @@ export const districts: readonly District[] = [
   {
     slug: "bulungur",
     type: "district",
+    parentSlug: "samarkand",
     regionSlug: "samarkand",
     regionIso: "UZ-SA",
     names: { en: "Bulungur", uz: "Bulung'ur", uzc: "Булунғур", ru: "Булунгур" },
@@ -575,6 +644,7 @@ export const districts: readonly District[] = [
   {
     slug: "jomboy",
     type: "district",
+    parentSlug: "samarkand",
     regionSlug: "samarkand",
     regionIso: "UZ-SA",
     names: { en: "Jomboy", uz: "Jomboy", uzc: "Жомбой", ru: "Джамбай" },
@@ -583,6 +653,7 @@ export const districts: readonly District[] = [
   {
     slug: "ishtykhan",
     type: "district",
+    parentSlug: "samarkand",
     regionSlug: "samarkand",
     regionIso: "UZ-SA",
     names: { en: "Ishtykhan", uz: "Ishtixon", uzc: "Иштихон", ru: "Иштыхан" },
@@ -591,6 +662,7 @@ export const districts: readonly District[] = [
   {
     slug: "kattakurgan",
     type: "district",
+    parentSlug: "samarkand",
     regionSlug: "samarkand",
     regionIso: "UZ-SA",
     names: { en: "Kattakurgan", uz: "Kattaqo'rg'on", uzc: "Каттақўрғон", ru: "Каттакурган" },
@@ -599,6 +671,7 @@ export const districts: readonly District[] = [
   {
     slug: "koshrabad",
     type: "district",
+    parentSlug: "samarkand",
     regionSlug: "samarkand",
     regionIso: "UZ-SA",
     names: { en: "Koshrabad", uz: "Qo'shrabot", uzc: "Қўшработ", ru: "Кошрабад" },
@@ -607,6 +680,7 @@ export const districts: readonly District[] = [
   {
     slug: "narpai",
     type: "district",
+    parentSlug: "samarkand",
     regionSlug: "samarkand",
     regionIso: "UZ-SA",
     names: { en: "Narpai", uz: "Narpay", uzc: "Нарпай", ru: "Нарпай" },
@@ -615,6 +689,7 @@ export const districts: readonly District[] = [
   {
     slug: "payaryk",
     type: "district",
+    parentSlug: "samarkand",
     regionSlug: "samarkand",
     regionIso: "UZ-SA",
     names: { en: "Payaryk", uz: "Payariq", uzc: "Паяриқ", ru: "Пайарык" },
@@ -623,6 +698,7 @@ export const districts: readonly District[] = [
   {
     slug: "pastdargom",
     type: "district",
+    parentSlug: "samarkand",
     regionSlug: "samarkand",
     regionIso: "UZ-SA",
     names: { en: "Pastdargom", uz: "Pastdarg'om", uzc: "Пастдарғом", ru: "Пастдаргом" },
@@ -631,6 +707,7 @@ export const districts: readonly District[] = [
   {
     slug: "pakhtachi",
     type: "district",
+    parentSlug: "samarkand",
     regionSlug: "samarkand",
     regionIso: "UZ-SA",
     names: { en: "Pakhtachi", uz: "Paxtachi", uzc: "Пахтачи", ru: "Пахтачи" },
@@ -639,6 +716,7 @@ export const districts: readonly District[] = [
   {
     slug: "samarkand",
     type: "district",
+    parentSlug: "samarkand",
     regionSlug: "samarkand",
     regionIso: "UZ-SA",
     names: { en: "Samarkand", uz: "Samarqand", uzc: "Самарқанд", ru: "Самарканд" },
@@ -647,6 +725,7 @@ export const districts: readonly District[] = [
   {
     slug: "nurabad",
     type: "district",
+    parentSlug: "samarkand",
     regionSlug: "samarkand",
     regionIso: "UZ-SA",
     names: { en: "Nurabad", uz: "Nurobod", uzc: "Нуробод", ru: "Нурабад" },
@@ -655,6 +734,7 @@ export const districts: readonly District[] = [
   {
     slug: "urgut",
     type: "district",
+    parentSlug: "samarkand",
     regionSlug: "samarkand",
     regionIso: "UZ-SA",
     names: { en: "Urgut", uz: "Urgut", uzc: "Ургут", ru: "Ургут" },
@@ -663,6 +743,7 @@ export const districts: readonly District[] = [
   {
     slug: "tailak",
     type: "district",
+    parentSlug: "samarkand",
     regionSlug: "samarkand",
     regionIso: "UZ-SA",
     names: { en: "Tailak", uz: "Tayloq", uzc: "Тайлоқ", ru: "Тайляк" },
@@ -673,6 +754,7 @@ export const districts: readonly District[] = [
   {
     slug: "akaltyn",
     type: "district",
+    parentSlug: "syrdarya",
     regionSlug: "syrdarya",
     regionIso: "UZ-SI",
     names: { en: "Akaltyn", uz: "Oqoltin", uzc: "Оқолтин", ru: "Акалтын" },
@@ -681,6 +763,7 @@ export const districts: readonly District[] = [
   {
     slug: "bayaut",
     type: "district",
+    parentSlug: "syrdarya",
     regionSlug: "syrdarya",
     regionIso: "UZ-SI",
     names: { en: "Bayaut", uz: "Boyovut", uzc: "Боёвут", ru: "Баяут" },
@@ -689,6 +772,7 @@ export const districts: readonly District[] = [
   {
     slug: "saykhunabad",
     type: "district",
+    parentSlug: "syrdarya",
     regionSlug: "syrdarya",
     regionIso: "UZ-SI",
     names: { en: "Saykhunabad", uz: "Sayxunobod", uzc: "Сайхунобод", ru: "Сайхунабад" },
@@ -697,6 +781,7 @@ export const districts: readonly District[] = [
   {
     slug: "gulistan",
     type: "district",
+    parentSlug: "syrdarya",
     regionSlug: "syrdarya",
     regionIso: "UZ-SI",
     names: { en: "Gulistan", uz: "Guliston", uzc: "Гулистон", ru: "Гулистан" },
@@ -705,6 +790,7 @@ export const districts: readonly District[] = [
   {
     slug: "sardoba",
     type: "district",
+    parentSlug: "syrdarya",
     regionSlug: "syrdarya",
     regionIso: "UZ-SI",
     names: { en: "Sardoba", uz: "Sardoba", uzc: "Сардоба", ru: "Сардоба" },
@@ -713,6 +799,7 @@ export const districts: readonly District[] = [
   {
     slug: "mirzaabad",
     type: "district",
+    parentSlug: "syrdarya",
     regionSlug: "syrdarya",
     regionIso: "UZ-SI",
     names: { en: "Mirzaabad", uz: "Mirzaobod", uzc: "Мирзаобод", ru: "Мирзаабад" },
@@ -721,6 +808,7 @@ export const districts: readonly District[] = [
   {
     slug: "syrdarya",
     type: "district",
+    parentSlug: "syrdarya",
     regionSlug: "syrdarya",
     regionIso: "UZ-SI",
     names: { en: "Syrdarya", uz: "Sirdaryo", uzc: "Сирдарё", ru: "Сырдарья" },
@@ -729,6 +817,7 @@ export const districts: readonly District[] = [
   {
     slug: "khovos",
     type: "district",
+    parentSlug: "syrdarya",
     regionSlug: "syrdarya",
     regionIso: "UZ-SI",
     names: { en: "Khovos", uz: "Xovos", uzc: "Ховос", ru: "Хавас" },
@@ -739,6 +828,7 @@ export const districts: readonly District[] = [
   {
     slug: "altynsay",
     type: "district",
+    parentSlug: "surkhandarya",
     regionSlug: "surkhandarya",
     regionIso: "UZ-SU",
     names: { en: "Altynsay", uz: "Oltinsoy", uzc: "Олтинсой", ru: "Алтынсай" },
@@ -747,6 +837,7 @@ export const districts: readonly District[] = [
   {
     slug: "angor",
     type: "district",
+    parentSlug: "surkhandarya",
     regionSlug: "surkhandarya",
     regionIso: "UZ-SU",
     names: { en: "Angor", uz: "Angor", uzc: "Ангор", ru: "Ангор" },
@@ -755,6 +846,7 @@ export const districts: readonly District[] = [
   {
     slug: "bandykhan",
     type: "district",
+    parentSlug: "surkhandarya",
     regionSlug: "surkhandarya",
     regionIso: "UZ-SU",
     names: { en: "Bandykhan", uz: "Bandixon", uzc: "Бандихон", ru: "Бандихон" },
@@ -763,6 +855,7 @@ export const districts: readonly District[] = [
   {
     slug: "baysun",
     type: "district",
+    parentSlug: "surkhandarya",
     regionSlug: "surkhandarya",
     regionIso: "UZ-SU",
     names: { en: "Baysun", uz: "Boysun", uzc: "Бойсун", ru: "Байсун" },
@@ -771,6 +864,7 @@ export const districts: readonly District[] = [
   {
     slug: "muzrabad",
     type: "district",
+    parentSlug: "surkhandarya",
     regionSlug: "surkhandarya",
     regionIso: "UZ-SU",
     names: { en: "Muzrabad", uz: "Muzrabot", uzc: "Музработ", ru: "Музрабад" },
@@ -779,6 +873,7 @@ export const districts: readonly District[] = [
   {
     slug: "denau",
     type: "district",
+    parentSlug: "surkhandarya",
     regionSlug: "surkhandarya",
     regionIso: "UZ-SU",
     names: { en: "Denau", uz: "Denov", uzc: "Денов", ru: "Денау" },
@@ -787,6 +882,7 @@ export const districts: readonly District[] = [
   {
     slug: "jarkurgan",
     type: "district",
+    parentSlug: "surkhandarya",
     regionSlug: "surkhandarya",
     regionIso: "UZ-SU",
     names: { en: "Jarkurgan", uz: "Jarqo'rg'on", uzc: "Жарқўрғон", ru: "Джаркурган" },
@@ -795,6 +891,7 @@ export const districts: readonly District[] = [
   {
     slug: "kumkurgan",
     type: "district",
+    parentSlug: "surkhandarya",
     regionSlug: "surkhandarya",
     regionIso: "UZ-SU",
     names: { en: "Kumkurgan", uz: "Qumqo'rg'on", uzc: "Қумқўрғон", ru: "Кумкурган" },
@@ -803,6 +900,7 @@ export const districts: readonly District[] = [
   {
     slug: "kizirik",
     type: "district",
+    parentSlug: "surkhandarya",
     regionSlug: "surkhandarya",
     regionIso: "UZ-SU",
     names: { en: "Kizirik", uz: "Qiziriq", uzc: "Қизириқ", ru: "Кизирик" },
@@ -811,6 +909,7 @@ export const districts: readonly District[] = [
   {
     slug: "sariosia",
     type: "district",
+    parentSlug: "surkhandarya",
     regionSlug: "surkhandarya",
     regionIso: "UZ-SU",
     names: { en: "Sariosia", uz: "Sariosiyo", uzc: "Сариосиё", ru: "Сариасия" },
@@ -819,6 +918,7 @@ export const districts: readonly District[] = [
   {
     slug: "termiz",
     type: "district",
+    parentSlug: "surkhandarya",
     regionSlug: "surkhandarya",
     regionIso: "UZ-SU",
     names: { en: "Termiz", uz: "Termiz", uzc: "Термиз", ru: "Термез" },
@@ -827,6 +927,7 @@ export const districts: readonly District[] = [
   {
     slug: "uzun",
     type: "district",
+    parentSlug: "surkhandarya",
     regionSlug: "surkhandarya",
     regionIso: "UZ-SU",
     names: { en: "Uzun", uz: "Uzun", uzc: "Узун", ru: "Узун" },
@@ -835,6 +936,7 @@ export const districts: readonly District[] = [
   {
     slug: "sherabad",
     type: "district",
+    parentSlug: "surkhandarya",
     regionSlug: "surkhandarya",
     regionIso: "UZ-SU",
     names: { en: "Sherabad", uz: "Sherobod", uzc: "Шеробод", ru: "Шерабад" },
@@ -843,6 +945,7 @@ export const districts: readonly District[] = [
   {
     slug: "shurchi",
     type: "district",
+    parentSlug: "surkhandarya",
     regionSlug: "surkhandarya",
     regionIso: "UZ-SU",
     names: { en: "Shurchi", uz: "Sho'rchi", uzc: "Шўрчи", ru: "Шурчи" },
@@ -853,6 +956,7 @@ export const districts: readonly District[] = [
   {
     slug: "uchtepa",
     type: "district",
+    parentSlug: "tashkent_city",
     regionSlug: "tashkent_city",
     regionIso: "UZ-TK",
     names: { en: "Uchtepa", uz: "Uchtepa", uzc: "Учтепа", ru: "Учтепа" },
@@ -861,6 +965,7 @@ export const districts: readonly District[] = [
   {
     slug: "bektemir",
     type: "district",
+    parentSlug: "tashkent_city",
     regionSlug: "tashkent_city",
     regionIso: "UZ-TK",
     names: { en: "Bektemir", uz: "Bektemir", uzc: "Бектемир", ru: "Бектемир" },
@@ -869,6 +974,7 @@ export const districts: readonly District[] = [
   {
     slug: "yunusabad",
     type: "district",
+    parentSlug: "tashkent_city",
     regionSlug: "tashkent_city",
     regionIso: "UZ-TK",
     names: { en: "Yunusabad", uz: "Yunusobod", uzc: "Юнусобод", ru: "Юнусабад" },
@@ -877,6 +983,7 @@ export const districts: readonly District[] = [
   {
     slug: "mirzo_ulugbek",
     type: "district",
+    parentSlug: "tashkent_city",
     regionSlug: "tashkent_city",
     regionIso: "UZ-TK",
     names: { en: "Mirzo Ulugbek", uz: "Mirzo Ulug'bek", uzc: "Мирзо Улуғбек", ru: "Мирзо Улугбек" },
@@ -885,6 +992,7 @@ export const districts: readonly District[] = [
   {
     slug: "mirabad",
     type: "district",
+    parentSlug: "tashkent_city",
     regionSlug: "tashkent_city",
     regionIso: "UZ-TK",
     names: { en: "Mirabad", uz: "Mirobod", uzc: "Миробод", ru: "Мирабад" },
@@ -893,6 +1001,7 @@ export const districts: readonly District[] = [
   {
     slug: "shaykhantakhur",
     type: "district",
+    parentSlug: "tashkent_city",
     regionSlug: "tashkent_city",
     regionIso: "UZ-TK",
     names: { en: "Shaykhantakhur", uz: "Shayxontoxur", uzc: "Шайхонтохур", ru: "Шайхантахур" },
@@ -901,6 +1010,7 @@ export const districts: readonly District[] = [
   {
     slug: "almazar",
     type: "district",
+    parentSlug: "tashkent_city",
     regionSlug: "tashkent_city",
     regionIso: "UZ-TK",
     names: { en: "Almazar", uz: "Olmazor", uzc: "Олмазор", ru: "Алмазар" },
@@ -909,6 +1019,7 @@ export const districts: readonly District[] = [
   {
     slug: "sergeli",
     type: "district",
+    parentSlug: "tashkent_city",
     regionSlug: "tashkent_city",
     regionIso: "UZ-TK",
     names: { en: "Sergeli", uz: "Sirg'ali", uzc: "Сирғали", ru: "Сергели" },
@@ -917,6 +1028,7 @@ export const districts: readonly District[] = [
   {
     slug: "yakkasaray",
     type: "district",
+    parentSlug: "tashkent_city",
     regionSlug: "tashkent_city",
     regionIso: "UZ-TK",
     names: { en: "Yakkasaray", uz: "Yakkasaroy", uzc: "Яккасарой", ru: "Яккасарай" },
@@ -925,6 +1037,7 @@ export const districts: readonly District[] = [
   {
     slug: "yashnabad",
     type: "district",
+    parentSlug: "tashkent_city",
     regionSlug: "tashkent_city",
     regionIso: "UZ-TK",
     names: { en: "Yashnabad", uz: "Yashnobod", uzc: "Яшнобод", ru: "Яшнабад" },
@@ -933,6 +1046,7 @@ export const districts: readonly District[] = [
   {
     slug: "yangikhayot",
     type: "district",
+    parentSlug: "tashkent_city",
     regionSlug: "tashkent_city",
     regionIso: "UZ-TK",
     names: { en: "Yangikhayot", uz: "Yangihayot", uzc: "Янгиҳаёт", ru: "Янгихаёт" },
@@ -941,6 +1055,7 @@ export const districts: readonly District[] = [
   {
     slug: "chilanzar",
     type: "district",
+    parentSlug: "tashkent_city",
     regionSlug: "tashkent_city",
     regionIso: "UZ-TK",
     names: { en: "Chilanzar", uz: "Chilonzor", uzc: "Чилонзор", ru: "Чиланзар" },
@@ -951,6 +1066,7 @@ export const districts: readonly District[] = [
   {
     slug: "akkurgan",
     type: "district",
+    parentSlug: "tashkent",
     regionSlug: "tashkent",
     regionIso: "UZ-TO",
     names: { en: "Akkurgan", uz: "Oqqo'rg'on", uzc: "Оққўрғон", ru: "Аккурган" },
@@ -959,6 +1075,7 @@ export const districts: readonly District[] = [
   {
     slug: "akhangaran",
     type: "district",
+    parentSlug: "tashkent",
     regionSlug: "tashkent",
     regionIso: "UZ-TO",
     names: { en: "Akhangaran", uz: "Ohangaron", uzc: "Оҳангарон", ru: "Ахангаран" },
@@ -967,6 +1084,7 @@ export const districts: readonly District[] = [
   {
     slug: "bekabad",
     type: "district",
+    parentSlug: "tashkent",
     regionSlug: "tashkent",
     regionIso: "UZ-TO",
     names: { en: "Bekabad", uz: "Bekobod", uzc: "Бекобод", ru: "Бекабад" },
@@ -975,6 +1093,7 @@ export const districts: readonly District[] = [
   {
     slug: "bostanlyk",
     type: "district",
+    parentSlug: "tashkent",
     regionSlug: "tashkent",
     regionIso: "UZ-TO",
     names: { en: "Bostanlyk", uz: "Bo'stonliq", uzc: "Бўстонлиқ", ru: "Бостанлык" },
@@ -983,6 +1102,7 @@ export const districts: readonly District[] = [
   {
     slug: "buka",
     type: "district",
+    parentSlug: "tashkent",
     regionSlug: "tashkent",
     regionIso: "UZ-TO",
     names: { en: "Buka", uz: "Bo'ka", uzc: "Бўка", ru: "Бука" },
@@ -991,6 +1111,7 @@ export const districts: readonly District[] = [
   {
     slug: "kuyichirchik",
     type: "district",
+    parentSlug: "tashkent",
     regionSlug: "tashkent",
     regionIso: "UZ-TO",
     names: { en: "Kuyichirchik", uz: "Quyichirchiq", uzc: "Қуйичирчиқ", ru: "Куйичирчик" },
@@ -999,6 +1120,7 @@ export const districts: readonly District[] = [
   {
     slug: "zangiata",
     type: "district",
+    parentSlug: "tashkent",
     regionSlug: "tashkent",
     regionIso: "UZ-TO",
     names: { en: "Zangiata", uz: "Zangiota", uzc: "Зангиота", ru: "Зангиата" },
@@ -1007,6 +1129,7 @@ export const districts: readonly District[] = [
   {
     slug: "yukorichirchik",
     type: "district",
+    parentSlug: "tashkent",
     regionSlug: "tashkent",
     regionIso: "UZ-TO",
     names: { en: "Yukorichirchik", uz: "Yuqorichirchiq", uzc: "Юқоричирчиқ", ru: "Юкоричирчик" },
@@ -1015,6 +1138,7 @@ export const districts: readonly District[] = [
   {
     slug: "kibray",
     type: "district",
+    parentSlug: "tashkent",
     regionSlug: "tashkent",
     regionIso: "UZ-TO",
     names: { en: "Kibray", uz: "Qibray", uzc: "Қибрай", ru: "Кибрай" },
@@ -1023,6 +1147,7 @@ export const districts: readonly District[] = [
   {
     slug: "parkent",
     type: "district",
+    parentSlug: "tashkent",
     regionSlug: "tashkent",
     regionIso: "UZ-TO",
     names: { en: "Parkent", uz: "Parkent", uzc: "Паркент", ru: "Паркент" },
@@ -1031,6 +1156,7 @@ export const districts: readonly District[] = [
   {
     slug: "piskent",
     type: "district",
+    parentSlug: "tashkent",
     regionSlug: "tashkent",
     regionIso: "UZ-TO",
     names: { en: "Piskent", uz: "Piskent", uzc: "Пискент", ru: "Пскент" },
@@ -1039,6 +1165,7 @@ export const districts: readonly District[] = [
   {
     slug: "urtachirchik",
     type: "district",
+    parentSlug: "tashkent",
     regionSlug: "tashkent",
     regionIso: "UZ-TO",
     names: { en: "Urtachirchik", uz: "O'rtachirchiq", uzc: "Ўртачирчиқ", ru: "Уртачирчик" },
@@ -1047,6 +1174,7 @@ export const districts: readonly District[] = [
   {
     slug: "chinaz",
     type: "district",
+    parentSlug: "tashkent",
     regionSlug: "tashkent",
     regionIso: "UZ-TO",
     names: { en: "Chinaz", uz: "Chinoz", uzc: "Чиноз", ru: "Чиназ" },
@@ -1055,6 +1183,7 @@ export const districts: readonly District[] = [
   {
     slug: "yangiyul",
     type: "district",
+    parentSlug: "tashkent",
     regionSlug: "tashkent",
     regionIso: "UZ-TO",
     names: { en: "Yangiyul", uz: "Yangiyo'l", uzc: "Янгийўл", ru: "Янгиюль" },
@@ -1063,6 +1192,7 @@ export const districts: readonly District[] = [
   {
     slug: "tashkent",
     type: "district",
+    parentSlug: "tashkent",
     regionSlug: "tashkent",
     regionIso: "UZ-TO",
     names: { en: "Tashkent", uz: "Toshkent", uzc: "Тошкент", ru: "Ташкент" },
@@ -1073,6 +1203,7 @@ export const districts: readonly District[] = [
   {
     slug: "altyaryk",
     type: "district",
+    parentSlug: "fergana",
     regionSlug: "fergana",
     regionIso: "UZ-FA",
     names: { en: "Altyaryk", uz: "Oltiariq", uzc: "Олтиариқ", ru: "Алтыарык" },
@@ -1081,6 +1212,7 @@ export const districts: readonly District[] = [
   {
     slug: "kushtepa",
     type: "district",
+    parentSlug: "fergana",
     regionSlug: "fergana",
     regionIso: "UZ-FA",
     names: { en: "Kushtepa", uz: "Qo'shtepa", uzc: "Қўштепа", ru: "Куштепа" },
@@ -1089,6 +1221,7 @@ export const districts: readonly District[] = [
   {
     slug: "baghdad",
     type: "district",
+    parentSlug: "fergana",
     regionSlug: "fergana",
     regionIso: "UZ-FA",
     names: { en: "Baghdad", uz: "Bog'dod", uzc: "Боғдод", ru: "Багдад" },
@@ -1097,6 +1230,7 @@ export const districts: readonly District[] = [
   {
     slug: "buvayda",
     type: "district",
+    parentSlug: "fergana",
     regionSlug: "fergana",
     regionIso: "UZ-FA",
     names: { en: "Buvayda", uz: "Buvayda", uzc: "Бувайда", ru: "Бувайда" },
@@ -1105,6 +1239,7 @@ export const districts: readonly District[] = [
   {
     slug: "besharik",
     type: "district",
+    parentSlug: "fergana",
     regionSlug: "fergana",
     regionIso: "UZ-FA",
     names: { en: "Besharik", uz: "Beshariq", uzc: "Бешариқ", ru: "Бешарык" },
@@ -1113,6 +1248,7 @@ export const districts: readonly District[] = [
   {
     slug: "kuva",
     type: "district",
+    parentSlug: "fergana",
     regionSlug: "fergana",
     regionIso: "UZ-FA",
     names: { en: "Kuva", uz: "Quva", uzc: "Қува", ru: "Кува" },
@@ -1121,6 +1257,7 @@ export const districts: readonly District[] = [
   {
     slug: "uchkuprik",
     type: "district",
+    parentSlug: "fergana",
     regionSlug: "fergana",
     regionIso: "UZ-FA",
     names: { en: "Uchkuprik", uz: "Uchko'prik", uzc: "Учкўприк", ru: "Учкуприк" },
@@ -1129,6 +1266,7 @@ export const districts: readonly District[] = [
   {
     slug: "rishtan",
     type: "district",
+    parentSlug: "fergana",
     regionSlug: "fergana",
     regionIso: "UZ-FA",
     names: { en: "Rishtan", uz: "Rishton", uzc: "Риштон", ru: "Риштан" },
@@ -1137,6 +1275,7 @@ export const districts: readonly District[] = [
   {
     slug: "sokh",
     type: "district",
+    parentSlug: "fergana",
     regionSlug: "fergana",
     regionIso: "UZ-FA",
     names: { en: "Sokh", uz: "So'x", uzc: "Сўх", ru: "Сох" },
@@ -1145,6 +1284,7 @@ export const districts: readonly District[] = [
   {
     slug: "tashlak",
     type: "district",
+    parentSlug: "fergana",
     regionSlug: "fergana",
     regionIso: "UZ-FA",
     names: { en: "Tashlak", uz: "Toshloq", uzc: "Тошлоқ", ru: "Ташлак" },
@@ -1153,6 +1293,7 @@ export const districts: readonly District[] = [
   {
     slug: "uzbekistan",
     type: "district",
+    parentSlug: "fergana",
     regionSlug: "fergana",
     regionIso: "UZ-FA",
     names: { en: "Uzbekistan", uz: "O'zbekiston", uzc: "Ўзбекистон", ru: "Узбекистан" },
@@ -1161,6 +1302,7 @@ export const districts: readonly District[] = [
   {
     slug: "fergana",
     type: "district",
+    parentSlug: "fergana",
     regionSlug: "fergana",
     regionIso: "UZ-FA",
     names: { en: "Fergana", uz: "Farg'ona", uzc: "Фарғона", ru: "Фергана" },
@@ -1169,6 +1311,7 @@ export const districts: readonly District[] = [
   {
     slug: "dangara",
     type: "district",
+    parentSlug: "fergana",
     regionSlug: "fergana",
     regionIso: "UZ-FA",
     names: { en: "Dangara", uz: "Dang'ara", uzc: "Данғара", ru: "Дангара" },
@@ -1177,6 +1320,7 @@ export const districts: readonly District[] = [
   {
     slug: "furkat",
     type: "district",
+    parentSlug: "fergana",
     regionSlug: "fergana",
     regionIso: "UZ-FA",
     names: { en: "Furkat", uz: "Furqat", uzc: "Фурқат", ru: "Фуркат" },
@@ -1185,6 +1329,7 @@ export const districts: readonly District[] = [
   {
     slug: "yazyavan",
     type: "district",
+    parentSlug: "fergana",
     regionSlug: "fergana",
     regionIso: "UZ-FA",
     names: { en: "Yazyavan", uz: "Yozyovon", uzc: "Ёзёвон", ru: "Язъяван" },
@@ -1195,6 +1340,7 @@ export const districts: readonly District[] = [
   {
     slug: "mingbulak",
     type: "district",
+    parentSlug: "namangan",
     regionSlug: "namangan",
     regionIso: "UZ-NG",
     names: { en: "Mingbulak", uz: "Mingbuloq", uzc: "Мингбулоқ", ru: "Мингбулак" },
@@ -1203,6 +1349,7 @@ export const districts: readonly District[] = [
   {
     slug: "kasansay",
     type: "district",
+    parentSlug: "namangan",
     regionSlug: "namangan",
     regionIso: "UZ-NG",
     names: { en: "Kasansay", uz: "Kosonsoy", uzc: "Косонсой", ru: "Касансай" },
@@ -1211,6 +1358,7 @@ export const districts: readonly District[] = [
   {
     slug: "namangan",
     type: "district",
+    parentSlug: "namangan",
     regionSlug: "namangan",
     regionIso: "UZ-NG",
     names: { en: "Namangan", uz: "Namangan", uzc: "Наманган", ru: "Наманган" },
@@ -1219,6 +1367,7 @@ export const districts: readonly District[] = [
   {
     slug: "naryn",
     type: "district",
+    parentSlug: "namangan",
     regionSlug: "namangan",
     regionIso: "UZ-NG",
     names: { en: "Naryn", uz: "Norin", uzc: "Норин", ru: "Нарын" },
@@ -1227,6 +1376,7 @@ export const districts: readonly District[] = [
   {
     slug: "pop",
     type: "district",
+    parentSlug: "namangan",
     regionSlug: "namangan",
     regionIso: "UZ-NG",
     names: { en: "Pop", uz: "Pop", uzc: "Поп", ru: "Пап" },
@@ -1235,6 +1385,7 @@ export const districts: readonly District[] = [
   {
     slug: "turakurgan",
     type: "district",
+    parentSlug: "namangan",
     regionSlug: "namangan",
     regionIso: "UZ-NG",
     names: { en: "Turakurgan", uz: "To'raqo'rg'on", uzc: "Тўрақўрғон", ru: "Туракурган" },
@@ -1243,6 +1394,7 @@ export const districts: readonly District[] = [
   {
     slug: "uychi",
     type: "district",
+    parentSlug: "namangan",
     regionSlug: "namangan",
     regionIso: "UZ-NG",
     names: { en: "Uychi", uz: "Uychi", uzc: "Уйчи", ru: "Уйчи" },
@@ -1251,6 +1403,7 @@ export const districts: readonly District[] = [
   {
     slug: "uchkurgan",
     type: "district",
+    parentSlug: "namangan",
     regionSlug: "namangan",
     regionIso: "UZ-NG",
     names: { en: "Uchkurgan", uz: "Uchqo'rg'on", uzc: "Учқўрғон", ru: "Учкурган" },
@@ -1259,6 +1412,7 @@ export const districts: readonly District[] = [
   {
     slug: "chartak",
     type: "district",
+    parentSlug: "namangan",
     regionSlug: "namangan",
     regionIso: "UZ-NG",
     names: { en: "Chartak", uz: "Chortoq", uzc: "Чортоқ", ru: "Чартак" },
@@ -1267,6 +1421,7 @@ export const districts: readonly District[] = [
   {
     slug: "chust",
     type: "district",
+    parentSlug: "namangan",
     regionSlug: "namangan",
     regionIso: "UZ-NG",
     names: { en: "Chust", uz: "Chust", uzc: "Чуст", ru: "Чуст" },
@@ -1275,6 +1430,7 @@ export const districts: readonly District[] = [
   {
     slug: "yangikurgan",
     type: "district",
+    parentSlug: "namangan",
     regionSlug: "namangan",
     regionIso: "UZ-NG",
     names: { en: "Yangikurgan", uz: "Yangiqo'rg'on", uzc: "Янгиқўрғон", ru: "Янгикурган" },
@@ -1285,6 +1441,7 @@ export const districts: readonly District[] = [
   {
     slug: "kanimekh",
     type: "district",
+    parentSlug: "navoi",
     regionSlug: "navoi",
     regionIso: "UZ-NW",
     names: { en: "Kanimekh", uz: "Konimex", uzc: "Конимех", ru: "Канимех" },
@@ -1293,6 +1450,7 @@ export const districts: readonly District[] = [
   {
     slug: "kyzyltepa",
     type: "district",
+    parentSlug: "navoi",
     regionSlug: "navoi",
     regionIso: "UZ-NW",
     names: { en: "Kyzyltepa", uz: "Qiziltepa", uzc: "Қизилтепа", ru: "Кызылтепа" },
@@ -1301,6 +1459,7 @@ export const districts: readonly District[] = [
   {
     slug: "navbahor",
     type: "district",
+    parentSlug: "navoi",
     regionSlug: "navoi",
     regionIso: "UZ-NW",
     names: { en: "Navbahor", uz: "Navbahor", uzc: "Навбаҳор", ru: "Навбахор" },
@@ -1309,6 +1468,7 @@ export const districts: readonly District[] = [
   {
     slug: "karmana",
     type: "district",
+    parentSlug: "navoi",
     regionSlug: "navoi",
     regionIso: "UZ-NW",
     names: { en: "Karmana", uz: "Karmana", uzc: "Кармана", ru: "Кармана" },
@@ -1317,6 +1477,7 @@ export const districts: readonly District[] = [
   {
     slug: "nurota",
     type: "district",
+    parentSlug: "navoi",
     regionSlug: "navoi",
     regionIso: "UZ-NW",
     names: { en: "Nurota", uz: "Nurota", uzc: "Нурота", ru: "Нурата" },
@@ -1325,6 +1486,7 @@ export const districts: readonly District[] = [
   {
     slug: "tomdy",
     type: "district",
+    parentSlug: "navoi",
     regionSlug: "navoi",
     regionIso: "UZ-NW",
     names: { en: "Tomdy", uz: "Tomdi", uzc: "Томди", ru: "Тамды" },
@@ -1333,6 +1495,7 @@ export const districts: readonly District[] = [
   {
     slug: "uchkuduk",
     type: "district",
+    parentSlug: "navoi",
     regionSlug: "navoi",
     regionIso: "UZ-NW",
     names: { en: "Uchkuduk", uz: "Uchquduq", uzc: "Учқудуқ", ru: "Учкудук" },
@@ -1341,6 +1504,7 @@ export const districts: readonly District[] = [
   {
     slug: "khatyrchi",
     type: "district",
+    parentSlug: "navoi",
     regionSlug: "navoi",
     regionIso: "UZ-NW",
     names: { en: "Khatyrchi", uz: "Xatirchi", uzc: "Хатирчи", ru: "Хатырчи" },
@@ -1351,6 +1515,7 @@ export const districts: readonly District[] = [
   {
     slug: "bagat",
     type: "district",
+    parentSlug: "khorezm",
     regionSlug: "khorezm",
     regionIso: "UZ-XO",
     names: { en: "Bagat", uz: "Bog'ot", uzc: "Боғот", ru: "Багат" },
@@ -1359,6 +1524,7 @@ export const districts: readonly District[] = [
   {
     slug: "gurlan",
     type: "district",
+    parentSlug: "khorezm",
     regionSlug: "khorezm",
     regionIso: "UZ-XO",
     names: { en: "Gurlan", uz: "Gurlan", uzc: "Гурлан", ru: "Гурлен" },
@@ -1367,6 +1533,7 @@ export const districts: readonly District[] = [
   {
     slug: "kushkupyr",
     type: "district",
+    parentSlug: "khorezm",
     regionSlug: "khorezm",
     regionIso: "UZ-XO",
     names: { en: "Kushkupyr", uz: "Qo'shko'pir", uzc: "Қўшкўпир", ru: "Кошкупыр" },
@@ -1375,6 +1542,7 @@ export const districts: readonly District[] = [
   {
     slug: "urgench",
     type: "district",
+    parentSlug: "khorezm",
     regionSlug: "khorezm",
     regionIso: "UZ-XO",
     names: { en: "Urgench", uz: "Urganch", uzc: "Урганч", ru: "Ургенч" },
@@ -1383,6 +1551,7 @@ export const districts: readonly District[] = [
   {
     slug: "khazarasp",
     type: "district",
+    parentSlug: "khorezm",
     regionSlug: "khorezm",
     regionIso: "UZ-XO",
     names: { en: "Khazarasp", uz: "Xazorasp", uzc: "Хазорасп", ru: "Хазарасп" },
@@ -1391,6 +1560,7 @@ export const districts: readonly District[] = [
   {
     slug: "tuprakkala",
     type: "district",
+    parentSlug: "khorezm",
     regionSlug: "khorezm",
     regionIso: "UZ-XO",
     names: { en: "Tuprakkala", uz: "Tuproqqal'a", uzc: "Тупроққалъа", ru: "Тупраккала" },
@@ -1399,6 +1569,7 @@ export const districts: readonly District[] = [
   {
     slug: "khanka",
     type: "district",
+    parentSlug: "khorezm",
     regionSlug: "khorezm",
     regionIso: "UZ-XO",
     names: { en: "Khanka", uz: "Xonqa", uzc: "Хонқа", ru: "Ханка" },
@@ -1407,6 +1578,7 @@ export const districts: readonly District[] = [
   {
     slug: "khiva",
     type: "district",
+    parentSlug: "khorezm",
     regionSlug: "khorezm",
     regionIso: "UZ-XO",
     names: { en: "Khiva", uz: "Xiva", uzc: "Хива", ru: "Хива" },
@@ -1415,6 +1587,7 @@ export const districts: readonly District[] = [
   {
     slug: "shavat",
     type: "district",
+    parentSlug: "khorezm",
     regionSlug: "khorezm",
     regionIso: "UZ-XO",
     names: { en: "Shavat", uz: "Shovot", uzc: "Шовот", ru: "Шават" },
@@ -1423,6 +1596,7 @@ export const districts: readonly District[] = [
   {
     slug: "yangiaryk",
     type: "district",
+    parentSlug: "khorezm",
     regionSlug: "khorezm",
     regionIso: "UZ-XO",
     names: { en: "Yangiaryk", uz: "Yangiariq", uzc: "Янгиариқ", ru: "Янгиарык" },
@@ -1431,6 +1605,7 @@ export const districts: readonly District[] = [
   {
     slug: "yangibazar",
     type: "district",
+    parentSlug: "khorezm",
     regionSlug: "khorezm",
     regionIso: "UZ-XO",
     names: { en: "Yangibazar", uz: "Yangibozor", uzc: "Янгибозор", ru: "Янгибазар" },

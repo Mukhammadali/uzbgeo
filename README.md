@@ -2,11 +2,11 @@
 
 **English** · [O'zbekcha](./README.uz.md) · [Русский](./README.ru.md)
 
-Geographical data for the Republic of Uzbekistan — regions, districts, and cities of regional significance, with both **short names** and **full official titles** in 4 languages (English, Uzbek Latin, Uzbek Cyrillic, Russian).
+Geographical data for the Republic of Uzbekistan — regions, districts, and cities, with both **short names** and **full official titles** in 4 languages (English, Uzbek Latin, Uzbek Cyrillic, Russian).
 
 - **14** top-level administrative units (12 viloyats + Karakalpakstan + Tashkent City)
 - **175** districts (`tumani`)
-- **31** cities of regional significance (`shahar`)
+- **109** cities (`shahar`) — **31** of regional significance + **78** of district subordination
 - **Tashkent Metro** — 4 lines, 50 stations, cross-line transfers (see [METRO.md](./METRO.md))
 - **ISO 3166-2:UZ** codes for all regions
 - **Zero runtime dependencies**, browser-safe, ESM + CJS, written in TypeScript
@@ -35,8 +35,10 @@ import {
   getDistrict,
   getDistrictsByRegionId,
   getAllCities,
+  getRegionalCities,
   getCity,
   getCitiesByRegionId,
+  getCitiesByDistrictId,
 } from "uzbgeo";
 
 const regions = getAllRegions();
@@ -67,6 +69,18 @@ console.log(bukharaDistricts.length); // 11
 
 const tashkentCityDistricts = getDistrictsByRegionId("tashkent_city");
 console.log(tashkentCityDistricts.length); // 12
+
+// Cities come in two tiers — regional significance and district subordination.
+console.log(getAllCities().length);        // 109 (all cities)
+console.log(getRegionalCities().length);   // 31  (the regional-significance subset)
+
+// District-subordinate cities know their parent district:
+const gazalkent = getCity("gazalkent_city");
+console.log(gazalkent?.subordination);     // "district"
+console.log(gazalkent?.districtSlug);      // "bostanlyk"
+
+// Look cities up by their parent district:
+console.log(getCitiesByDistrictId("bostanlyk").map((c) => c.slug)); // ["gazalkent_city"]
 ```
 
 ### CommonJS
@@ -97,15 +111,26 @@ All functions are pure and operate on frozen data. Lookups by region accept eith
 | `getDistrict(slug)` | One district, or `undefined` |
 | `getDistrictsByRegionId(slugOrIso)` | All districts in a given region |
 
-### Cities of regional significance (`shahar`)
+### Cities (`shahar`)
 
-These are administratively parallel to districts, not nested inside them. The slugs are suffixed with `_city` to distinguish them from same-named districts (e.g., `bukhara_city` vs `bukhara`).
+Cities come in two administrative tiers, told apart by the `subordination` field:
+
+- **`"regional"`** — cities of regional significance, administratively parallel to districts (31 nationwide).
+- **`"district"`** — cities of district subordination, nested inside a district (`parentSlug`/`districtSlug` point at the parent district).
+
+Slugs are suffixed with `_city` to distinguish them from same-named districts (e.g., `bukhara_city` vs `bukhara`).
 
 | Function | Returns |
 |---|---|
-| `getAllCities()` | All 31 cities of regional significance |
+| `getAllCities()` | **All 109 cities** (both tiers) |
+| `getRegionalCities()` | The 31 cities of regional significance |
 | `getCity(slug)` | One city, or `undefined` |
-| `getCitiesByRegionId(slugOrIso)` | All cities in a given region |
+| `getCitiesByRegionId(slugOrIso)` | All cities in a region (both tiers) |
+| `getCitiesByDistrictId(slug)` | District-subordinate cities inside a district |
+
+> **Migrating from v1:** `getAllCities()` used to return only the 31 regional-significance cities. In v2 it returns **all** cities; call **`getRegionalCities()`** for the old behavior. See the [CHANGELOG](./CHANGELOG.md).
+
+> **Coverage note:** district-subordinate cities include only high-confidence entries. A handful of cities with disputed status (e.g. the 2025 Khorezm reform of Xonqa/Shovot/Gurlan/Qoʻshkoʻpir, or Yangiobod's contested district) are held back pending verification — see the [CHANGELOG](./CHANGELOG.md).
 
 ## Data shape
 
@@ -130,21 +155,27 @@ interface Region {
 interface District {
   slug: string;                       // "izbaskan"
   type: "district";
+  parentSlug: string;                 // "andijan" (the region)
   regionSlug: string;                 // "andijan"
   regionIso: string;                  // "UZ-AN"
   names: Names;                       // { en: "Izbaskan", ru: "Избаскан", ... }
   titles: Names;                      // { en: "Izbaskan District", ru: "Избасканский район", ... }
 }
 
-interface RegionalCity {
-  slug: string;                       // "bukhara_city"
+interface City {
+  slug: string;                       // "bukhara_city" | "gazalkent_city"
   type: "city";
-  regionSlug: string;                 // "bukhara"
-  regionIso: string;                  // "UZ-BU"
+  subordination: "regional" | "district";
+  parentSlug: string;                 // region slug (regional) OR district slug (district)
+  districtSlug?: string;              // set iff subordination === "district"
+  regionSlug: string;                 // "bukhara" | "tashkent"
+  regionIso: string;                  // "UZ-BU" | "UZ-TO"
   names: Names;                       // { en: "Bukhara", ru: "Бухара", ... }
   titles: Names;                      // { en: "Bukhara City", ru: "Город Бухара", ... }
 }
 ```
+
+The hierarchy is expressed by `parentSlug`: a district's parent is its region, a regional city's parent is its region, and a district-subordinate city's parent is its district. Walk it up with `getDistrict()` / `getRegion()`. (`RegionalCity` remains exported as a deprecated alias of `City`.)
 
 ### When to use `names` vs `titles`
 

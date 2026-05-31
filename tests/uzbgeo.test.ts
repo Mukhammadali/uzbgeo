@@ -6,8 +6,10 @@ import {
   getDistrict,
   getDistrictsByRegionId,
   getAllCities,
+  getRegionalCities,
   getCity,
   getCitiesByRegionId,
+  getCitiesByDistrictId,
 } from "../src/index";
 
 describe("regions", () => {
@@ -203,18 +205,44 @@ describe("districts", () => {
   });
 });
 
-describe("cities of regional significance", () => {
-  test("getAllCities returns 31 cities", () => {
-    expect(getAllCities()).toHaveLength(31);
+describe("cities", () => {
+  test("getAllCities returns all 109 cities (regional + district)", () => {
+    expect(getAllCities()).toHaveLength(109);
   });
 
-  test("getCity looks up by slug", () => {
+  test("getRegionalCities returns the 31 cities of regional significance", () => {
+    const regional = getRegionalCities();
+    expect(regional).toHaveLength(31);
+    expect(regional.every((c) => c.subordination === "regional")).toBe(true);
+  });
+
+  test("getAllCities splits into 31 regional + 78 district-subordinate", () => {
+    const all = getAllCities();
+    expect(all.filter((c) => c.subordination === "regional")).toHaveLength(31);
+    expect(all.filter((c) => c.subordination === "district")).toHaveLength(78);
+  });
+
+  test("getCity looks up a regional city by slug", () => {
     const c = getCity("bukhara_city");
     expect(c).toBeDefined();
     expect(c?.regionSlug).toBe("bukhara");
     expect(c?.regionIso).toBe("UZ-BU");
     expect(c?.type).toBe("city");
+    expect(c?.subordination).toBe("regional");
+    expect(c?.districtSlug).toBeUndefined();
     expect(c?.names.en).toBe("Bukhara");
+  });
+
+  test("getCity looks up a district-subordinate city by slug", () => {
+    const c = getCity("gazalkent_city");
+    expect(c).toBeDefined();
+    expect(c?.subordination).toBe("district");
+    expect(c?.regionSlug).toBe("tashkent");
+    expect(c?.regionIso).toBe("UZ-TO");
+    expect(c?.districtSlug).toBe("bostanlyk");
+    expect(c?.parentSlug).toBe("bostanlyk");
+    expect(c?.names.uz).toBe("G'azalkent");
+    expect(c?.names.ru).toBe("Газалкент");
   });
 
   test("getCity returns undefined for unknown slug", () => {
@@ -226,17 +254,42 @@ describe("cities of regional significance", () => {
     expect(getCity("tashkent")).toBeUndefined();
   });
 
-  test("getCitiesByRegionId works with slug and ISO", () => {
-    expect(getCitiesByRegionId("bukhara")).toHaveLength(2);
-    expect(getCitiesByRegionId("UZ-BU")).toHaveLength(2);
+  test("getCitiesByRegionId returns both tiers", () => {
+    // Bukhara: 2 regional + 8 district-subordinate = 10.
+    expect(getCitiesByRegionId("bukhara")).toHaveLength(10);
+    expect(getCitiesByRegionId("UZ-BU")).toHaveLength(10);
   });
 
-  test("Tashkent region has 7 cities of regional significance", () => {
-    expect(getCitiesByRegionId("tashkent")).toHaveLength(7);
+  test("Tashkent region has 7 regional + 8 district-subordinate = 15 cities", () => {
+    const list = getCitiesByRegionId("tashkent");
+    expect(list).toHaveLength(15);
+    expect(list.filter((c) => c.subordination === "regional")).toHaveLength(7);
+    expect(list.filter((c) => c.subordination === "district")).toHaveLength(8);
   });
 
-  test("Karakalpakstan has 1 city (Nukus)", () => {
-    const list = getCitiesByRegionId("karakalpakstan");
+  test("getCitiesByDistrictId returns the cities inside a district", () => {
+    const list = getCitiesByDistrictId("bostanlyk");
+    expect(list).toHaveLength(1);
+    expect(list[0]?.slug).toBe("gazalkent_city");
+  });
+
+  test("getCitiesByDistrictId can return multiple cities in one district", () => {
+    // Kurgantepa District (Andijan) contains both Kurgantepa and Karasu.
+    const list = getCitiesByDistrictId("kurgantepa");
+    expect(list.map((c) => c.slug).sort()).toEqual([
+      "karasu_city",
+      "kurgantepa_city",
+    ]);
+  });
+
+  test("getCitiesByDistrictId returns empty for a district with no cities", () => {
+    expect(getCitiesByDistrictId("altynkul")).toEqual([]);
+  });
+
+  test("Karakalpakstan has 1 regional city (Nukus)", () => {
+    const list = getCitiesByRegionId("karakalpakstan").filter(
+      (c) => c.subordination === "regional",
+    );
     expect(list).toHaveLength(1);
     expect(list[0]?.slug).toBe("nukus_city");
   });
@@ -245,6 +298,24 @@ describe("cities of regional significance", () => {
     const validSlugs = new Set(getAllRegions().map((r) => r.slug));
     for (const c of getAllCities()) {
       expect(validSlugs.has(c.regionSlug)).toBe(true);
+    }
+  });
+
+  test("every district-subordinate city's districtSlug resolves to a real district", () => {
+    const districtSlugs = new Set(getAllDistricts().map((d) => d.slug));
+    for (const c of getAllCities()) {
+      if (c.subordination === "district") {
+        expect(c.districtSlug).toBeDefined();
+        expect(districtSlugs.has(c.districtSlug as string)).toBe(true);
+        expect(c.parentSlug).toBe(c.districtSlug);
+      }
+    }
+  });
+
+  test("every regional city's parentSlug is its region and has no districtSlug", () => {
+    for (const c of getRegionalCities()) {
+      expect(c.parentSlug).toBe(c.regionSlug);
+      expect(c.districtSlug).toBeUndefined();
     }
   });
 

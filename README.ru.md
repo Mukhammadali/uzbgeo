@@ -2,11 +2,11 @@
 
 [English](./README.md) · [O'zbekcha](./README.uz.md) · **Русский**
 
-Географические данные Республики Узбекистан — области, районы и города областного подчинения, с **краткими названиями** и **полными официальными наименованиями** на 4 языках (английский, узбекский латиница, узбекский кириллица, русский).
+Географические данные Республики Узбекистан — области, районы и города, с **краткими названиями** и **полными официальными наименованиями** на 4 языках (английский, узбекский латиница, узбекский кириллица, русский).
 
 - **14** административно-территориальных единиц первого уровня (12 областей + Каракалпакстан + город Ташкент)
 - **175** районов (`tumani`)
-- **31** город областного подчинения (`shahar`)
+- **109** городов (`shahar`) — **31** областного подчинения + **78** районного подчинения
 - **Ташкентский метрополитен** — 4 линии, 50 станций, межлинейные пересадки (см. [METRO.md](./METRO.md))
 - Коды **ISO 3166-2:UZ** для всех областей
 - **Без runtime-зависимостей**, работает в браузере, ESM + CJS, написан на TypeScript
@@ -35,8 +35,10 @@ import {
   getDistrict,
   getDistrictsByRegionId,
   getAllCities,
+  getRegionalCities,
   getCity,
   getCitiesByRegionId,
+  getCitiesByDistrictId,
 } from "uzbgeo";
 
 const regions = getAllRegions();
@@ -67,6 +69,18 @@ console.log(bukharaDistricts.length); // 11
 
 const tashkentCityDistricts = getDistrictsByRegionId("tashkent_city");
 console.log(tashkentCityDistricts.length); // 12
+
+// Города бывают двух уровней — областного и районного подчинения.
+console.log(getAllCities().length);        // 109 (все города)
+console.log(getRegionalCities().length);   // 31  (только областного подчинения)
+
+// Города районного подчинения знают свой район:
+const gazalkent = getCity("gazalkent_city");
+console.log(gazalkent?.subordination);     // "district"
+console.log(gazalkent?.districtSlug);      // "bostanlyk"
+
+// Поиск городов по родительскому району:
+console.log(getCitiesByDistrictId("bostanlyk").map((c) => c.slug)); // ["gazalkent_city"]
 ```
 
 ### CommonJS
@@ -97,15 +111,26 @@ const fergana = getDistrictsByRegionId("fergana");
 | `getDistrict(slug)` | Один район или `undefined` |
 | `getDistrictsByRegionId(slugOrIso)` | Все районы заданной области |
 
-### Города областного подчинения (`shahar`)
+### Города (`shahar`)
 
-Эти города административно равны районам, а не вложены в них. Slug-имена имеют суффикс `_city`, чтобы отличать их от одноимённых районов (например, `bukhara_city` и `bukhara`).
+Города бывают двух административных уровней, различаемых по полю `subordination`:
+
+- **`"regional"`** — города областного подчинения, административно равные районам (31 по стране).
+- **`"district"`** — города районного подчинения, вложенные в район (`parentSlug`/`districtSlug` указывают на родительский район).
+
+Slug-имена имеют суффикс `_city`, чтобы отличать их от одноимённых районов (например, `bukhara_city` и `bukhara`).
 
 | Функция | Возвращает |
 |---|---|
-| `getAllCities()` | Все 31 город областного подчинения |
+| `getAllCities()` | **Все 109 городов** (оба уровня) |
+| `getRegionalCities()` | 31 город областного подчинения |
 | `getCity(slug)` | Один город или `undefined` |
-| `getCitiesByRegionId(slugOrIso)` | Все города заданной области |
+| `getCitiesByRegionId(slugOrIso)` | Все города области (оба уровня) |
+| `getCitiesByDistrictId(slug)` | Города районного подчинения внутри района |
+
+> **Миграция с v1:** ранее `getAllCities()` возвращал только 31 город областного подчинения. В v2 он возвращает **все** города; для прежнего поведения вызывайте **`getRegionalCities()`**. См. [CHANGELOG](./CHANGELOG.md).
+
+> **О покрытии:** в города районного подчинения включены только записи с высокой достоверностью. Несколько городов со спорным статусом (например, Хонка/Шават/Гурлен/Кошкупыр в рамках реформы Хорезма 2025 года или спорный район Янгиабада) пока не включены — см. [CHANGELOG](./CHANGELOG.md).
 
 ## Структура данных
 
@@ -130,21 +155,27 @@ interface Region {
 interface District {
   slug: string;                       // "izbaskan"
   type: "district";
+  parentSlug: string;                 // "andijan" (область)
   regionSlug: string;                 // "andijan"
   regionIso: string;                  // "UZ-AN"
   names: Names;                       // { en: "Izbaskan", ru: "Избаскан", ... }
   titles: Names;                      // { en: "Izbaskan District", ru: "Избасканский район", ... }
 }
 
-interface RegionalCity {
-  slug: string;                       // "bukhara_city"
+interface City {
+  slug: string;                       // "bukhara_city" | "gazalkent_city"
   type: "city";
-  regionSlug: string;                 // "bukhara"
-  regionIso: string;                  // "UZ-BU"
+  subordination: "regional" | "district";
+  parentSlug: string;                 // slug области (regional) ИЛИ slug района (district)
+  districtSlug?: string;              // только при subordination === "district"
+  regionSlug: string;                 // "bukhara" | "tashkent"
+  regionIso: string;                  // "UZ-BU" | "UZ-TO"
   names: Names;                       // { en: "Bukhara", ru: "Бухара", ... }
   titles: Names;                      // { en: "Bukhara City", ru: "Город Бухара", ... }
 }
 ```
+
+Иерархия выражается через `parentSlug`: родитель района — область, родитель города областного подчинения — область, родитель города районного подчинения — район. Поднимайтесь по ней с помощью `getDistrict()` / `getRegion()`. (`RegionalCity` сохранён как устаревший (deprecated) псевдоним `City`.)
 
 ### Когда использовать `names`, а когда `titles`
 

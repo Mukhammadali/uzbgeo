@@ -60,17 +60,40 @@ export interface Region {
 /**
  * Discriminator for a subdivision of a region.
  * - `district`: tuman — 175 of these
- * - `city`: city of regional significance (shahar) — administratively
- *   parallel to a district, not contained within one
+ * - `city`: a city (shahar), either of regional significance (parallel to a
+ *   district) or of district subordination (nested inside a district). The
+ *   `subordination` field on {@link City} distinguishes the two.
  */
 export type SubdivisionType = "district" | "city";
+
+/**
+ * Administrative subordination level of a city (shahar).
+ * - `regional`: city of regional significance — administratively parallel to a
+ *   district, directly under the region. There are 31 of these nationwide.
+ * - `district`: city of district subordination — nested inside a district.
+ */
+export type CitySubordination = "regional" | "district";
 
 interface SubdivisionBase {
   /** Stable snake_case identifier, unique within its type. */
   slug: string;
-  /** Slug of the parent region (e.g., `"bukhara"`). */
+  /**
+   * Slug of the immediate parent administrative unit, forming the hierarchy.
+   * - For a district: the region's slug (e.g., `"bukhara"`).
+   * - For a regional city: the region's slug.
+   * - For a district-subordinate city: the parent district's slug
+   *   (e.g., `"bostanlyk"` for `"gazalkent_city"`).
+   *
+   * Walk this up the tree with `getRegion` / `getDistrict`.
+   */
+  parentSlug: string;
+  /**
+   * Slug of the enclosing region (e.g., `"bukhara"`). Always points at the
+   * region even for district-subordinate cities, so "everything in region X"
+   * stays a single-field filter.
+   */
   regionSlug: string;
-  /** ISO 3166-2:UZ code of the parent region (e.g., `"UZ-BU"`). */
+  /** ISO 3166-2:UZ code of the enclosing region (e.g., `"UZ-BU"`). */
   regionIso: string;
   /**
    * Short noun forms for use as labels, dropdown items, or short headings.
@@ -93,12 +116,32 @@ export interface District extends SubdivisionBase {
 }
 
 /**
- * A city of regional significance (shahar). Administratively parallel
- * to a district within the same region, not nested under one.
+ * A city (shahar) of Uzbekistan.
+ *
+ * Two kinds, told apart by {@link City.subordination}:
+ * - `"regional"` — city of regional significance, administratively parallel to
+ *   a district within its region (`parentSlug` is the region). 31 nationwide.
+ * - `"district"` — city of district subordination, nested inside a district
+ *   (`parentSlug` and `districtSlug` are the parent district).
  */
-export interface RegionalCity extends SubdivisionBase {
+export interface City extends SubdivisionBase {
   type: "city";
+  /** Whether this city is parallel to districts (`regional`) or inside one (`district`). */
+  subordination: CitySubordination;
+  /**
+   * Slug of the parent district. Present if and only if
+   * `subordination === "district"` (mirrors `parentSlug` in that case).
+   */
+  districtSlug?: string;
 }
 
-/** Any subdivision of a region — either a district or a regional city. */
-export type Subdivision = District | RegionalCity;
+/**
+ * @deprecated Renamed to {@link City} in v2, which now covers both
+ * regional-significance and district-subordinate cities. This alias is kept
+ * for backward compatibility and will be removed in a future major version.
+ * Filter with `city.subordination === "regional"` for the old meaning.
+ */
+export type RegionalCity = City;
+
+/** Any subdivision of a region — either a district or a city. */
+export type Subdivision = District | City;
