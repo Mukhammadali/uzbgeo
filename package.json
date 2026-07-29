@@ -1,6 +1,6 @@
 {
   "name": "uzbgeo",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Uzbekistan geographical data — regions, districts, cities, and the Tashkent Metro, with names in 4 languages (English, Uzbek Latin, Uzbek Cyrillic, Russian)",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -48,6 +48,10 @@
     "shahar",
     "administrative-divisions",
     "iso-3166-2",
+    "i18n",
+    "localization",
+    "locative",
+    "declension",
     "tashkent-metro",
     "metro",
     "subway",

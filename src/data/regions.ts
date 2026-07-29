@@ -27,6 +27,10 @@ export const regions: readonly Region[] = [
       uzc: "Андижон вилояти",
       ru: "Андижанская область",
     },
+    locatives: {
+      name: { en: "in Andijan", uz: "Andijonda", uzc: "Андижонда", ru: "в Андижане" },
+      title: { en: "in the Andijan Region", uz: "Andijon viloyatida", uzc: "Андижон вилоятида", ru: "в Андижанской области" },
+    },
   },
   {
     slug: "bukhara",
@@ -43,6 +47,10 @@ export const regions: readonly Region[] = [
       uz: "Buxoro viloyati",
       uzc: "Бухоро вилояти",
       ru: "Бухарская область",
+    },
+    locatives: {
+      name: { en: "in Bukhara", uz: "Buxoroda", uzc: "Бухорода", ru: "в Бухаре" },
+      title: { en: "in the Bukhara Region", uz: "Buxoro viloyatida", uzc: "Бухоро вилоятида", ru: "в Бухарской области" },
     },
   },
   {
@@ -61,6 +69,10 @@ export const regions: readonly Region[] = [
       uzc: "Фарғона вилояти",
       ru: "Ферганская область",
     },
+    locatives: {
+      name: { en: "in Fergana", uz: "Farg'onada", uzc: "Фарғонада", ru: "в Фергане" },
+      title: { en: "in the Fergana Region", uz: "Farg'ona viloyatida", uzc: "Фарғона вилоятида", ru: "в Ферганской области" },
+    },
   },
   {
     slug: "jizzakh",
@@ -77,6 +89,10 @@ export const regions: readonly Region[] = [
       uz: "Jizzax viloyati",
       uzc: "Жиззах вилояти",
       ru: "Джизакская область",
+    },
+    locatives: {
+      name: { en: "in Jizzakh", uz: "Jizzaxda", uzc: "Жиззахда", ru: "в Джизаке" },
+      title: { en: "in the Jizzakh Region", uz: "Jizzax viloyatida", uzc: "Жиззах вилоятида", ru: "в Джизакской области" },
     },
   },
   {
@@ -95,6 +111,10 @@ export const regions: readonly Region[] = [
       uzc: "Наманган вилояти",
       ru: "Наманганская область",
     },
+    locatives: {
+      name: { en: "in Namangan", uz: "Namanganda", uzc: "Наманганда", ru: "в Намангане" },
+      title: { en: "in the Namangan Region", uz: "Namangan viloyatida", uzc: "Наманган вилоятида", ru: "в Наманганской области" },
+    },
   },
   {
     slug: "navoi",
@@ -111,6 +131,10 @@ export const regions: readonly Region[] = [
       uz: "Navoiy viloyati",
       uzc: "Навоий вилояти",
       ru: "Навоийская область",
+    },
+    locatives: {
+      name: { en: "in Navoi", uz: "Navoiyda", uzc: "Навоийда", ru: "в Навои" },
+      title: { en: "in the Navoi Region", uz: "Navoiy viloyatida", uzc: "Навоий вилоятида", ru: "в Навоийской области" },
     },
   },
   {
@@ -129,6 +153,10 @@ export const regions: readonly Region[] = [
       uzc: "Қашқадарё вилояти",
       ru: "Кашкадарьинская область",
     },
+    locatives: {
+      name: { en: "in Kashkadarya", uz: "Qashqadaryoda", uzc: "Қашқадарёда", ru: "в Кашкадарье" },
+      title: { en: "in the Kashkadarya Region", uz: "Qashqadaryo viloyatida", uzc: "Қашқадарё вилоятида", ru: "в Кашкадарьинской области" },
+    },
   },
   {
     slug: "karakalpakstan",
@@ -145,6 +173,10 @@ export const regions: readonly Region[] = [
       uz: "Qoraqalpog'iston Respublikasi",
       uzc: "Қорақалпоғистон Республикаси",
       ru: "Республика Каракалпакстан",
+    },
+    locatives: {
+      name: { en: "in Karakalpakstan", uz: "Qoraqalpog'istonda", uzc: "Қорақалпоғистонда", ru: "в Каракалпакстане" },
+      title: { en: "in the Republic of Karakalpakstan", uz: "Qoraqalpog'iston Respublikasida", uzc: "Қорақалпоғистон Республикасида", ru: "в Республике Каракалпакстан" },
     },
   },
   {
@@ -163,6 +195,10 @@ export const regions: readonly Region[] = [
       uzc: "Самарқанд вилояти",
       ru: "Самаркандская область",
     },
+    locatives: {
+      name: { en: "in Samarkand", uz: "Samarqandda", uzc: "Самарқандда", ru: "в Самарканде" },
+      title: { en: "in the Samarkand Region", uz: "Samarqand viloyatida", uzc: "Самарқанд вилоятида", ru: "в Самаркандской области" },
+    },
   },
   {
     slug: "syrdarya",
@@ -179,6 +215,10 @@ export const regions: readonly Region[] = [
       uz: "Sirdaryo viloyati",
       uzc: "Сирдарё вилояти",
       ru: "Сырдарьинская область",
+    },
+    locatives: {
+      name: { en: "in Syrdarya", uz: "Sirdaryoda", uzc: "Сирдарёда", ru: "в Сырдарье" },
+      title: { en: "in the Syrdarya Region", uz: "Sirdaryo viloyatida", uzc: "Сирдарё вилоятида", ru: "в Сырдарьинской области" },
     },
   },
   {
@@ -197,6 +237,10 @@ export const regions: readonly Region[] = [
       uzc: "Сурхондарё вилояти",
       ru: "Сурхандарьинская область",
     },
+    locatives: {
+      name: { en: "in Surkhandarya", uz: "Surxondaryoda", uzc: "Сурхондарёда", ru: "в Сурхандарье" },
+      title: { en: "in the Surkhandarya Region", uz: "Surxondaryo viloyatida", uzc: "Сурхондарё вилоятида", ru: "в Сурхандарьинской области" },
+    },
   },
   {
     slug: "tashkent_city",
@@ -213,6 +257,10 @@ export const regions: readonly Region[] = [
       uz: "Toshkent shahri",
       uzc: "Тошкент шаҳри",
       ru: "Город Ташкент",
+    },
+    locatives: {
+      name: { en: "in Tashkent", uz: "Toshkentda", uzc: "Тошкентда", ru: "в Ташкенте" },
+      title: { en: "in Tashkent City", uz: "Toshkent shahrida", uzc: "Тошкент шаҳрида", ru: "в городе Ташкенте" },
     },
   },
   {
@@ -231,6 +279,10 @@ export const regions: readonly Region[] = [
       uzc: "Тошкент вилояти",
       ru: "Ташкентская область",
     },
+    locatives: {
+      name: { en: "in Tashkent", uz: "Toshkentda", uzc: "Тошкентда", ru: "в Ташкенте" },
+      title: { en: "in the Tashkent Region", uz: "Toshkent viloyatida", uzc: "Тошкент вилоятида", ru: "в Ташкентской области" },
+    },
   },
   {
     slug: "khorezm",
@@ -247,6 +299,10 @@ export const regions: readonly Region[] = [
       uz: "Xorazm viloyati",
       uzc: "Хоразм вилояти",
       ru: "Хорезмская область",
+    },
+    locatives: {
+      name: { en: "in Khorezm", uz: "Xorazmda", uzc: "Хоразмда", ru: "в Хорезме" },
+      title: { en: "in the Khorezm Region", uz: "Xorazm viloyatida", uzc: "Хоразм вилоятида", ru: "в Хорезмской области" },
     },
   },
 ];

@@ -199,6 +199,58 @@ for (const c of cities) {
   checkLocalized("City", c.slug, "titles", c.titles);
 }
 
+// ---- locative completeness ----
+//
+// The locative fields are the reason `locatives` can be typed as a total
+// (non-optional) property and read without a runtime guard. A missing or
+// malformed entry must never reach npm, so every unit is checked here for all
+// four languages, on both the `name` and `title` form.
+const RU_PREPOSITION = /^во? /;
+
+for (const u of [...regions, ...districts, ...cities]) {
+  const loc = u.locatives;
+  if (!loc) {
+    fail(`"${u.slug}" is missing locatives entirely`);
+    continue;
+  }
+  for (const form of ["name", "title"] as const) {
+    const bag = loc[form];
+    if (!bag) {
+      fail(`"${u.slug}" is missing locatives.${form}`);
+      continue;
+    }
+    for (const lang of ["en", "uz", "uzc", "ru"] as const) {
+      const v = bag[lang];
+      if (typeof v !== "string" || v.trim() === "") {
+        fail(`"${u.slug}" has an empty locatives.${form}.${lang}`);
+        continue;
+      }
+      if (v !== v.trim()) {
+        fail(`"${u.slug}" locatives.${form}.${lang} has surrounding whitespace`);
+      }
+    }
+    // Per-language shape: each carries its own marker of the locative.
+    if (bag.en && !bag.en.startsWith("in ")) {
+      fail(`"${u.slug}" locatives.${form}.en must start with "in ": ${bag.en}`);
+    }
+    if (bag.uz && !bag.uz.endsWith("da")) {
+      fail(
+        `"${u.slug}" locatives.${form}.uz must end with the -da suffix: ${bag.uz}`,
+      );
+    }
+    if (bag.uzc && !bag.uzc.endsWith("да")) {
+      fail(
+        `"${u.slug}" locatives.${form}.uzc must end with the -да suffix: ${bag.uzc}`,
+      );
+    }
+    if (bag.ru && !RU_PREPOSITION.test(bag.ru)) {
+      fail(
+        `"${u.slug}" locatives.${form}.ru must start with "в " or "во ": ${bag.ru}`,
+      );
+    }
+  }
+}
+
 // ---- metro: lines ----
 const LINE_IDS: readonly LineId[] = [
   "chilanzar",

@@ -40,6 +40,10 @@ export const cities: readonly City[] = [
       uzc: "Андижон шаҳри",
       ru: "Город Андижан",
     },
+    locatives: {
+      name: { en: "in Andijan", uz: "Andijonda", uzc: "Андижонда", ru: "в Андижане" },
+      title: { en: "in Andijan City", uz: "Andijon shahrida", uzc: "Андижон шаҳрида", ru: "в городе Андижане" },
+    },
   },
   {
     slug: "khanabad_city",
@@ -54,6 +58,10 @@ export const cities: readonly City[] = [
       uz: "Xonobod shahri",
       uzc: "Хонобод шаҳри",
       ru: "Город Ханабад",
+    },
+    locatives: {
+      name: { en: "in Khanabad", uz: "Xonobodda", uzc: "Хонободда", ru: "в Ханабаде" },
+      title: { en: "in Khanabad City", uz: "Xonobod shahrida", uzc: "Хонобод шаҳрида", ru: "в городе Ханабаде" },
     },
   },
 
@@ -72,6 +80,10 @@ export const cities: readonly City[] = [
       uzc: "Бухоро шаҳри",
       ru: "Город Бухара",
     },
+    locatives: {
+      name: { en: "in Bukhara", uz: "Buxoroda", uzc: "Бухорода", ru: "в Бухаре" },
+      title: { en: "in Bukhara City", uz: "Buxoro shahrida", uzc: "Бухоро шаҳрида", ru: "в городе Бухаре" },
+    },
   },
   {
     slug: "kagan_city",
@@ -86,6 +98,10 @@ export const cities: readonly City[] = [
       uz: "Kogon shahri",
       uzc: "Когон шаҳри",
       ru: "Город Каган",
+    },
+    locatives: {
+      name: { en: "in Kagan", uz: "Kogonda", uzc: "Когонда", ru: "в Кагане" },
+      title: { en: "in Kagan City", uz: "Kogon shahrida", uzc: "Когон шаҳрида", ru: "в городе Кагане" },
     },
   },
 
@@ -104,6 +120,10 @@ export const cities: readonly City[] = [
       uzc: "Фарғона шаҳри",
       ru: "Город Фергана",
     },
+    locatives: {
+      name: { en: "in Fergana", uz: "Farg'onada", uzc: "Фарғонада", ru: "в Фергане" },
+      title: { en: "in Fergana City", uz: "Farg'ona shahrida", uzc: "Фарғона шаҳрида", ru: "в городе Фергане" },
+    },
   },
   {
     slug: "kokand_city",
@@ -118,6 +138,10 @@ export const cities: readonly City[] = [
       uz: "Qo'qon shahri",
       uzc: "Қўқон шаҳри",
       ru: "Город Коканд",
+    },
+    locatives: {
+      name: { en: "in Kokand", uz: "Qo'qonda", uzc: "Қўқонда", ru: "в Коканде" },
+      title: { en: "in Kokand City", uz: "Qo'qon shahrida", uzc: "Қўқон шаҳрида", ru: "в городе Коканде" },
     },
   },
   {
@@ -134,6 +158,10 @@ export const cities: readonly City[] = [
       uzc: "Қувасой шаҳри",
       ru: "Город Кувасай",
     },
+    locatives: {
+      name: { en: "in Kuvasay", uz: "Quvasoyda", uzc: "Қувасойда", ru: "в Кувасае" },
+      title: { en: "in Kuvasay City", uz: "Quvasoy shahrida", uzc: "Қувасой шаҳрида", ru: "в городе Кувасае" },
+    },
   },
   {
     slug: "margilan_city",
@@ -148,6 +176,10 @@ export const cities: readonly City[] = [
       uz: "Marg'ilon shahri",
       uzc: "Марғилон шаҳри",
       ru: "Город Маргилан",
+    },
+    locatives: {
+      name: { en: "in Margilan", uz: "Marg'ilonda", uzc: "Марғилонда", ru: "в Маргилане" },
+      title: { en: "in Margilan City", uz: "Marg'ilon shahrida", uzc: "Марғилон шаҳрида", ru: "в городе Маргилане" },
     },
   },
 
@@ -166,6 +198,10 @@ export const cities: readonly City[] = [
       uzc: "Жиззах шаҳри",
       ru: "Город Джизак",
     },
+    locatives: {
+      name: { en: "in Jizzakh", uz: "Jizzaxda", uzc: "Жиззахда", ru: "в Джизаке" },
+      title: { en: "in Jizzakh City", uz: "Jizzax shahrida", uzc: "Жиззах шаҳрида", ru: "в городе Джизаке" },
+    },
   },
 
   // ===== Namangan (UZ-NG) — 1 city =====
@@ -182,6 +218,10 @@ export const cities: readonly City[] = [
       uz: "Namangan shahri",
       uzc: "Наманган шаҳри",
       ru: "Город Наманган",
+    },
+    locatives: {
+      name: { en: "in Namangan", uz: "Namanganda", uzc: "Наманганда", ru: "в Намангане" },
+      title: { en: "in Namangan City", uz: "Namangan shahrida", uzc: "Наманган шаҳрида", ru: "в городе Намангане" },
     },
   },
 
@@ -200,6 +240,10 @@ export const cities: readonly City[] = [
       uzc: "Навоий шаҳри",
       ru: "Город Навои",
     },
+    locatives: {
+      name: { en: "in Navoi", uz: "Navoiyda", uzc: "Навоийда", ru: "в Навои" },
+      title: { en: "in Navoi City", uz: "Navoiy shahrida", uzc: "Навоий шаҳрида", ru: "в городе Навои" },
+    },
   },
   {
     slug: "zarafshan_city",
@@ -215,6 +259,10 @@ export const cities: readonly City[] = [
       uzc: "Зарафшон шаҳри",
       ru: "Город Зарафшан",
     },
+    locatives: {
+      name: { en: "in Zarafshan", uz: "Zarafshonda", uzc: "Зарафшонда", ru: "в Зарафшане" },
+      title: { en: "in Zarafshan City", uz: "Zarafshon shahrida", uzc: "Зарафшон шаҳрида", ru: "в городе Зарафшане" },
+    },
   },
   {
     slug: "gazgan_city",
@@ -229,6 +277,10 @@ export const cities: readonly City[] = [
       uz: "G'ozg'on shahri",
       uzc: "Ғозғон шаҳри",
       ru: "Город Газган",
+    },
+    locatives: {
+      name: { en: "in Gazgan", uz: "G'ozg'onda", uzc: "Ғозғонда", ru: "в Газгане" },
+      title: { en: "in Gazgan City", uz: "G'ozg'on shahrida", uzc: "Ғозғон шаҳрида", ru: "в городе Газгане" },
     },
   },
 
@@ -247,6 +299,10 @@ export const cities: readonly City[] = [
       uzc: "Қарши шаҳри",
       ru: "Город Карши",
     },
+    locatives: {
+      name: { en: "in Karshi", uz: "Qarshida", uzc: "Қаршида", ru: "в Карши" },
+      title: { en: "in Karshi City", uz: "Qarshi shahrida", uzc: "Қарши шаҳрида", ru: "в городе Карши" },
+    },
   },
   {
     slug: "shakhrisabz_city",
@@ -261,6 +317,10 @@ export const cities: readonly City[] = [
       uz: "Shahrisabz shahri",
       uzc: "Шаҳрисабз шаҳри",
       ru: "Город Шахрисабз",
+    },
+    locatives: {
+      name: { en: "in Shakhrisabz", uz: "Shahrisabzda", uzc: "Шаҳрисабзда", ru: "в Шахрисабзе" },
+      title: { en: "in Shakhrisabz City", uz: "Shahrisabz shahrida", uzc: "Шаҳрисабз шаҳрида", ru: "в городе Шахрисабзе" },
     },
   },
 
@@ -279,6 +339,10 @@ export const cities: readonly City[] = [
       uzc: "Нукус шаҳри",
       ru: "Город Нукус",
     },
+    locatives: {
+      name: { en: "in Nukus", uz: "Nukusda", uzc: "Нукусда", ru: "в Нукусе" },
+      title: { en: "in Nukus City", uz: "Nukus shahrida", uzc: "Нукус шаҳрида", ru: "в городе Нукусе" },
+    },
   },
 
   // ===== Samarkand (UZ-SA) — 2 cities =====
@@ -296,6 +360,10 @@ export const cities: readonly City[] = [
       uzc: "Самарқанд шаҳри",
       ru: "Город Самарканд",
     },
+    locatives: {
+      name: { en: "in Samarkand", uz: "Samarqandda", uzc: "Самарқандда", ru: "в Самарканде" },
+      title: { en: "in Samarkand City", uz: "Samarqand shahrida", uzc: "Самарқанд шаҳрида", ru: "в городе Самарканде" },
+    },
   },
   {
     slug: "kattakurgan_city",
@@ -310,6 +378,10 @@ export const cities: readonly City[] = [
       uz: "Kattaqo'rg'on shahri",
       uzc: "Каттақўрғон шаҳри",
       ru: "Город Каттакурган",
+    },
+    locatives: {
+      name: { en: "in Kattakurgan", uz: "Kattaqo'rg'onda", uzc: "Каттақўрғонда", ru: "в Каттакургане" },
+      title: { en: "in Kattakurgan City", uz: "Kattaqo'rg'on shahrida", uzc: "Каттақўрғон шаҳрида", ru: "в городе Каттакургане" },
     },
   },
 
@@ -328,6 +400,10 @@ export const cities: readonly City[] = [
       uzc: "Гулистон шаҳри",
       ru: "Город Гулистан",
     },
+    locatives: {
+      name: { en: "in Gulistan", uz: "Gulistonda", uzc: "Гулистонда", ru: "в Гулистане" },
+      title: { en: "in Gulistan City", uz: "Guliston shahrida", uzc: "Гулистон шаҳрида", ru: "в городе Гулистане" },
+    },
   },
   {
     slug: "shirin_city",
@@ -343,6 +419,10 @@ export const cities: readonly City[] = [
       uzc: "Ширин шаҳри",
       ru: "Город Ширин",
     },
+    locatives: {
+      name: { en: "in Shirin", uz: "Shirinda", uzc: "Ширинда", ru: "в Ширине" },
+      title: { en: "in Shirin City", uz: "Shirin shahrida", uzc: "Ширин шаҳрида", ru: "в городе Ширине" },
+    },
   },
   {
     slug: "yangier_city",
@@ -357,6 +437,10 @@ export const cities: readonly City[] = [
       uz: "Yangiyer shahri",
       uzc: "Янгийер шаҳри",
       ru: "Город Янгиер",
+    },
+    locatives: {
+      name: { en: "in Yangier", uz: "Yangiyerda", uzc: "Янгийерда", ru: "в Янгиере" },
+      title: { en: "in Yangier City", uz: "Yangiyer shahrida", uzc: "Янгийер шаҳрида", ru: "в городе Янгиере" },
     },
   },
 
@@ -375,6 +459,10 @@ export const cities: readonly City[] = [
       uzc: "Термиз шаҳри",
       ru: "Город Термез",
     },
+    locatives: {
+      name: { en: "in Termiz", uz: "Termizda", uzc: "Термизда", ru: "в Термезе" },
+      title: { en: "in Termiz City", uz: "Termiz shahrida", uzc: "Термиз шаҳрида", ru: "в городе Термезе" },
+    },
   },
 
   // ===== Tashkent Region (UZ-TO) — 7 cities =====
@@ -392,6 +480,10 @@ export const cities: readonly City[] = [
       uzc: "Нурафшон шаҳри",
       ru: "Город Нурафшан",
     },
+    locatives: {
+      name: { en: "in Nurafshan", uz: "Nurafshonda", uzc: "Нурафшонда", ru: "в Нурафшане" },
+      title: { en: "in Nurafshan City", uz: "Nurafshon shahrida", uzc: "Нурафшон шаҳрида", ru: "в городе Нурафшане" },
+    },
   },
   {
     slug: "almalyk_city",
@@ -406,6 +498,10 @@ export const cities: readonly City[] = [
       uz: "Olmaliq shahri",
       uzc: "Олмалиқ шаҳри",
       ru: "Город Алмалык",
+    },
+    locatives: {
+      name: { en: "in Almalyk", uz: "Olmaliqda", uzc: "Олмалиқда", ru: "в Алмалыке" },
+      title: { en: "in Almalyk City", uz: "Olmaliq shahrida", uzc: "Олмалиқ шаҳрида", ru: "в городе Алмалыке" },
     },
   },
   {
@@ -422,6 +518,10 @@ export const cities: readonly City[] = [
       uzc: "Ангрен шаҳри",
       ru: "Город Ангрен",
     },
+    locatives: {
+      name: { en: "in Angren", uz: "Angrenda", uzc: "Ангренда", ru: "в Ангрене" },
+      title: { en: "in Angren City", uz: "Angren shahrida", uzc: "Ангрен шаҳрида", ru: "в городе Ангрене" },
+    },
   },
   {
     slug: "bekabad_city",
@@ -436,6 +536,10 @@ export const cities: readonly City[] = [
       uz: "Bekobod shahri",
       uzc: "Бекобод шаҳри",
       ru: "Город Бекабад",
+    },
+    locatives: {
+      name: { en: "in Bekabad", uz: "Bekobodda", uzc: "Бекободда", ru: "в Бекабаде" },
+      title: { en: "in Bekabad City", uz: "Bekobod shahrida", uzc: "Бекобод шаҳрида", ru: "в городе Бекабаде" },
     },
   },
   {
@@ -452,6 +556,10 @@ export const cities: readonly City[] = [
       uzc: "Чирчиқ шаҳри",
       ru: "Город Чирчик",
     },
+    locatives: {
+      name: { en: "in Chirchik", uz: "Chirchiqda", uzc: "Чирчиқда", ru: "в Чирчике" },
+      title: { en: "in Chirchik City", uz: "Chirchiq shahrida", uzc: "Чирчиқ шаҳрида", ru: "в городе Чирчике" },
+    },
   },
   {
     slug: "akhangaran_city",
@@ -467,6 +575,10 @@ export const cities: readonly City[] = [
       uzc: "Оҳангарон шаҳри",
       ru: "Город Ахангаран",
     },
+    locatives: {
+      name: { en: "in Akhangaran", uz: "Ohangaronda", uzc: "Оҳангаронда", ru: "в Ахангаране" },
+      title: { en: "in Akhangaran City", uz: "Ohangaron shahrida", uzc: "Оҳангарон шаҳрида", ru: "в городе Ахангаране" },
+    },
   },
   {
     slug: "yangiyul_city",
@@ -481,6 +593,10 @@ export const cities: readonly City[] = [
       uz: "Yangiyo'l shahri",
       uzc: "Янгийўл шаҳри",
       ru: "Город Янгиюль",
+    },
+    locatives: {
+      name: { en: "in Yangiyul", uz: "Yangiyo'lda", uzc: "Янгийўлда", ru: "в Янгиюле" },
+      title: { en: "in Yangiyul City", uz: "Yangiyo'l shahrida", uzc: "Янгийўл шаҳрида", ru: "в городе Янгиюле" },
     },
   },
 
@@ -499,6 +615,10 @@ export const cities: readonly City[] = [
       uzc: "Урганч шаҳри",
       ru: "Город Ургенч",
     },
+    locatives: {
+      name: { en: "in Urgench", uz: "Urganchda", uzc: "Урганчда", ru: "в Ургенче" },
+      title: { en: "in Urgench City", uz: "Urganch shahrida", uzc: "Урганч шаҳрида", ru: "в городе Ургенче" },
+    },
   },
   {
     slug: "khiva_city",
@@ -513,6 +633,10 @@ export const cities: readonly City[] = [
       uz: "Xiva shahri",
       uzc: "Хива шаҳри",
       ru: "Город Хива",
+    },
+    locatives: {
+      name: { en: "in Khiva", uz: "Xivada", uzc: "Хивада", ru: "в Хиве" },
+      title: { en: "in Khiva City", uz: "Xiva shahrida", uzc: "Хива шаҳрида", ru: "в городе Хиве" },
     },
   },
 
@@ -533,6 +657,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-AN",
     names: { en: "Asaka", uz: "Asaka", uzc: "Асака", ru: "Асака" },
     titles: { en: "Asaka City", uz: "Asaka shahri", uzc: "Асака шаҳри", ru: "Город Асака" },
+    locatives: {
+      name: { en: "in Asaka", uz: "Asakada", uzc: "Асакада", ru: "в Асаке" },
+      title: { en: "in Asaka City", uz: "Asaka shahrida", uzc: "Асака шаҳрида", ru: "в городе Асаке" },
+    },
   },
   {
     slug: "shakhrikhan_city",
@@ -544,6 +672,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-AN",
     names: { en: "Shakhrikhan", uz: "Shahrixon", uzc: "Шаҳрихон", ru: "Шахрихан" },
     titles: { en: "Shakhrikhan City", uz: "Shahrixon shahri", uzc: "Шаҳрихон шаҳри", ru: "Город Шахрихан" },
+    locatives: {
+      name: { en: "in Shakhrikhan", uz: "Shahrixonda", uzc: "Шаҳрихонда", ru: "в Шахрихане" },
+      title: { en: "in Shakhrikhan City", uz: "Shahrixon shahrida", uzc: "Шаҳрихон шаҳрида", ru: "в городе Шахрихане" },
+    },
   },
   {
     slug: "kurgantepa_city",
@@ -555,6 +687,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-AN",
     names: { en: "Kurgantepa", uz: "Qo'rg'ontepa", uzc: "Қўрғонтепа", ru: "Кургантепа" },
     titles: { en: "Kurgantepa City", uz: "Qo'rg'ontepa shahri", uzc: "Қўрғонтепа шаҳри", ru: "Город Кургантепа" },
+    locatives: {
+      name: { en: "in Kurgantepa", uz: "Qo'rg'ontepada", uzc: "Қўрғонтепада", ru: "в Кургантепе" },
+      title: { en: "in Kurgantepa City", uz: "Qo'rg'ontepa shahrida", uzc: "Қўрғонтепа шаҳрида", ru: "в городе Кургантепе" },
+    },
   },
   {
     slug: "karasu_city",
@@ -566,6 +702,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-AN",
     names: { en: "Karasu", uz: "Qorasuv", uzc: "Қорасув", ru: "Карасу" },
     titles: { en: "Karasu City", uz: "Qorasuv shahri", uzc: "Қорасув шаҳри", ru: "Город Карасу" },
+    locatives: {
+      name: { en: "in Karasu", uz: "Qorasuvda", uzc: "Қорасувда", ru: "в Карасу" },
+      title: { en: "in Karasu City", uz: "Qorasuv shahrida", uzc: "Қорасув шаҳрида", ru: "в городе Карасу" },
+    },
   },
   {
     slug: "markhamat_city",
@@ -577,6 +717,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-AN",
     names: { en: "Markhamat", uz: "Marhamat", uzc: "Мархамат", ru: "Мархамат" },
     titles: { en: "Markhamat City", uz: "Marhamat shahri", uzc: "Мархамат шаҳри", ru: "Город Мархамат" },
+    locatives: {
+      name: { en: "in Markhamat", uz: "Marhamatda", uzc: "Мархаматда", ru: "в Мархамате" },
+      title: { en: "in Markhamat City", uz: "Marhamat shahrida", uzc: "Мархамат шаҳрида", ru: "в городе Мархамате" },
+    },
   },
   {
     slug: "pakhtaabad_city",
@@ -588,6 +732,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-AN",
     names: { en: "Pakhtaabad", uz: "Paxtaobod", uzc: "Пахтаобод", ru: "Пахтаабад" },
     titles: { en: "Pakhtaabad City", uz: "Paxtaobod shahri", uzc: "Пахтаобод шаҳри", ru: "Город Пахтаабад" },
+    locatives: {
+      name: { en: "in Pakhtaabad", uz: "Paxtaobodda", uzc: "Пахтаободда", ru: "в Пахтаабаде" },
+      title: { en: "in Pakhtaabad City", uz: "Paxtaobod shahrida", uzc: "Пахтаобод шаҳрида", ru: "в городе Пахтаабаде" },
+    },
   },
   {
     slug: "khojaabad_city",
@@ -599,6 +747,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-AN",
     names: { en: "Khojaabad", uz: "Xo'jaobod", uzc: "Хўжаобод", ru: "Ходжаабад" },
     titles: { en: "Khojaabad City", uz: "Xo'jaobod shahri", uzc: "Хўжаобод шаҳри", ru: "Город Ходжаабад" },
+    locatives: {
+      name: { en: "in Khojaabad", uz: "Xo'jaobodda", uzc: "Хўжаободда", ru: "в Ходжаабаде" },
+      title: { en: "in Khojaabad City", uz: "Xo'jaobod shahrida", uzc: "Хўжаобод шаҳрида", ru: "в городе Ходжаабаде" },
+    },
   },
   {
     slug: "jalaquduk_city",
@@ -610,6 +762,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-AN",
     names: { en: "Jalaquduq", uz: "Jalaquduq", uzc: "Жалақудуқ", ru: "Джалакудук" },
     titles: { en: "Jalaquduq City", uz: "Jalaquduq shahri", uzc: "Жалақудуқ шаҳри", ru: "Город Джалакудук" },
+    locatives: {
+      name: { en: "in Jalaquduq", uz: "Jalaquduqda", uzc: "Жалақудуқда", ru: "в Джалакудуке" },
+      title: { en: "in Jalaquduq City", uz: "Jalaquduq shahrida", uzc: "Жалақудуқ шаҳрида", ru: "в городе Джалакудуке" },
+    },
   },
   {
     slug: "paytug_city",
@@ -621,6 +777,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-AN",
     names: { en: "Paytug", uz: "Poytug'", uzc: "Пойтуғ", ru: "Пайтуг" },
     titles: { en: "Paytug City", uz: "Poytug' shahri", uzc: "Пойтуғ шаҳри", ru: "Город Пайтуг" },
+    locatives: {
+      name: { en: "in Paytug", uz: "Poytug'da", uzc: "Пойтуғда", ru: "в Пайтуге" },
+      title: { en: "in Paytug City", uz: "Poytug' shahrida", uzc: "Пойтуғ шаҳрида", ru: "в городе Пайтуге" },
+    },
   },
 
   // ----- Fergana (UZ-FA) -----
@@ -634,6 +794,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-FA",
     names: { en: "Kuva", uz: "Quva", uzc: "Қува", ru: "Кува" },
     titles: { en: "Kuva City", uz: "Quva shahri", uzc: "Қува шаҳри", ru: "Город Кува" },
+    locatives: {
+      name: { en: "in Kuva", uz: "Quvada", uzc: "Қувада", ru: "в Куве" },
+      title: { en: "in Kuva City", uz: "Quva shahrida", uzc: "Қува шаҳрида", ru: "в городе Куве" },
+    },
   },
   {
     slug: "rishtan_city",
@@ -645,6 +809,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-FA",
     names: { en: "Rishtan", uz: "Rishton", uzc: "Риштон", ru: "Риштан" },
     titles: { en: "Rishtan City", uz: "Rishton shahri", uzc: "Риштон шаҳри", ru: "Город Риштан" },
+    locatives: {
+      name: { en: "in Rishtan", uz: "Rishtonda", uzc: "Риштонда", ru: "в Риштане" },
+      title: { en: "in Rishtan City", uz: "Rishton shahrida", uzc: "Риштон шаҳрида", ru: "в городе Риштане" },
+    },
   },
   {
     slug: "besharik_city",
@@ -656,6 +824,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-FA",
     names: { en: "Besharik", uz: "Beshariq", uzc: "Бешариқ", ru: "Бешарык" },
     titles: { en: "Besharik City", uz: "Beshariq shahri", uzc: "Бешариқ шаҳри", ru: "Город Бешарык" },
+    locatives: {
+      name: { en: "in Besharik", uz: "Beshariqda", uzc: "Бешариқда", ru: "в Бешарыке" },
+      title: { en: "in Besharik City", uz: "Beshariq shahrida", uzc: "Бешариқ шаҳрида", ru: "в городе Бешарыке" },
+    },
   },
   {
     slug: "yaypan_city",
@@ -667,6 +839,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-FA",
     names: { en: "Yaypan", uz: "Yaypan", uzc: "Яйпан", ru: "Яйпан" },
     titles: { en: "Yaypan City", uz: "Yaypan shahri", uzc: "Яйпан шаҳри", ru: "Город Яйпан" },
+    locatives: {
+      name: { en: "in Yaypan", uz: "Yaypanda", uzc: "Яйпанда", ru: "в Яйпане" },
+      title: { en: "in Yaypan City", uz: "Yaypan shahrida", uzc: "Яйпан шаҳрида", ru: "в городе Яйпане" },
+    },
   },
 
   // ----- Namangan (UZ-NG) -----
@@ -680,6 +856,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-NG",
     names: { en: "Pop", uz: "Pop", uzc: "Поп", ru: "Пап" },
     titles: { en: "Pop City", uz: "Pop shahri", uzc: "Поп шаҳри", ru: "Город Пап" },
+    locatives: {
+      name: { en: "in Pop", uz: "Popda", uzc: "Попда", ru: "в Папе" },
+      title: { en: "in Pop City", uz: "Pop shahrida", uzc: "Поп шаҳрида", ru: "в городе Папе" },
+    },
   },
   {
     slug: "chust_city",
@@ -691,6 +871,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-NG",
     names: { en: "Chust", uz: "Chust", uzc: "Чуст", ru: "Чуст" },
     titles: { en: "Chust City", uz: "Chust shahri", uzc: "Чуст шаҳри", ru: "Город Чуст" },
+    locatives: {
+      name: { en: "in Chust", uz: "Chustda", uzc: "Чустда", ru: "в Чусте" },
+      title: { en: "in Chust City", uz: "Chust shahrida", uzc: "Чуст шаҳрида", ru: "в городе Чусте" },
+    },
   },
   {
     slug: "chartak_city",
@@ -702,6 +886,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-NG",
     names: { en: "Chartak", uz: "Chortoq", uzc: "Чортоқ", ru: "Чартак" },
     titles: { en: "Chartak City", uz: "Chortoq shahri", uzc: "Чортоқ шаҳри", ru: "Город Чартак" },
+    locatives: {
+      name: { en: "in Chartak", uz: "Chortoqda", uzc: "Чортоқда", ru: "в Чартаке" },
+      title: { en: "in Chartak City", uz: "Chortoq shahrida", uzc: "Чортоқ шаҳрида", ru: "в городе Чартаке" },
+    },
   },
   {
     slug: "kasansay_city",
@@ -713,6 +901,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-NG",
     names: { en: "Kasansay", uz: "Kosonsoy", uzc: "Косонсой", ru: "Касансай" },
     titles: { en: "Kasansay City", uz: "Kosonsoy shahri", uzc: "Косонсой шаҳри", ru: "Город Касансай" },
+    locatives: {
+      name: { en: "in Kasansay", uz: "Kosonsoyda", uzc: "Косонсойда", ru: "в Касансае" },
+      title: { en: "in Kasansay City", uz: "Kosonsoy shahrida", uzc: "Косонсой шаҳрида", ru: "в городе Касансае" },
+    },
   },
   {
     slug: "khakkulabad_city",
@@ -724,6 +916,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-NG",
     names: { en: "Khakkulabad", uz: "Haqqulobod", uzc: "Ҳаққулобод", ru: "Хаккулабад" },
     titles: { en: "Khakkulabad City", uz: "Haqqulobod shahri", uzc: "Ҳаққулобод шаҳри", ru: "Город Хаккулабад" },
+    locatives: {
+      name: { en: "in Khakkulabad", uz: "Haqqulobodda", uzc: "Ҳаққулободда", ru: "в Хаккулабаде" },
+      title: { en: "in Khakkulabad City", uz: "Haqqulobod shahrida", uzc: "Ҳаққулобод шаҳрида", ru: "в городе Хаккулабаде" },
+    },
   },
   {
     slug: "uchkurgan_city",
@@ -735,6 +931,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-NG",
     names: { en: "Uchkurgan", uz: "Uchqo'rg'on", uzc: "Учқўрғон", ru: "Учкурган" },
     titles: { en: "Uchkurgan City", uz: "Uchqo'rg'on shahri", uzc: "Учқўрғон шаҳри", ru: "Город Учкурган" },
+    locatives: {
+      name: { en: "in Uchkurgan", uz: "Uchqo'rg'onda", uzc: "Учқўрғонда", ru: "в Учкургане" },
+      title: { en: "in Uchkurgan City", uz: "Uchqo'rg'on shahrida", uzc: "Учқўрғон шаҳрида", ru: "в городе Учкургане" },
+    },
   },
 
   // ----- Bukhara (UZ-BU) -----
@@ -748,6 +948,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-BU",
     names: { en: "Alat", uz: "Olot", uzc: "Олот", ru: "Алат" },
     titles: { en: "Alat City", uz: "Olot shahri", uzc: "Олот шаҳри", ru: "Город Алат" },
+    locatives: {
+      name: { en: "in Alat", uz: "Olotda", uzc: "Олотда", ru: "в Алате" },
+      title: { en: "in Alat City", uz: "Olot shahrida", uzc: "Олот шаҳрида", ru: "в городе Алате" },
+    },
   },
   {
     slug: "gijduvan_city",
@@ -759,6 +963,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-BU",
     names: { en: "Gijduvan", uz: "G'ijduvon", uzc: "Ғиждувон", ru: "Гиждуван" },
     titles: { en: "Gijduvan City", uz: "G'ijduvon shahri", uzc: "Ғиждувон шаҳри", ru: "Город Гиждуван" },
+    locatives: {
+      name: { en: "in Gijduvan", uz: "G'ijduvonda", uzc: "Ғиждувонда", ru: "в Гиждуване" },
+      title: { en: "in Gijduvan City", uz: "G'ijduvon shahrida", uzc: "Ғиждувон шаҳрида", ru: "в городе Гиждуване" },
+    },
   },
   {
     slug: "karakul_city",
@@ -770,6 +978,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-BU",
     names: { en: "Karakul", uz: "Qorako'l", uzc: "Қоракўл", ru: "Каракуль" },
     titles: { en: "Karakul City", uz: "Qorako'l shahri", uzc: "Қоракўл шаҳри", ru: "Город Каракуль" },
+    locatives: {
+      name: { en: "in Karakul", uz: "Qorako'lda", uzc: "Қоракўлда", ru: "в Каракуле" },
+      title: { en: "in Karakul City", uz: "Qorako'l shahrida", uzc: "Қоракўл шаҳрида", ru: "в городе Каракуле" },
+    },
   },
   {
     slug: "vobkent_city",
@@ -781,6 +993,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-BU",
     names: { en: "Vobkent", uz: "Vobkent", uzc: "Вобкент", ru: "Вабкент" },
     titles: { en: "Vobkent City", uz: "Vobkent shahri", uzc: "Вобкент шаҳри", ru: "Город Вабкент" },
+    locatives: {
+      name: { en: "in Vobkent", uz: "Vobkentda", uzc: "Вобкентда", ru: "в Вабкенте" },
+      title: { en: "in Vobkent City", uz: "Vobkent shahrida", uzc: "Вобкент шаҳрида", ru: "в городе Вабкенте" },
+    },
   },
   {
     slug: "romitan_city",
@@ -792,6 +1008,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-BU",
     names: { en: "Romitan", uz: "Romitan", uzc: "Ромитан", ru: "Ромитан" },
     titles: { en: "Romitan City", uz: "Romitan shahri", uzc: "Ромитан шаҳри", ru: "Город Ромитан" },
+    locatives: {
+      name: { en: "in Romitan", uz: "Romitanda", uzc: "Ромитанда", ru: "в Ромитане" },
+      title: { en: "in Romitan City", uz: "Romitan shahrida", uzc: "Ромитан шаҳрида", ru: "в городе Ромитане" },
+    },
   },
   {
     slug: "shafirkan_city",
@@ -803,6 +1023,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-BU",
     names: { en: "Shafirkan", uz: "Shofirkon", uzc: "Шофиркон", ru: "Шафиркан" },
     titles: { en: "Shafirkan City", uz: "Shofirkon shahri", uzc: "Шофиркон шаҳри", ru: "Город Шафиркан" },
+    locatives: {
+      name: { en: "in Shafirkan", uz: "Shofirkonda", uzc: "Шофирконда", ru: "в Шафиркане" },
+      title: { en: "in Shafirkan City", uz: "Shofirkon shahrida", uzc: "Шофиркон шаҳрида", ru: "в городе Шафиркане" },
+    },
   },
   {
     slug: "qorovulbozor_city",
@@ -814,6 +1038,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-BU",
     names: { en: "Karavulbazar", uz: "Qorovulbozor", uzc: "Қоровулбозор", ru: "Каравулбазар" },
     titles: { en: "Karavulbazar City", uz: "Qorovulbozor shahri", uzc: "Қоровулбозор шаҳри", ru: "Город Каравулбазар" },
+    locatives: {
+      name: { en: "in Karavulbazar", uz: "Qorovulbozorda", uzc: "Қоровулбозорда", ru: "в Каравулбазаре" },
+      title: { en: "in Karavulbazar City", uz: "Qorovulbozor shahrida", uzc: "Қоровулбозор шаҳрида", ru: "в городе Каравулбазаре" },
+    },
   },
   {
     slug: "galaosiyo_city",
@@ -825,6 +1053,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-BU",
     names: { en: "Galaosiyo", uz: "Galaosiyo", uzc: "Галаосиё", ru: "Галаасия" },
     titles: { en: "Galaosiyo City", uz: "Galaosiyo shahri", uzc: "Галаосиё шаҳри", ru: "Город Галаасия" },
+    locatives: {
+      name: { en: "in Galaosiyo", uz: "Galaosiyoda", uzc: "Галаосиёда", ru: "в Галаасии" },
+      title: { en: "in Galaosiyo City", uz: "Galaosiyo shahrida", uzc: "Галаосиё шаҳрида", ru: "в городе Галаасии" },
+    },
   },
 
   // ----- Navoi (UZ-NW) -----
@@ -838,6 +1070,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-NW",
     names: { en: "Kyzyltepa", uz: "Qiziltepa", uzc: "Қизилтепа", ru: "Кызылтепа" },
     titles: { en: "Kyzyltepa City", uz: "Qiziltepa shahri", uzc: "Қизилтепа шаҳри", ru: "Город Кызылтепа" },
+    locatives: {
+      name: { en: "in Kyzyltepa", uz: "Qiziltepada", uzc: "Қизилтепада", ru: "в Кызылтепе" },
+      title: { en: "in Kyzyltepa City", uz: "Qiziltepa shahrida", uzc: "Қизилтепа шаҳрида", ru: "в городе Кызылтепе" },
+    },
   },
   {
     slug: "nurota_city",
@@ -849,6 +1085,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-NW",
     names: { en: "Nurata", uz: "Nurota", uzc: "Нурота", ru: "Нурата" },
     titles: { en: "Nurata City", uz: "Nurota shahri", uzc: "Нурота шаҳри", ru: "Город Нурата" },
+    locatives: {
+      name: { en: "in Nurata", uz: "Nurotada", uzc: "Нуротада", ru: "в Нурате" },
+      title: { en: "in Nurata City", uz: "Nurota shahrida", uzc: "Нурота шаҳрида", ru: "в городе Нурате" },
+    },
   },
   {
     slug: "uchkuduk_city",
@@ -860,6 +1100,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-NW",
     names: { en: "Uchkuduk", uz: "Uchquduq", uzc: "Учқудуқ", ru: "Учкудук" },
     titles: { en: "Uchkuduk City", uz: "Uchquduq shahri", uzc: "Учқудуқ шаҳри", ru: "Город Учкудук" },
+    locatives: {
+      name: { en: "in Uchkuduk", uz: "Uchquduqda", uzc: "Учқудуқда", ru: "в Учкудуке" },
+      title: { en: "in Uchkuduk City", uz: "Uchquduq shahrida", uzc: "Учқудуқ шаҳрида", ru: "в городе Учкудуке" },
+    },
   },
 
   // ----- Kashkadarya (UZ-QA) -----
@@ -873,6 +1117,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-QA",
     names: { en: "Beshkent", uz: "Beshkent", uzc: "Бешкент", ru: "Бешкент" },
     titles: { en: "Beshkent City", uz: "Beshkent shahri", uzc: "Бешкент шаҳри", ru: "Город Бешкент" },
+    locatives: {
+      name: { en: "in Beshkent", uz: "Beshkentda", uzc: "Бешкентда", ru: "в Бешкенте" },
+      title: { en: "in Beshkent City", uz: "Beshkent shahrida", uzc: "Бешкент шаҳрида", ru: "в городе Бешкенте" },
+    },
   },
   {
     slug: "kitab_city",
@@ -884,6 +1132,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-QA",
     names: { en: "Kitab", uz: "Kitob", uzc: "Китоб", ru: "Китаб" },
     titles: { en: "Kitab City", uz: "Kitob shahri", uzc: "Китоб шаҳри", ru: "Город Китаб" },
+    locatives: {
+      name: { en: "in Kitab", uz: "Kitobda", uzc: "Китобда", ru: "в Китабе" },
+      title: { en: "in Kitab City", uz: "Kitob shahrida", uzc: "Китоб шаҳрида", ru: "в городе Китабе" },
+    },
   },
   {
     slug: "kasan_city",
@@ -895,6 +1147,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-QA",
     names: { en: "Kasan", uz: "Koson", uzc: "Косон", ru: "Касан" },
     titles: { en: "Kasan City", uz: "Koson shahri", uzc: "Косон шаҳри", ru: "Город Касан" },
+    locatives: {
+      name: { en: "in Kasan", uz: "Kosonda", uzc: "Косонда", ru: "в Касане" },
+      title: { en: "in Kasan City", uz: "Koson shahrida", uzc: "Косон шаҳрида", ru: "в городе Касане" },
+    },
   },
   {
     slug: "mubarek_city",
@@ -906,6 +1162,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-QA",
     names: { en: "Mubarek", uz: "Muborak", uzc: "Муборак", ru: "Мубарек" },
     titles: { en: "Mubarek City", uz: "Muborak shahri", uzc: "Муборак шаҳри", ru: "Город Мубарек" },
+    locatives: {
+      name: { en: "in Mubarek", uz: "Muborakda", uzc: "Муборакда", ru: "в Мубареке" },
+      title: { en: "in Mubarek City", uz: "Muborak shahrida", uzc: "Муборак шаҳрида", ru: "в городе Мубареке" },
+    },
   },
   {
     slug: "kamashi_city",
@@ -917,6 +1177,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-QA",
     names: { en: "Kamashi", uz: "Qamashi", uzc: "Қамаши", ru: "Камаши" },
     titles: { en: "Kamashi City", uz: "Qamashi shahri", uzc: "Қамаши шаҳри", ru: "Город Камаши" },
+    locatives: {
+      name: { en: "in Kamashi", uz: "Qamashida", uzc: "Қамашида", ru: "в Камаши" },
+      title: { en: "in Kamashi City", uz: "Qamashi shahrida", uzc: "Қамаши шаҳрида", ru: "в городе Камаши" },
+    },
   },
   {
     slug: "yakkabag_city",
@@ -928,6 +1192,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-QA",
     names: { en: "Yakkabag", uz: "Yakkabog'", uzc: "Яккабоғ", ru: "Яккабаг" },
     titles: { en: "Yakkabag City", uz: "Yakkabog' shahri", uzc: "Яккабоғ шаҳри", ru: "Город Яккабаг" },
+    locatives: {
+      name: { en: "in Yakkabag", uz: "Yakkabog'da", uzc: "Яккабоғда", ru: "в Яккабаге" },
+      title: { en: "in Yakkabag City", uz: "Yakkabog' shahrida", uzc: "Яккабоғ шаҳрида", ru: "в городе Яккабаге" },
+    },
   },
   {
     slug: "yangi_nishan_city",
@@ -939,6 +1207,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-QA",
     names: { en: "Yangi Nishan", uz: "Yangi Nishon", uzc: "Янги Нишон", ru: "Янги-Нишан" },
     titles: { en: "Yangi Nishan City", uz: "Yangi Nishon shahri", uzc: "Янги Нишон шаҳри", ru: "Город Янги-Нишан" },
+    locatives: {
+      name: { en: "in Yangi Nishan", uz: "Yangi Nishonda", uzc: "Янги Нишонда", ru: "в Янги-Нишане" },
+      title: { en: "in Yangi Nishan City", uz: "Yangi Nishon shahrida", uzc: "Янги Нишон шаҳрида", ru: "в городе Янги-Нишане" },
+    },
   },
   {
     slug: "guzar_city",
@@ -950,6 +1222,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-QA",
     names: { en: "Guzar", uz: "G'uzor", uzc: "Ғузор", ru: "Гузар" },
     titles: { en: "Guzar City", uz: "G'uzor shahri", uzc: "Ғузор шаҳри", ru: "Город Гузар" },
+    locatives: {
+      name: { en: "in Guzar", uz: "G'uzorda", uzc: "Ғузорда", ru: "в Гузаре" },
+      title: { en: "in Guzar City", uz: "G'uzor shahrida", uzc: "Ғузор шаҳрида", ru: "в городе Гузаре" },
+    },
   },
   {
     slug: "chirakchi_city",
@@ -961,6 +1237,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-QA",
     names: { en: "Chirakchi", uz: "Chiroqchi", uzc: "Чироқчи", ru: "Чиракчи" },
     titles: { en: "Chirakchi City", uz: "Chiroqchi shahri", uzc: "Чироқчи шаҳри", ru: "Город Чиракчи" },
+    locatives: {
+      name: { en: "in Chirakchi", uz: "Chiroqchida", uzc: "Чироқчида", ru: "в Чиракчи" },
+      title: { en: "in Chirakchi City", uz: "Chiroqchi shahrida", uzc: "Чироқчи шаҳрида", ru: "в городе Чиракчи" },
+    },
   },
   {
     slug: "tallimarjon_city",
@@ -972,6 +1252,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-QA",
     names: { en: "Tallimarjon", uz: "Tallimarjon", uzc: "Таллимаржон", ru: "Талимарджан" },
     titles: { en: "Tallimarjon City", uz: "Tallimarjon shahri", uzc: "Таллимаржон шаҳри", ru: "Город Талимарджан" },
+    locatives: {
+      name: { en: "in Tallimarjon", uz: "Tallimarjonda", uzc: "Таллимаржонда", ru: "в Талимарджане" },
+      title: { en: "in Tallimarjon City", uz: "Tallimarjon shahrida", uzc: "Таллимаржон шаҳрида", ru: "в городе Талимарджане" },
+    },
   },
 
   // ----- Jizzakh (UZ-JI) -----
@@ -985,6 +1269,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-JI",
     names: { en: "Dustlik", uz: "Do'stlik", uzc: "Дўстлик", ru: "Дустлик" },
     titles: { en: "Dustlik City", uz: "Do'stlik shahri", uzc: "Дўстлик шаҳри", ru: "Город Дустлик" },
+    locatives: {
+      name: { en: "in Dustlik", uz: "Do'stlikda", uzc: "Дўстликда", ru: "в Дустлике" },
+      title: { en: "in Dustlik City", uz: "Do'stlik shahrida", uzc: "Дўстлик шаҳрида", ru: "в городе Дустлике" },
+    },
   },
   {
     slug: "gagarin_city",
@@ -996,6 +1284,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-JI",
     names: { en: "Gagarin", uz: "Gagarin", uzc: "Гагарин", ru: "Гагарин" },
     titles: { en: "Gagarin City", uz: "Gagarin shahri", uzc: "Гагарин шаҳри", ru: "Город Гагарин" },
+    locatives: {
+      name: { en: "in Gagarin", uz: "Gagarinda", uzc: "Гагаринда", ru: "в Гагарине" },
+      title: { en: "in Gagarin City", uz: "Gagarin shahrida", uzc: "Гагарин шаҳрида", ru: "в городе Гагарине" },
+    },
   },
   {
     slug: "gallaaral_city",
@@ -1007,6 +1299,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-JI",
     names: { en: "Gallaaral", uz: "G'allaorol", uzc: "Ғаллаорол", ru: "Галляарал" },
     titles: { en: "Gallaaral City", uz: "G'allaorol shahri", uzc: "Ғаллаорол шаҳри", ru: "Город Галляарал" },
+    locatives: {
+      name: { en: "in Gallaaral", uz: "G'allaorolda", uzc: "Ғаллаоролда", ru: "в Галляарале" },
+      title: { en: "in Gallaaral City", uz: "G'allaorol shahrida", uzc: "Ғаллаорол шаҳрида", ru: "в городе Галляарале" },
+    },
   },
   {
     slug: "pakhtakor_city",
@@ -1018,6 +1314,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-JI",
     names: { en: "Pakhtakor", uz: "Paxtakor", uzc: "Пахтакор", ru: "Пахтакор" },
     titles: { en: "Pakhtakor City", uz: "Paxtakor shahri", uzc: "Пахтакор шаҳри", ru: "Город Пахтакор" },
+    locatives: {
+      name: { en: "in Pakhtakor", uz: "Paxtakorda", uzc: "Пахтакорда", ru: "в Пахтакоре" },
+      title: { en: "in Pakhtakor City", uz: "Paxtakor shahrida", uzc: "Пахтакор шаҳрида", ru: "в городе Пахтакоре" },
+    },
   },
 
   // ----- Syrdarya (UZ-SI) -----
@@ -1031,6 +1331,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-SI",
     names: { en: "Syrdarya", uz: "Sirdaryo", uzc: "Сирдарё", ru: "Сырдарья" },
     titles: { en: "Syrdarya City", uz: "Sirdaryo shahri", uzc: "Сирдарё шаҳри", ru: "Город Сырдарья" },
+    locatives: {
+      name: { en: "in Syrdarya", uz: "Sirdaryoda", uzc: "Сирдарёда", ru: "в Сырдарье" },
+      title: { en: "in Syrdarya City", uz: "Sirdaryo shahrida", uzc: "Сирдарё шаҳрида", ru: "в городе Сырдарье" },
+    },
   },
   {
     slug: "bakht_city",
@@ -1042,6 +1346,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-SI",
     names: { en: "Bakht", uz: "Baxt", uzc: "Бахт", ru: "Бахт" },
     titles: { en: "Bakht City", uz: "Baxt shahri", uzc: "Бахт шаҳри", ru: "Город Бахт" },
+    locatives: {
+      name: { en: "in Bakht", uz: "Baxtda", uzc: "Бахтда", ru: "в Бахте" },
+      title: { en: "in Bakht City", uz: "Baxt shahrida", uzc: "Бахт шаҳрида", ru: "в городе Бахте" },
+    },
   },
 
   // ----- Samarkand (UZ-SA) -----
@@ -1055,6 +1363,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-SA",
     names: { en: "Bulungur", uz: "Bulung'ur", uzc: "Булунғур", ru: "Булунгур" },
     titles: { en: "Bulungur City", uz: "Bulung'ur shahri", uzc: "Булунғур шаҳри", ru: "Город Булунгур" },
+    locatives: {
+      name: { en: "in Bulungur", uz: "Bulung'urda", uzc: "Булунғурда", ru: "в Булунгуре" },
+      title: { en: "in Bulungur City", uz: "Bulung'ur shahrida", uzc: "Булунғур шаҳрида", ru: "в городе Булунгуре" },
+    },
   },
   {
     slug: "jomboy_city",
@@ -1066,6 +1378,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-SA",
     names: { en: "Jomboy", uz: "Jomboy", uzc: "Жомбой", ru: "Джамбай" },
     titles: { en: "Jomboy City", uz: "Jomboy shahri", uzc: "Жомбой шаҳри", ru: "Город Джамбай" },
+    locatives: {
+      name: { en: "in Jomboy", uz: "Jomboyda", uzc: "Жомбойда", ru: "в Джамбае" },
+      title: { en: "in Jomboy City", uz: "Jomboy shahrida", uzc: "Жомбой шаҳрида", ru: "в городе Джамбае" },
+    },
   },
   {
     slug: "ishtykhan_city",
@@ -1077,6 +1393,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-SA",
     names: { en: "Ishtykhan", uz: "Ishtixon", uzc: "Иштихон", ru: "Иштыхан" },
     titles: { en: "Ishtykhan City", uz: "Ishtixon shahri", uzc: "Иштихон шаҳри", ru: "Город Иштыхан" },
+    locatives: {
+      name: { en: "in Ishtykhan", uz: "Ishtixonda", uzc: "Иштихонда", ru: "в Иштыхане" },
+      title: { en: "in Ishtykhan City", uz: "Ishtixon shahrida", uzc: "Иштихон шаҳрида", ru: "в городе Иштыхане" },
+    },
   },
   {
     slug: "payaryk_city",
@@ -1088,6 +1408,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-SA",
     names: { en: "Payaryk", uz: "Payariq", uzc: "Пайариқ", ru: "Пайарык" },
     titles: { en: "Payaryk City", uz: "Payariq shahri", uzc: "Пайариқ шаҳри", ru: "Город Пайарык" },
+    locatives: {
+      name: { en: "in Payaryk", uz: "Payariqda", uzc: "Пайариқда", ru: "в Пайарыке" },
+      title: { en: "in Payaryk City", uz: "Payariq shahrida", uzc: "Пайариқ шаҳрида", ru: "в городе Пайарыке" },
+    },
   },
   {
     slug: "chelak_city",
@@ -1099,6 +1423,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-SA",
     names: { en: "Chelak", uz: "Chelak", uzc: "Челак", ru: "Челек" },
     titles: { en: "Chelak City", uz: "Chelak shahri", uzc: "Челак шаҳри", ru: "Город Челек" },
+    locatives: {
+      name: { en: "in Chelak", uz: "Chelakda", uzc: "Челакда", ru: "в Челеке" },
+      title: { en: "in Chelak City", uz: "Chelak shahrida", uzc: "Челак шаҳрида", ru: "в городе Челеке" },
+    },
   },
   {
     slug: "juma_city",
@@ -1110,6 +1438,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-SA",
     names: { en: "Juma", uz: "Juma", uzc: "Жума", ru: "Джума" },
     titles: { en: "Juma City", uz: "Juma shahri", uzc: "Жума шаҳри", ru: "Город Джума" },
+    locatives: {
+      name: { en: "in Juma", uz: "Jumada", uzc: "Жумада", ru: "в Джуме" },
+      title: { en: "in Juma City", uz: "Juma shahrida", uzc: "Жума шаҳрида", ru: "в городе Джуме" },
+    },
   },
   {
     slug: "nurabad_city",
@@ -1121,6 +1453,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-SA",
     names: { en: "Nurabad", uz: "Nurobod", uzc: "Нуробод", ru: "Нурабад" },
     titles: { en: "Nurabad City", uz: "Nurobod shahri", uzc: "Нуробод шаҳри", ru: "Город Нурабад" },
+    locatives: {
+      name: { en: "in Nurabad", uz: "Nurobodda", uzc: "Нурободда", ru: "в Нурабаде" },
+      title: { en: "in Nurabad City", uz: "Nurobod shahrida", uzc: "Нуробод шаҳрида", ru: "в городе Нурабаде" },
+    },
   },
 
   // ----- Surkhandarya (UZ-SU) -----
@@ -1134,6 +1470,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-SU",
     names: { en: "Denau", uz: "Denov", uzc: "Денов", ru: "Денау" },
     titles: { en: "Denau City", uz: "Denov shahri", uzc: "Денов шаҳри", ru: "Город Денау" },
+    locatives: {
+      name: { en: "in Denau", uz: "Denovda", uzc: "Деновда", ru: "в Денау" },
+      title: { en: "in Denau City", uz: "Denov shahrida", uzc: "Денов шаҳрида", ru: "в городе Денау" },
+    },
   },
   {
     slug: "baysun_city",
@@ -1145,6 +1485,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-SU",
     names: { en: "Baysun", uz: "Boysun", uzc: "Бойсун", ru: "Байсун" },
     titles: { en: "Baysun City", uz: "Boysun shahri", uzc: "Бойсун шаҳри", ru: "Город Байсун" },
+    locatives: {
+      name: { en: "in Baysun", uz: "Boysunda", uzc: "Бойсунда", ru: "в Байсуне" },
+      title: { en: "in Baysun City", uz: "Boysun shahrida", uzc: "Бойсун шаҳрида", ru: "в городе Байсуне" },
+    },
   },
   {
     slug: "jarkurgan_city",
@@ -1156,6 +1500,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-SU",
     names: { en: "Jarkurgan", uz: "Jarqo'rg'on", uzc: "Жарқўрғон", ru: "Джаркурган" },
     titles: { en: "Jarkurgan City", uz: "Jarqo'rg'on shahri", uzc: "Жарқўрғон шаҳри", ru: "Город Джаркурган" },
+    locatives: {
+      name: { en: "in Jarkurgan", uz: "Jarqo'rg'onda", uzc: "Жарқўрғонда", ru: "в Джаркургане" },
+      title: { en: "in Jarkurgan City", uz: "Jarqo'rg'on shahrida", uzc: "Жарқўрғон шаҳрида", ru: "в городе Джаркургане" },
+    },
   },
   {
     slug: "kumkurgan_city",
@@ -1167,6 +1515,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-SU",
     names: { en: "Kumkurgan", uz: "Qumqo'rg'on", uzc: "Қумқўрғон", ru: "Кумкурган" },
     titles: { en: "Kumkurgan City", uz: "Qumqo'rg'on shahri", uzc: "Қумқўрғон шаҳри", ru: "Город Кумкурган" },
+    locatives: {
+      name: { en: "in Kumkurgan", uz: "Qumqo'rg'onda", uzc: "Қумқўрғонда", ru: "в Кумкургане" },
+      title: { en: "in Kumkurgan City", uz: "Qumqo'rg'on shahrida", uzc: "Қумқўрғон шаҳрида", ru: "в городе Кумкургане" },
+    },
   },
   {
     slug: "sherabad_city",
@@ -1178,6 +1530,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-SU",
     names: { en: "Sherabad", uz: "Sherobod", uzc: "Шеробод", ru: "Шерабад" },
     titles: { en: "Sherabad City", uz: "Sherobod shahri", uzc: "Шеробод шаҳри", ru: "Город Шерабад" },
+    locatives: {
+      name: { en: "in Sherabad", uz: "Sherobodda", uzc: "Шерободда", ru: "в Шерабаде" },
+      title: { en: "in Sherabad City", uz: "Sherobod shahrida", uzc: "Шеробод шаҳрида", ru: "в городе Шерабаде" },
+    },
   },
   {
     slug: "shurchi_city",
@@ -1189,6 +1545,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-SU",
     names: { en: "Shurchi", uz: "Sho'rchi", uzc: "Шўрчи", ru: "Шурчи" },
     titles: { en: "Shurchi City", uz: "Sho'rchi shahri", uzc: "Шўрчи шаҳри", ru: "Город Шурчи" },
+    locatives: {
+      name: { en: "in Shurchi", uz: "Sho'rchida", uzc: "Шўрчида", ru: "в Шурчи" },
+      title: { en: "in Shurchi City", uz: "Sho'rchi shahrida", uzc: "Шўрчи шаҳрида", ru: "в городе Шурчи" },
+    },
   },
   {
     slug: "shargun_city",
@@ -1200,6 +1560,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-SU",
     names: { en: "Shargun", uz: "Sharg'un", uzc: "Шарғун", ru: "Шаргунь" },
     titles: { en: "Shargun City", uz: "Sharg'un shahri", uzc: "Шарғун шаҳри", ru: "Город Шаргунь" },
+    locatives: {
+      name: { en: "in Shargun", uz: "Sharg'unda", uzc: "Шарғунда", ru: "в Шаргуне" },
+      title: { en: "in Shargun City", uz: "Sharg'un shahrida", uzc: "Шарғун шаҳрида", ru: "в городе Шаргуне" },
+    },
   },
 
   // ----- Khorezm (UZ-XO) -----
@@ -1213,6 +1577,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-XO",
     names: { en: "Pitnak", uz: "Pitnak", uzc: "Питнак", ru: "Питнак" },
     titles: { en: "Pitnak City", uz: "Pitnak shahri", uzc: "Питнак шаҳри", ru: "Город Питнак" },
+    locatives: {
+      name: { en: "in Pitnak", uz: "Pitnakda", uzc: "Питнакда", ru: "в Питнаке" },
+      title: { en: "in Pitnak City", uz: "Pitnak shahrida", uzc: "Питнак шаҳрида", ru: "в городе Питнаке" },
+    },
   },
 
   // ----- Karakalpakstan (UZ-QR) -----
@@ -1226,6 +1594,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-QR",
     names: { en: "Beruniy", uz: "Beruniy", uzc: "Беруний", ru: "Беруни" },
     titles: { en: "Beruniy City", uz: "Beruniy shahri", uzc: "Беруний шаҳри", ru: "Город Беруни" },
+    locatives: {
+      name: { en: "in Beruniy", uz: "Beruniyda", uzc: "Берунийда", ru: "в Беруни" },
+      title: { en: "in Beruniy City", uz: "Beruniy shahrida", uzc: "Беруний шаҳрида", ru: "в городе Беруни" },
+    },
   },
   {
     slug: "boston_city",
@@ -1237,6 +1609,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-QR",
     names: { en: "Boston", uz: "Bo'ston", uzc: "Бўстон", ru: "Бустан" },
     titles: { en: "Boston City", uz: "Bo'ston shahri", uzc: "Бўстон шаҳри", ru: "Город Бустан" },
+    locatives: {
+      name: { en: "in Boston", uz: "Bo'stonda", uzc: "Бўстонда", ru: "в Бустане" },
+      title: { en: "in Boston City", uz: "Bo'ston shahrida", uzc: "Бўстон шаҳрида", ru: "в городе Бустане" },
+    },
   },
   {
     slug: "chimbay_city",
@@ -1248,6 +1624,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-QR",
     names: { en: "Chimbay", uz: "Chimboy", uzc: "Чимбой", ru: "Чимбай" },
     titles: { en: "Chimbay City", uz: "Chimboy shahri", uzc: "Чимбой шаҳри", ru: "Город Чимбай" },
+    locatives: {
+      name: { en: "in Chimbay", uz: "Chimboyda", uzc: "Чимбойда", ru: "в Чимбае" },
+      title: { en: "in Chimbay City", uz: "Chimboy shahrida", uzc: "Чимбой шаҳрида", ru: "в городе Чимбае" },
+    },
   },
   {
     slug: "mangit_city",
@@ -1259,6 +1639,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-QR",
     names: { en: "Mangit", uz: "Mang'it", uzc: "Манғит", ru: "Мангит" },
     titles: { en: "Mangit City", uz: "Mang'it shahri", uzc: "Манғит шаҳри", ru: "Город Мангит" },
+    locatives: {
+      name: { en: "in Mangit", uz: "Mang'itda", uzc: "Манғитда", ru: "в Мангите" },
+      title: { en: "in Mangit City", uz: "Mang'it shahrida", uzc: "Манғит шаҳрида", ru: "в городе Мангите" },
+    },
   },
   {
     slug: "muynak_city",
@@ -1270,6 +1654,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-QR",
     names: { en: "Muynak", uz: "Mo'ynoq", uzc: "Мўйноқ", ru: "Муйнак" },
     titles: { en: "Muynak City", uz: "Mo'ynoq shahri", uzc: "Мўйноқ шаҳри", ru: "Город Муйнак" },
+    locatives: {
+      name: { en: "in Muynak", uz: "Mo'ynoqda", uzc: "Мўйноқда", ru: "в Муйнаке" },
+      title: { en: "in Muynak City", uz: "Mo'ynoq shahrida", uzc: "Мўйноқ шаҳрида", ru: "в городе Муйнаке" },
+    },
   },
   {
     slug: "kungrad_city",
@@ -1281,6 +1669,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-QR",
     names: { en: "Kungrad", uz: "Qo'ng'irot", uzc: "Қўнғирот", ru: "Кунград" },
     titles: { en: "Kungrad City", uz: "Qo'ng'irot shahri", uzc: "Қўнғирот шаҳри", ru: "Город Кунград" },
+    locatives: {
+      name: { en: "in Kungrad", uz: "Qo'ng'irotda", uzc: "Қўнғиротда", ru: "в Кунграде" },
+      title: { en: "in Kungrad City", uz: "Qo'ng'irot shahrida", uzc: "Қўнғирот шаҳрида", ru: "в городе Кунграде" },
+    },
   },
   {
     slug: "shumanai_city",
@@ -1292,6 +1684,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-QR",
     names: { en: "Shumanai", uz: "Shumanay", uzc: "Шуманай", ru: "Шуманай" },
     titles: { en: "Shumanai City", uz: "Shumanay shahri", uzc: "Шуманай шаҳри", ru: "Город Шуманай" },
+    locatives: {
+      name: { en: "in Shumanai", uz: "Shumanayda", uzc: "Шуманайда", ru: "в Шуманае" },
+      title: { en: "in Shumanai City", uz: "Shumanay shahrida", uzc: "Шуманай шаҳрида", ru: "в городе Шуманае" },
+    },
   },
   {
     slug: "turtkul_city",
@@ -1303,6 +1699,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-QR",
     names: { en: "Turtkul", uz: "To'rtko'l", uzc: "Тўрткўл", ru: "Турткуль" },
     titles: { en: "Turtkul City", uz: "To'rtko'l shahri", uzc: "Тўрткўл шаҳри", ru: "Город Турткуль" },
+    locatives: {
+      name: { en: "in Turtkul", uz: "To'rtko'lda", uzc: "Тўрткўлда", ru: "в Турткуле" },
+      title: { en: "in Turtkul City", uz: "To'rtko'l shahrida", uzc: "Тўрткўл шаҳрида", ru: "в городе Турткуле" },
+    },
   },
   {
     slug: "khojeyli_city",
@@ -1314,6 +1714,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-QR",
     names: { en: "Khojeyli", uz: "Xo'jayli", uzc: "Хўжайли", ru: "Ходжейли" },
     titles: { en: "Khojeyli City", uz: "Xo'jayli shahri", uzc: "Хўжайли шаҳри", ru: "Город Ходжейли" },
+    locatives: {
+      name: { en: "in Khojeyli", uz: "Xo'jaylida", uzc: "Хўжайлида", ru: "в Ходжейли" },
+      title: { en: "in Khojeyli City", uz: "Xo'jayli shahrida", uzc: "Хўжайли шаҳрида", ru: "в городе Ходжейли" },
+    },
   },
 
   // ----- Tashkent Region (UZ-TO) -----
@@ -1327,6 +1731,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-TO",
     names: { en: "Gazalkent", uz: "G'azalkent", uzc: "Ғазалкент", ru: "Газалкент" },
     titles: { en: "Gazalkent City", uz: "G'azalkent shahri", uzc: "Ғазалкент шаҳри", ru: "Город Газалкент" },
+    locatives: {
+      name: { en: "in Gazalkent", uz: "G'azalkentda", uzc: "Ғазалкентда", ru: "в Газалкенте" },
+      title: { en: "in Gazalkent City", uz: "G'azalkent shahrida", uzc: "Ғазалкент шаҳрида", ru: "в городе Газалкенте" },
+    },
   },
   {
     slug: "keles_city",
@@ -1338,6 +1746,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-TO",
     names: { en: "Keles", uz: "Keles", uzc: "Келес", ru: "Келес" },
     titles: { en: "Keles City", uz: "Keles shahri", uzc: "Келес шаҳри", ru: "Город Келес" },
+    locatives: {
+      name: { en: "in Keles", uz: "Kelesda", uzc: "Келесда", ru: "в Келесе" },
+      title: { en: "in Keles City", uz: "Keles shahrida", uzc: "Келес шаҳрида", ru: "в городе Келесе" },
+    },
   },
   {
     slug: "buka_city",
@@ -1349,6 +1761,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-TO",
     names: { en: "Buka", uz: "Bo'ka", uzc: "Бўка", ru: "Бука" },
     titles: { en: "Buka City", uz: "Bo'ka shahri", uzc: "Бўка шаҳри", ru: "Город Бука" },
+    locatives: {
+      name: { en: "in Buka", uz: "Bo'kada", uzc: "Бўкада", ru: "в Буке" },
+      title: { en: "in Buka City", uz: "Bo'ka shahrida", uzc: "Бўка шаҳрида", ru: "в городе Буке" },
+    },
   },
   {
     slug: "dustabad_city",
@@ -1360,6 +1776,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-TO",
     names: { en: "Dustabad", uz: "Do'stobod", uzc: "Дўстобод", ru: "Дустабад" },
     titles: { en: "Dustabad City", uz: "Do'stobod shahri", uzc: "Дўстобод шаҳри", ru: "Город Дустабад" },
+    locatives: {
+      name: { en: "in Dustabad", uz: "Do'stobodda", uzc: "Дўстободда", ru: "в Дустабаде" },
+      title: { en: "in Dustabad City", uz: "Do'stobod shahrida", uzc: "Дўстобод шаҳрида", ru: "в городе Дустабаде" },
+    },
   },
   {
     slug: "akkurgan_city",
@@ -1371,6 +1791,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-TO",
     names: { en: "Akkurgan", uz: "Oqqo'rg'on", uzc: "Оққўрғон", ru: "Аккурган" },
     titles: { en: "Akkurgan City", uz: "Oqqo'rg'on shahri", uzc: "Оққўрғон шаҳри", ru: "Город Аккурган" },
+    locatives: {
+      name: { en: "in Akkurgan", uz: "Oqqo'rg'onda", uzc: "Оққўрғонда", ru: "в Аккургане" },
+      title: { en: "in Akkurgan City", uz: "Oqqo'rg'on shahrida", uzc: "Оққўрғон шаҳрида", ru: "в городе Аккургане" },
+    },
   },
   {
     slug: "parkent_city",
@@ -1382,6 +1806,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-TO",
     names: { en: "Parkent", uz: "Parkent", uzc: "Паркент", ru: "Паркент" },
     titles: { en: "Parkent City", uz: "Parkent shahri", uzc: "Паркент шаҳри", ru: "Город Паркент" },
+    locatives: {
+      name: { en: "in Parkent", uz: "Parkentda", uzc: "Паркентда", ru: "в Паркенте" },
+      title: { en: "in Parkent City", uz: "Parkent shahrida", uzc: "Паркент шаҳрида", ru: "в городе Паркенте" },
+    },
   },
   {
     slug: "piskent_city",
@@ -1393,6 +1821,10 @@ export const cities: readonly City[] = [
     regionIso: "UZ-TO",
     names: { en: "Piskent", uz: "Piskent", uzc: "Пискент", ru: "Пскент" },
     titles: { en: "Piskent City", uz: "Piskent shahri", uzc: "Пискент шаҳри", ru: "Город Пскент" },
+    locatives: {
+      name: { en: "in Piskent", uz: "Piskentda", uzc: "Пискентда", ru: "в Пскенте" },
+      title: { en: "in Piskent City", uz: "Piskent shahrida", uzc: "Пискент шаҳрида", ru: "в городе Пскенте" },
+    },
   },
   {
     slug: "chinaz_city",
@@ -1404,5 +1836,9 @@ export const cities: readonly City[] = [
     regionIso: "UZ-TO",
     names: { en: "Chinaz", uz: "Chinoz", uzc: "Чиноз", ru: "Чиназ" },
     titles: { en: "Chinaz City", uz: "Chinoz shahri", uzc: "Чиноз шаҳри", ru: "Город Чиназ" },
+    locatives: {
+      name: { en: "in Chinaz", uz: "Chinozda", uzc: "Чинозда", ru: "в Чиназе" },
+      title: { en: "in Chinaz City", uz: "Chinoz shahrida", uzc: "Чиноз шаҳрида", ru: "в городе Чиназе" },
+    },
   },
 ];
