@@ -4,6 +4,61 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/), and this project adheres to
 [Semantic Versioning](https://semver.org/).
 
+## [2.1.0]
+
+### Summary
+
+Every unit now carries a **locative** — the ready-to-use "in X" phrase — in all
+four languages. This is what a page title like `Работа в Бухаре` or
+`Buxoroda ish` needs and what the nominative `names` field cannot provide.
+
+Purely additive: nothing that worked before returns anything different.
+
+### Added
+
+- **`locatives`** on `Region`, `District` and `City`, with a `name` form (from
+  `names`) and a `title` form (from `titles`), each in all four languages:
+
+  ```ts
+  getRegion("bukhara")?.locatives.name.ru;   // "в Бухаре"
+  getRegion("bukhara")?.locatives.name.uz;   // "Buxoroda"
+  getRegion("bukhara")?.locatives.title.ru;  // "в Бухарской области"
+  ```
+
+  Values are complete phrases, not bare inflected nouns, because what's missing
+  differs by language: Russian needs a preposition plus the prepositional case,
+  Uzbek needs the `-da` suffix and has no preposition at all, English needs
+  `in` plus an article where one is required.
+
+- **`Locatives`** exported type.
+- Build-time validation that every one of the 298 units has both forms in all
+  four languages, with the right per-language marker. `locatives` is therefore
+  a total (non-optional) field and needs no runtime guard.
+
+### Notes
+
+- **Russian is hand-authored and reviewed, not rule-generated.** Toponyms ending
+  in `-и` or `-у` are indeclinable and keep the nominative form (`в Карши`,
+  `в Навои`, `в Балыкчи`, `в Денау`, `в Карасу`); feminine names in `-ия` take
+  `-ии` (`Галаасия` → `в Галаасии`). A naive "add `-е`" rule corrupts all of
+  these.
+- **Uzbek `-da` is regular** and applied mechanically, including gemination
+  after a final `d` (`Samarqand` → `Samarqandda`).
+- **Seven slugs exist as both a region and a district** (`bukhara`, `samarkand`,
+  `fergana`, `andijan`, `namangan`, `syrdarya`, `tashkent`), and the same-named
+  city adds a third. All produce an identical `locatives.name` — use
+  `locatives.title` for region and district pages to keep `<title>` unique.
+- **Payload:** +8.2 KB gzipped (15.6 → 23.8 KB), +82.5 KB raw. Server-rendered
+  titles never ship this to a browser.
+
+### Type stability
+
+`Region`, `District` and `City` describe data uzbgeo returns; they are not meant
+to be constructed. Reading returned objects is unaffected by this release. If
+you hand-write a literal annotated with one of these types (a test fixture, for
+instance), it will need the new field to compile — prefer `getRegion()` /
+`getDistrict()` / `getCity()` for real data.
+
 ## [2.0.0]
 
 ### Summary

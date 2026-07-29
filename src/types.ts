@@ -17,6 +17,34 @@ export interface Names {
 export type LanguageCode = keyof Names;
 
 /**
+ * Ready-to-use locative ("in X") phrases for an administrative unit.
+ *
+ * Each string is a complete phrase, not a bare inflected noun, so consumers
+ * never have to pick a preposition, an article, or a case ending themselves:
+ * - Russian carries the preposition and the prepositional case (`"в Бухаре"`).
+ * - Uzbek has no preposition at all — the locative is the `-da` suffix
+ *   (`"Buxoroda"`), so a "preposition" field would be meaningless there.
+ * - English carries `in` plus the article where one is required
+ *   (`"in the Republic of Karakalpakstan"`).
+ *
+ * Word order still differs by language (`Работа {loc}` vs `{loc} ish`), so
+ * these are meant to be substituted into a per-language message template.
+ */
+export interface Locatives {
+  /**
+   * Locative of the short name — the form for page titles and headlines.
+   * Example: `{ en: "in Bukhara", uz: "Buxoroda", uzc: "Бухорода", ru: "в Бухаре" }`.
+   */
+  name: Names;
+  /**
+   * Locative of the full official title — the form for region and district
+   * pages, where the short name would be ambiguous.
+   * Example: `{ en: "in the Bukhara Region", uz: "Buxoro viloyatida", uzc: "Бухоро вилоятида", ru: "в Бухарской области" }`.
+   */
+  title: Names;
+}
+
+/**
  * Official ISO 3166-2 category for a top-level administrative unit.
  * - `region`: viloyat — 12 of these
  * - `republic`: autonomous republic — only Karakalpakstan
@@ -55,6 +83,11 @@ export interface Region {
    * Example: `{ en: "Bukhara Region", uz: "Buxoro viloyati", uzc: "Бухоро вилояти", ru: "Бухарская область" }`.
    */
   titles: Names;
+  /**
+   * Locative ("in X") phrases derived from {@link Region.names} and
+   * {@link Region.titles}. See {@link Locatives}.
+   */
+  locatives: Locatives;
 }
 
 /**
@@ -108,6 +141,11 @@ interface SubdivisionBase {
    * Example: `{ en: "Izbaskan District", uz: "Izboskan tumani", uzc: "Избоскан тумани", ru: "Избасканский район" }`.
    */
   titles: Names;
+  /**
+   * Locative ("in X") phrases derived from `names` and `titles`.
+   * See {@link Locatives}.
+   */
+  locatives: Locatives;
 }
 
 /** A district (tuman) of a region. */

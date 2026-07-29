@@ -18,6 +18,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-AN",
     names: { en: "Altynkul", uz: "Oltinko'l", uzc: "Олтинкўл", ru: "Алтынкуль" },
     titles: { en: "Altynkul District", uz: "Oltinko'l tumani", uzc: "Олтинкўл тумани", ru: "Алтынкульский район" },
+    locatives: {
+      name: { en: "in Altynkul", uz: "Oltinko'lda", uzc: "Олтинкўлда", ru: "в Алтынкуле" },
+      title: { en: "in the Altynkul District", uz: "Oltinko'l tumanida", uzc: "Олтинкўл туманида", ru: "в Алтынкульском районе" },
+    },
   },
   {
     slug: "andijan",
@@ -27,6 +31,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-AN",
     names: { en: "Andijan", uz: "Andijon", uzc: "Андижон", ru: "Андижан" },
     titles: { en: "Andijan District", uz: "Andijon tumani", uzc: "Андижон тумани", ru: "Андижанский район" },
+    locatives: {
+      name: { en: "in Andijan", uz: "Andijonda", uzc: "Андижонда", ru: "в Андижане" },
+      title: { en: "in the Andijan District", uz: "Andijon tumanida", uzc: "Андижон туманида", ru: "в Андижанском районе" },
+    },
   },
   {
     slug: "balykchi",
@@ -36,6 +44,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-AN",
     names: { en: "Balykchi", uz: "Baliqchi", uzc: "Балиқчи", ru: "Балыкчи" },
     titles: { en: "Balykchi District", uz: "Baliqchi tumani", uzc: "Балиқчи тумани", ru: "Балыкчинский район" },
+    locatives: {
+      name: { en: "in Balykchi", uz: "Baliqchida", uzc: "Балиқчида", ru: "в Балыкчи" },
+      title: { en: "in the Balykchi District", uz: "Baliqchi tumanida", uzc: "Балиқчи туманида", ru: "в Балыкчинском районе" },
+    },
   },
   {
     slug: "bustan",
@@ -45,6 +57,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-AN",
     names: { en: "Bustan", uz: "Bo'ston", uzc: "Бўстон", ru: "Бустон" },
     titles: { en: "Bustan District", uz: "Bo'ston tumani", uzc: "Бўстон тумани", ru: "Бустонский район" },
+    locatives: {
+      name: { en: "in Bustan", uz: "Bo'stonda", uzc: "Бўстонда", ru: "в Бустоне" },
+      title: { en: "in the Bustan District", uz: "Bo'ston tumanida", uzc: "Бўстон туманида", ru: "в Бустонском районе" },
+    },
   },
   {
     slug: "bulakbashi",
@@ -54,6 +70,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-AN",
     names: { en: "Bulakbashi", uz: "Buloqboshi", uzc: "Булоқбоши", ru: "Булакбаши" },
     titles: { en: "Bulakbashi District", uz: "Buloqboshi tumani", uzc: "Булоқбоши тумани", ru: "Булакбашинский район" },
+    locatives: {
+      name: { en: "in Bulakbashi", uz: "Buloqboshida", uzc: "Булоқбошида", ru: "в Булакбаши" },
+      title: { en: "in the Bulakbashi District", uz: "Buloqboshi tumanida", uzc: "Булоқбоши туманида", ru: "в Булакбашинском районе" },
+    },
   },
   {
     slug: "jalaquduk",
@@ -63,6 +83,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-AN",
     names: { en: "Jalaquduk", uz: "Jalaquduq", uzc: "Жалақудуқ", ru: "Жалакудук" },
     titles: { en: "Jalaquduk District", uz: "Jalaquduq tumani", uzc: "Жалақудуқ тумани", ru: "Жалакудукский район" },
+    locatives: {
+      name: { en: "in Jalaquduk", uz: "Jalaquduqda", uzc: "Жалақудуқда", ru: "в Жалакудуке" },
+      title: { en: "in the Jalaquduk District", uz: "Jalaquduq tumanida", uzc: "Жалақудуқ туманида", ru: "в Жалакудукском районе" },
+    },
   },
   {
     slug: "izbaskan",
@@ -72,6 +96,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-AN",
     names: { en: "Izbaskan", uz: "Izboskan", uzc: "Избоскан", ru: "Избаскан" },
     titles: { en: "Izbaskan District", uz: "Izboskan tumani", uzc: "Избоскан тумани", ru: "Избасканский район" },
+    locatives: {
+      name: { en: "in Izbaskan", uz: "Izboskanda", uzc: "Избосканда", ru: "в Избаскане" },
+      title: { en: "in the Izbaskan District", uz: "Izboskan tumanida", uzc: "Избоскан туманида", ru: "в Избасканском районе" },
+    },
   },
   {
     slug: "ulugnor",
@@ -81,6 +109,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-AN",
     names: { en: "Ulugnor", uz: "Ulug'nor", uzc: "Улуғнор", ru: "Улугнор" },
     titles: { en: "Ulugnor District", uz: "Ulug'nor tumani", uzc: "Улуғнор тумани", ru: "Улугнорский район" },
+    locatives: {
+      name: { en: "in Ulugnor", uz: "Ulug'norda", uzc: "Улуғнорда", ru: "в Улугноре" },
+      title: { en: "in the Ulugnor District", uz: "Ulug'nor tumanida", uzc: "Улуғнор туманида", ru: "в Улугнорском районе" },
+    },
   },
   {
     slug: "kurgantepa",
@@ -90,6 +122,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-AN",
     names: { en: "Kurgantepa", uz: "Qo'rg'ontepa", uzc: "Қўрғонтепа", ru: "Кургантепа" },
     titles: { en: "Kurgantepa District", uz: "Qo'rg'ontepa tumani", uzc: "Қўрғонтепа тумани", ru: "Кургантепинский район" },
+    locatives: {
+      name: { en: "in Kurgantepa", uz: "Qo'rg'ontepada", uzc: "Қўрғонтепада", ru: "в Кургантепе" },
+      title: { en: "in the Kurgantepa District", uz: "Qo'rg'ontepa tumanida", uzc: "Қўрғонтепа туманида", ru: "в Кургантепинском районе" },
+    },
   },
   {
     slug: "asaka",
@@ -99,6 +135,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-AN",
     names: { en: "Asaka", uz: "Asaka", uzc: "Асака", ru: "Асака" },
     titles: { en: "Asaka District", uz: "Asaka tumani", uzc: "Асака тумани", ru: "Асакинский район" },
+    locatives: {
+      name: { en: "in Asaka", uz: "Asakada", uzc: "Асакада", ru: "в Асаке" },
+      title: { en: "in the Asaka District", uz: "Asaka tumanida", uzc: "Асака туманида", ru: "в Асакинском районе" },
+    },
   },
   {
     slug: "markhamat",
@@ -108,6 +148,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-AN",
     names: { en: "Markhamat", uz: "Marxamat", uzc: "Мархамат", ru: "Мархамат" },
     titles: { en: "Markhamat District", uz: "Marxamat tumani", uzc: "Мархамат тумани", ru: "Мархаматский район" },
+    locatives: {
+      name: { en: "in Markhamat", uz: "Marxamatda", uzc: "Мархаматда", ru: "в Мархамате" },
+      title: { en: "in the Markhamat District", uz: "Marxamat tumanida", uzc: "Мархамат туманида", ru: "в Мархаматском районе" },
+    },
   },
   {
     slug: "shakhrikhan",
@@ -117,6 +161,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-AN",
     names: { en: "Shakhrikhan", uz: "Shaxrixon", uzc: "Шахрихон", ru: "Шахрихан" },
     titles: { en: "Shakhrikhan District", uz: "Shaxrixon tumani", uzc: "Шахрихон тумани", ru: "Шахриханский район" },
+    locatives: {
+      name: { en: "in Shakhrikhan", uz: "Shaxrixonda", uzc: "Шахрихонда", ru: "в Шахрихане" },
+      title: { en: "in the Shakhrikhan District", uz: "Shaxrixon tumanida", uzc: "Шахрихон туманида", ru: "в Шахриханском районе" },
+    },
   },
   {
     slug: "pakhtaabad",
@@ -126,6 +174,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-AN",
     names: { en: "Pakhtaabad", uz: "Paxtaobod", uzc: "Пахтаобод", ru: "Пахтаабад" },
     titles: { en: "Pakhtaabad District", uz: "Paxtaobod tumani", uzc: "Пахтаобод тумани", ru: "Пахтаабадский район" },
+    locatives: {
+      name: { en: "in Pakhtaabad", uz: "Paxtaobodda", uzc: "Пахтаободда", ru: "в Пахтаабаде" },
+      title: { en: "in the Pakhtaabad District", uz: "Paxtaobod tumanida", uzc: "Пахтаобод туманида", ru: "в Пахтаабадском районе" },
+    },
   },
   {
     slug: "khojaabad",
@@ -135,6 +187,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-AN",
     names: { en: "Khojaabad", uz: "Xo'jaobod", uzc: "Хўжаобод", ru: "Ходжаабад" },
     titles: { en: "Khojaabad District", uz: "Xo'jaobod tumani", uzc: "Хўжаобод тумани", ru: "Ходжаабадский район" },
+    locatives: {
+      name: { en: "in Khojaabad", uz: "Xo'jaobodda", uzc: "Хўжаободда", ru: "в Ходжаабаде" },
+      title: { en: "in the Khojaabad District", uz: "Xo'jaobod tumanida", uzc: "Хўжаобод туманида", ru: "в Ходжаабадском районе" },
+    },
   },
 
   // ===== Bukhara (UZ-BU) — 11 districts =====
@@ -146,6 +202,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-BU",
     names: { en: "Alat", uz: "Olot", uzc: "Олот", ru: "Алат" },
     titles: { en: "Alat District", uz: "Olot tumani", uzc: "Олот тумани", ru: "Алатский район" },
+    locatives: {
+      name: { en: "in Alat", uz: "Olotda", uzc: "Олотда", ru: "в Алате" },
+      title: { en: "in the Alat District", uz: "Olot tumanida", uzc: "Олот туманида", ru: "в Алатском районе" },
+    },
   },
   {
     slug: "bukhara",
@@ -155,6 +215,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-BU",
     names: { en: "Bukhara", uz: "Buxoro", uzc: "Бухоро", ru: "Бухара" },
     titles: { en: "Bukhara District", uz: "Buxoro tumani", uzc: "Бухоро тумани", ru: "Бухарский район" },
+    locatives: {
+      name: { en: "in Bukhara", uz: "Buxoroda", uzc: "Бухорода", ru: "в Бухаре" },
+      title: { en: "in the Bukhara District", uz: "Buxoro tumanida", uzc: "Бухоро туманида", ru: "в Бухарском районе" },
+    },
   },
   {
     slug: "vobkent",
@@ -164,6 +228,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-BU",
     names: { en: "Vobkent", uz: "Vobkent", uzc: "Вобкент", ru: "Вабкент" },
     titles: { en: "Vobkent District", uz: "Vobkent tumani", uzc: "Вобкент тумани", ru: "Вабкентский район" },
+    locatives: {
+      name: { en: "in Vobkent", uz: "Vobkentda", uzc: "Вобкентда", ru: "в Вабкенте" },
+      title: { en: "in the Vobkent District", uz: "Vobkent tumanida", uzc: "Вобкент туманида", ru: "в Вабкентском районе" },
+    },
   },
   {
     slug: "gijduvan",
@@ -173,6 +241,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-BU",
     names: { en: "Gijduvan", uz: "G'ijduvon", uzc: "Ғиждувон", ru: "Гиждуван" },
     titles: { en: "Gijduvan District", uz: "G'ijduvon tumani", uzc: "Ғиждувон тумани", ru: "Гиждуванский район" },
+    locatives: {
+      name: { en: "in Gijduvan", uz: "G'ijduvonda", uzc: "Ғиждувонда", ru: "в Гиждуване" },
+      title: { en: "in the Gijduvan District", uz: "G'ijduvon tumanida", uzc: "Ғиждувон туманида", ru: "в Гиждуванском районе" },
+    },
   },
   {
     slug: "kagan",
@@ -182,6 +254,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-BU",
     names: { en: "Kagan", uz: "Kogon", uzc: "Когон", ru: "Каган" },
     titles: { en: "Kagan District", uz: "Kogon tumani", uzc: "Когон тумани", ru: "Каганский район" },
+    locatives: {
+      name: { en: "in Kagan", uz: "Kogonda", uzc: "Когонда", ru: "в Кагане" },
+      title: { en: "in the Kagan District", uz: "Kogon tumanida", uzc: "Когон туманида", ru: "в Каганском районе" },
+    },
   },
   {
     slug: "karakul",
@@ -191,6 +267,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-BU",
     names: { en: "Karakul", uz: "Qorako'l", uzc: "Қоракўл", ru: "Каракуль" },
     titles: { en: "Karakul District", uz: "Qorako'l tumani", uzc: "Қоракўл тумани", ru: "Каракульский район" },
+    locatives: {
+      name: { en: "in Karakul", uz: "Qorako'lda", uzc: "Қоракўлда", ru: "в Каракуле" },
+      title: { en: "in the Karakul District", uz: "Qorako'l tumanida", uzc: "Қоракўл туманида", ru: "в Каракульском районе" },
+    },
   },
   {
     slug: "qorovulbozor",
@@ -200,6 +280,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-BU",
     names: { en: "Qorovulbozor", uz: "Qorovulbozor", uzc: "Қоровулбозор", ru: "Караулбазар" },
     titles: { en: "Qorovulbozor District", uz: "Qorovulbozor tumani", uzc: "Қоровулбозор тумани", ru: "Караулбазарский район" },
+    locatives: {
+      name: { en: "in Qorovulbozor", uz: "Qorovulbozorda", uzc: "Қоровулбозорда", ru: "в Караулбазаре" },
+      title: { en: "in the Qorovulbozor District", uz: "Qorovulbozor tumanida", uzc: "Қоровулбозор туманида", ru: "в Караулбазарском районе" },
+    },
   },
   {
     slug: "peshkun",
@@ -209,6 +293,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-BU",
     names: { en: "Peshkun", uz: "Peshku", uzc: "Пешку", ru: "Пешкун" },
     titles: { en: "Peshkun District", uz: "Peshku tumani", uzc: "Пешку тумани", ru: "Пешкунский район" },
+    locatives: {
+      name: { en: "in Peshkun", uz: "Peshkuda", uzc: "Пешкуда", ru: "в Пешкуне" },
+      title: { en: "in the Peshkun District", uz: "Peshku tumanida", uzc: "Пешку туманида", ru: "в Пешкунском районе" },
+    },
   },
   {
     slug: "romitan",
@@ -218,6 +306,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-BU",
     names: { en: "Romitan", uz: "Romitan", uzc: "Ромитан", ru: "Ромитан" },
     titles: { en: "Romitan District", uz: "Romitan tumani", uzc: "Ромитан тумани", ru: "Ромитанский район" },
+    locatives: {
+      name: { en: "in Romitan", uz: "Romitanda", uzc: "Ромитанда", ru: "в Ромитане" },
+      title: { en: "in the Romitan District", uz: "Romitan tumanida", uzc: "Ромитан туманида", ru: "в Ромитанском районе" },
+    },
   },
   {
     slug: "jondor",
@@ -227,6 +319,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-BU",
     names: { en: "Jondor", uz: "Jondor", uzc: "Жондор", ru: "Жондор" },
     titles: { en: "Jondor District", uz: "Jondor tumani", uzc: "Жондор тумани", ru: "Жондорский район" },
+    locatives: {
+      name: { en: "in Jondor", uz: "Jondorda", uzc: "Жондорда", ru: "в Жондоре" },
+      title: { en: "in the Jondor District", uz: "Jondor tumanida", uzc: "Жондор туманида", ru: "в Жондорском районе" },
+    },
   },
   {
     slug: "shafirkan",
@@ -236,6 +332,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-BU",
     names: { en: "Shafirkan", uz: "Shofirkon", uzc: "Шофиркон", ru: "Шафиркан" },
     titles: { en: "Shafirkan District", uz: "Shofirkon tumani", uzc: "Шофиркон тумани", ru: "Шафирканский район" },
+    locatives: {
+      name: { en: "in Shafirkan", uz: "Shofirkonda", uzc: "Шофирконда", ru: "в Шафиркане" },
+      title: { en: "in the Shafirkan District", uz: "Shofirkon tumanida", uzc: "Шофиркон туманида", ru: "в Шафирканском районе" },
+    },
   },
 
   // ===== Jizzakh (UZ-JI) — 12 districts =====
@@ -247,6 +347,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-JI",
     names: { en: "Arnasay", uz: "Arnasoy", uzc: "Арнасой", ru: "Арнасай" },
     titles: { en: "Arnasay District", uz: "Arnasoy tumani", uzc: "Арнасой тумани", ru: "Арнасайский район" },
+    locatives: {
+      name: { en: "in Arnasay", uz: "Arnasoyda", uzc: "Арнасойда", ru: "в Арнасае" },
+      title: { en: "in the Arnasay District", uz: "Arnasoy tumanida", uzc: "Арнасой туманида", ru: "в Арнасайском районе" },
+    },
   },
   {
     slug: "bakhmal",
@@ -256,6 +360,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-JI",
     names: { en: "Bakhmal", uz: "Baxmal", uzc: "Бахмал", ru: "Бахмал" },
     titles: { en: "Bakhmal District", uz: "Baxmal tumani", uzc: "Бахмал тумани", ru: "Бахмальский район" },
+    locatives: {
+      name: { en: "in Bakhmal", uz: "Baxmalda", uzc: "Бахмалда", ru: "в Бахмале" },
+      title: { en: "in the Bakhmal District", uz: "Baxmal tumanida", uzc: "Бахмал туманида", ru: "в Бахмальском районе" },
+    },
   },
   {
     slug: "gallaaral",
@@ -265,6 +373,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-JI",
     names: { en: "Gallaaral", uz: "G'allaorol", uzc: "Ғаллаорол", ru: "Галляарал" },
     titles: { en: "Gallaaral District", uz: "G'allaorol tumani", uzc: "Ғаллаорол тумани", ru: "Галляаральский район" },
+    locatives: {
+      name: { en: "in Gallaaral", uz: "G'allaorolda", uzc: "Ғаллаоролда", ru: "в Галляарале" },
+      title: { en: "in the Gallaaral District", uz: "G'allaorol tumanida", uzc: "Ғаллаорол туманида", ru: "в Галляаральском районе" },
+    },
   },
   {
     slug: "sharof_rashidov",
@@ -274,6 +386,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-JI",
     names: { en: "Sharof Rashidov", uz: "Sharof Rashidov", uzc: "Шароф Рашидов", ru: "Шароф Рашидов" },
     titles: { en: "Sharof Rashidov District", uz: "Sharof Rashidov tumani", uzc: "Шароф Рашидов тумани", ru: "Шароф-Рашидовский район" },
+    locatives: {
+      name: { en: "in Sharof Rashidov", uz: "Sharof Rashidovda", uzc: "Шароф Рашидовда", ru: "в Шароф Рашидове" },
+      title: { en: "in the Sharof Rashidov District", uz: "Sharof Rashidov tumanida", uzc: "Шароф Рашидов туманида", ru: "в Шароф-Рашидовском районе" },
+    },
   },
   {
     slug: "dustlik",
@@ -283,6 +399,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-JI",
     names: { en: "Dustlik", uz: "Do'stlik", uzc: "Дўстлик", ru: "Дустлик" },
     titles: { en: "Dustlik District", uz: "Do'stlik tumani", uzc: "Дўстлик тумани", ru: "Дустликский район" },
+    locatives: {
+      name: { en: "in Dustlik", uz: "Do'stlikda", uzc: "Дўстликда", ru: "в Дустлике" },
+      title: { en: "in the Dustlik District", uz: "Do'stlik tumanida", uzc: "Дўстлик туманида", ru: "в Дустликском районе" },
+    },
   },
   {
     slug: "zomin",
@@ -292,6 +412,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-JI",
     names: { en: "Zomin", uz: "Zomin", uzc: "Зомин", ru: "Заамин" },
     titles: { en: "Zomin District", uz: "Zomin tumani", uzc: "Зомин тумани", ru: "Зааминский район" },
+    locatives: {
+      name: { en: "in Zomin", uz: "Zominda", uzc: "Зоминда", ru: "в Заамине" },
+      title: { en: "in the Zomin District", uz: "Zomin tumanida", uzc: "Зомин туманида", ru: "в Зааминском районе" },
+    },
   },
   {
     slug: "zarbdar",
@@ -301,6 +425,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-JI",
     names: { en: "Zarbdar", uz: "Zarbdor", uzc: "Зарбдор", ru: "Зарбдар" },
     titles: { en: "Zarbdar District", uz: "Zarbdor tumani", uzc: "Зарбдор тумани", ru: "Зарбдарский район" },
+    locatives: {
+      name: { en: "in Zarbdar", uz: "Zarbdorda", uzc: "Зарбдорда", ru: "в Зарбдаре" },
+      title: { en: "in the Zarbdar District", uz: "Zarbdor tumanida", uzc: "Зарбдор туманида", ru: "в Зарбдарском районе" },
+    },
   },
   {
     slug: "mirzachul",
@@ -310,6 +438,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-JI",
     names: { en: "Mirzachul", uz: "Mirzacho'l", uzc: "Мирзачўл", ru: "Мирзачуль" },
     titles: { en: "Mirzachul District", uz: "Mirzacho'l tumani", uzc: "Мирзачўл тумани", ru: "Мирзачульский район" },
+    locatives: {
+      name: { en: "in Mirzachul", uz: "Mirzacho'lda", uzc: "Мирзачўлда", ru: "в Мирзачуле" },
+      title: { en: "in the Mirzachul District", uz: "Mirzacho'l tumanida", uzc: "Мирзачўл туманида", ru: "в Мирзачульском районе" },
+    },
   },
   {
     slug: "zafarabad",
@@ -319,6 +451,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-JI",
     names: { en: "Zafarabad", uz: "Zafarobod", uzc: "Зафаробод", ru: "Зафарабад" },
     titles: { en: "Zafarabad District", uz: "Zafarobod tumani", uzc: "Зафаробод тумани", ru: "Зафарабадский район" },
+    locatives: {
+      name: { en: "in Zafarabad", uz: "Zafarobodda", uzc: "Зафарободда", ru: "в Зафарабаде" },
+      title: { en: "in the Zafarabad District", uz: "Zafarobod tumanida", uzc: "Зафаробод туманида", ru: "в Зафарабадском районе" },
+    },
   },
   {
     slug: "pakhtakor",
@@ -328,6 +464,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-JI",
     names: { en: "Pakhtakor", uz: "Paxtakor", uzc: "Пахтакор", ru: "Пахтакор" },
     titles: { en: "Pakhtakor District", uz: "Paxtakor tumani", uzc: "Пахтакор тумани", ru: "Пахтакорский район" },
+    locatives: {
+      name: { en: "in Pakhtakor", uz: "Paxtakorda", uzc: "Пахтакорда", ru: "в Пахтакоре" },
+      title: { en: "in the Pakhtakor District", uz: "Paxtakor tumanida", uzc: "Пахтакор туманида", ru: "в Пахтакорском районе" },
+    },
   },
   {
     slug: "farish",
@@ -337,6 +477,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-JI",
     names: { en: "Farish", uz: "Forish", uzc: "Фориш", ru: "Фариш" },
     titles: { en: "Farish District", uz: "Forish tumani", uzc: "Фориш тумани", ru: "Фаришский район" },
+    locatives: {
+      name: { en: "in Farish", uz: "Forishda", uzc: "Форишда", ru: "в Фарише" },
+      title: { en: "in the Farish District", uz: "Forish tumanida", uzc: "Фориш туманида", ru: "в Фаришском районе" },
+    },
   },
   {
     slug: "yangiabad",
@@ -346,6 +490,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-JI",
     names: { en: "Yangiabad", uz: "Yangiobod", uzc: "Янгиобод", ru: "Янгиабад" },
     titles: { en: "Yangiabad District", uz: "Yangiobod tumani", uzc: "Янгиобод тумани", ru: "Янгиабадский район" },
+    locatives: {
+      name: { en: "in Yangiabad", uz: "Yangiobodda", uzc: "Янгиободда", ru: "в Янгиабаде" },
+      title: { en: "in the Yangiabad District", uz: "Yangiobod tumanida", uzc: "Янгиобод туманида", ru: "в Янгиабадском районе" },
+    },
   },
 
   // ===== Kashkadarya (UZ-QA) — 14 districts =====
@@ -357,6 +505,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-QA",
     names: { en: "Kukdala", uz: "Ko'kdala", uzc: "Кўкдала", ru: "Кукдала" },
     titles: { en: "Kukdala District", uz: "Ko'kdala tumani", uzc: "Кўкдала тумани", ru: "Кукдалинский район" },
+    locatives: {
+      name: { en: "in Kukdala", uz: "Ko'kdalada", uzc: "Кўкдалада", ru: "в Кукдале" },
+      title: { en: "in the Kukdala District", uz: "Ko'kdala tumanida", uzc: "Кўкдала туманида", ru: "в Кукдалинском районе" },
+    },
   },
   {
     slug: "guzar",
@@ -366,6 +518,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-QA",
     names: { en: "Guzar", uz: "G'uzor", uzc: "Ғузор", ru: "Гузар" },
     titles: { en: "Guzar District", uz: "G'uzor tumani", uzc: "Ғузор тумани", ru: "Гузарский район" },
+    locatives: {
+      name: { en: "in Guzar", uz: "G'uzorda", uzc: "Ғузорда", ru: "в Гузаре" },
+      title: { en: "in the Guzar District", uz: "G'uzor tumanida", uzc: "Ғузор туманида", ru: "в Гузарском районе" },
+    },
   },
   {
     slug: "dehkanabad",
@@ -375,6 +531,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-QA",
     names: { en: "Dehkanabad", uz: "Dehqonobod", uzc: "Деҳқонобод", ru: "Дехканабад" },
     titles: { en: "Dehkanabad District", uz: "Dehqonobod tumani", uzc: "Деҳқонобод тумани", ru: "Дехканабадский район" },
+    locatives: {
+      name: { en: "in Dehkanabad", uz: "Dehqonobodda", uzc: "Деҳқонободда", ru: "в Дехканабаде" },
+      title: { en: "in the Dehkanabad District", uz: "Dehqonobod tumanida", uzc: "Деҳқонобод туманида", ru: "в Дехканабадском районе" },
+    },
   },
   {
     slug: "kamashi",
@@ -384,6 +544,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-QA",
     names: { en: "Kamashi", uz: "Qamashi", uzc: "Қамаши", ru: "Камаши" },
     titles: { en: "Kamashi District", uz: "Qamashi tumani", uzc: "Қамаши тумани", ru: "Камашинский район" },
+    locatives: {
+      name: { en: "in Kamashi", uz: "Qamashida", uzc: "Қамашида", ru: "в Камаши" },
+      title: { en: "in the Kamashi District", uz: "Qamashi tumanida", uzc: "Қамаши туманида", ru: "в Камашинском районе" },
+    },
   },
   {
     slug: "karshi",
@@ -393,6 +557,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-QA",
     names: { en: "Karshi", uz: "Qarshi", uzc: "Қарши", ru: "Карши" },
     titles: { en: "Karshi District", uz: "Qarshi tumani", uzc: "Қарши тумани", ru: "Каршинский район" },
+    locatives: {
+      name: { en: "in Karshi", uz: "Qarshida", uzc: "Қаршида", ru: "в Карши" },
+      title: { en: "in the Karshi District", uz: "Qarshi tumanida", uzc: "Қарши туманида", ru: "в Каршинском районе" },
+    },
   },
   {
     slug: "kasan",
@@ -402,6 +570,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-QA",
     names: { en: "Kasan", uz: "Koson", uzc: "Косон", ru: "Касан" },
     titles: { en: "Kasan District", uz: "Koson tumani", uzc: "Косон тумани", ru: "Касанский район" },
+    locatives: {
+      name: { en: "in Kasan", uz: "Kosonda", uzc: "Косонда", ru: "в Касане" },
+      title: { en: "in the Kasan District", uz: "Koson tumanida", uzc: "Косон туманида", ru: "в Касанском районе" },
+    },
   },
   {
     slug: "kitab",
@@ -411,6 +583,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-QA",
     names: { en: "Kitab", uz: "Kitob", uzc: "Китоб", ru: "Китаб" },
     titles: { en: "Kitab District", uz: "Kitob tumani", uzc: "Китоб тумани", ru: "Китабский район" },
+    locatives: {
+      name: { en: "in Kitab", uz: "Kitobda", uzc: "Китобда", ru: "в Китабе" },
+      title: { en: "in the Kitab District", uz: "Kitob tumanida", uzc: "Китоб туманида", ru: "в Китабском районе" },
+    },
   },
   {
     slug: "mirishkor",
@@ -420,6 +596,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-QA",
     names: { en: "Mirishkor", uz: "Mirishkor", uzc: "Миришкор", ru: "Миришкор" },
     titles: { en: "Mirishkor District", uz: "Mirishkor tumani", uzc: "Миришкор тумани", ru: "Миришкорский район" },
+    locatives: {
+      name: { en: "in Mirishkor", uz: "Mirishkorda", uzc: "Миришкорда", ru: "в Миришкоре" },
+      title: { en: "in the Mirishkor District", uz: "Mirishkor tumanida", uzc: "Миришкор туманида", ru: "в Миришкорском районе" },
+    },
   },
   {
     slug: "mubarek",
@@ -429,6 +609,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-QA",
     names: { en: "Mubarek", uz: "Muborak", uzc: "Муборак", ru: "Мубарек" },
     titles: { en: "Mubarek District", uz: "Muborak tumani", uzc: "Муборак тумани", ru: "Мубарекский район" },
+    locatives: {
+      name: { en: "in Mubarek", uz: "Muborakda", uzc: "Муборакда", ru: "в Мубареке" },
+      title: { en: "in the Mubarek District", uz: "Muborak tumanida", uzc: "Муборак туманида", ru: "в Мубарекском районе" },
+    },
   },
   {
     slug: "nishon",
@@ -438,6 +622,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-QA",
     names: { en: "Nishon", uz: "Nishon", uzc: "Нишон", ru: "Нишан" },
     titles: { en: "Nishon District", uz: "Nishon tumani", uzc: "Нишон тумани", ru: "Нишанский район" },
+    locatives: {
+      name: { en: "in Nishon", uz: "Nishonda", uzc: "Нишонда", ru: "в Нишане" },
+      title: { en: "in the Nishon District", uz: "Nishon tumanida", uzc: "Нишон туманида", ru: "в Нишанском районе" },
+    },
   },
   {
     slug: "kasbi",
@@ -447,6 +635,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-QA",
     names: { en: "Kasbi", uz: "Kasbi", uzc: "Касби", ru: "Касби" },
     titles: { en: "Kasbi District", uz: "Kasbi tumani", uzc: "Касби тумани", ru: "Касбинский район" },
+    locatives: {
+      name: { en: "in Kasbi", uz: "Kasbida", uzc: "Касбида", ru: "в Касби" },
+      title: { en: "in the Kasbi District", uz: "Kasbi tumanida", uzc: "Касби туманида", ru: "в Касбинском районе" },
+    },
   },
   {
     slug: "chirakchi",
@@ -456,6 +648,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-QA",
     names: { en: "Chirakchi", uz: "Chiroqchi", uzc: "Чироқчи", ru: "Чиракчи" },
     titles: { en: "Chirakchi District", uz: "Chiroqchi tumani", uzc: "Чироқчи тумани", ru: "Чиракчинский район" },
+    locatives: {
+      name: { en: "in Chirakchi", uz: "Chiroqchida", uzc: "Чироқчида", ru: "в Чиракчи" },
+      title: { en: "in the Chirakchi District", uz: "Chiroqchi tumanida", uzc: "Чироқчи туманида", ru: "в Чиракчинском районе" },
+    },
   },
   {
     slug: "shakhrisabz",
@@ -465,6 +661,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-QA",
     names: { en: "Shakhrisabz", uz: "Shahrisabz", uzc: "Шаҳрисабз", ru: "Шахрисабз" },
     titles: { en: "Shakhrisabz District", uz: "Shahrisabz tumani", uzc: "Шаҳрисабз тумани", ru: "Шахрисабзский район" },
+    locatives: {
+      name: { en: "in Shakhrisabz", uz: "Shahrisabzda", uzc: "Шаҳрисабзда", ru: "в Шахрисабзе" },
+      title: { en: "in the Shakhrisabz District", uz: "Shahrisabz tumanida", uzc: "Шаҳрисабз туманида", ru: "в Шахрисабзском районе" },
+    },
   },
   {
     slug: "yakkabag",
@@ -474,6 +674,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-QA",
     names: { en: "Yakkabag", uz: "Yakkabog'", uzc: "Яккабоғ", ru: "Яккабаг" },
     titles: { en: "Yakkabag District", uz: "Yakkabog' tumani", uzc: "Яккабоғ тумани", ru: "Яккабагский район" },
+    locatives: {
+      name: { en: "in Yakkabag", uz: "Yakkabog'da", uzc: "Яккабоғда", ru: "в Яккабаге" },
+      title: { en: "in the Yakkabag District", uz: "Yakkabog' tumanida", uzc: "Яккабоғ туманида", ru: "в Яккабагском районе" },
+    },
   },
 
   // ===== Karakalpakstan (UZ-QR) — 16 districts =====
@@ -485,6 +689,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-QR",
     names: { en: "Amudarya", uz: "Amudaryo", uzc: "Амударё", ru: "Амударья" },
     titles: { en: "Amudarya District", uz: "Amudaryo tumani", uzc: "Амударё тумани", ru: "Амударьинский район" },
+    locatives: {
+      name: { en: "in Amudarya", uz: "Amudaryoda", uzc: "Амударёда", ru: "в Амударье" },
+      title: { en: "in the Amudarya District", uz: "Amudaryo tumanida", uzc: "Амударё туманида", ru: "в Амударьинском районе" },
+    },
   },
   {
     slug: "beruniy",
@@ -494,6 +702,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-QR",
     names: { en: "Beruniy", uz: "Beruniy", uzc: "Беруний", ru: "Беруни" },
     titles: { en: "Beruniy District", uz: "Beruniy tumani", uzc: "Беруний тумани", ru: "Берунийский район" },
+    locatives: {
+      name: { en: "in Beruniy", uz: "Beruniyda", uzc: "Берунийда", ru: "в Беруни" },
+      title: { en: "in the Beruniy District", uz: "Beruniy tumanida", uzc: "Беруний туманида", ru: "в Берунийском районе" },
+    },
   },
   {
     slug: "bozatau",
@@ -503,6 +715,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-QR",
     names: { en: "Bozatau", uz: "Bo'zatov", uzc: "Бўзатов", ru: "Бозатау" },
     titles: { en: "Bozatau District", uz: "Bo'zatov tumani", uzc: "Бўзатов тумани", ru: "Бозатауский район" },
+    locatives: {
+      name: { en: "in Bozatau", uz: "Bo'zatovda", uzc: "Бўзатовда", ru: "в Бозатау" },
+      title: { en: "in the Bozatau District", uz: "Bo'zatov tumanida", uzc: "Бўзатов туманида", ru: "в Бозатауском районе" },
+    },
   },
   {
     slug: "karauzak",
@@ -512,6 +728,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-QR",
     names: { en: "Karauzak", uz: "Qorao'zak", uzc: "Қораўзак", ru: "Караузяк" },
     titles: { en: "Karauzak District", uz: "Qorao'zak tumani", uzc: "Қораўзак тумани", ru: "Караузякский район" },
+    locatives: {
+      name: { en: "in Karauzak", uz: "Qorao'zakda", uzc: "Қораўзакда", ru: "в Караузяке" },
+      title: { en: "in the Karauzak District", uz: "Qorao'zak tumanida", uzc: "Қораўзак туманида", ru: "в Караузякском районе" },
+    },
   },
   {
     slug: "kegeyli",
@@ -521,6 +741,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-QR",
     names: { en: "Kegeyli", uz: "Kegeyli", uzc: "Кегейли", ru: "Кегейли" },
     titles: { en: "Kegeyli District", uz: "Kegeyli tumani", uzc: "Кегейли тумани", ru: "Кегейлийский район" },
+    locatives: {
+      name: { en: "in Kegeyli", uz: "Kegeylida", uzc: "Кегейлида", ru: "в Кегейли" },
+      title: { en: "in the Kegeyli District", uz: "Kegeyli tumanida", uzc: "Кегейли туманида", ru: "в Кегейлийском районе" },
+    },
   },
   {
     slug: "kungrad",
@@ -530,6 +754,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-QR",
     names: { en: "Kungrad", uz: "Qo'ng'irot", uzc: "Қўнғирот", ru: "Кунград" },
     titles: { en: "Kungrad District", uz: "Qo'ng'irot tumani", uzc: "Қўнғирот тумани", ru: "Кунградский район" },
+    locatives: {
+      name: { en: "in Kungrad", uz: "Qo'ng'irotda", uzc: "Қўнғиротда", ru: "в Кунграде" },
+      title: { en: "in the Kungrad District", uz: "Qo'ng'irot tumanida", uzc: "Қўнғирот туманида", ru: "в Кунградском районе" },
+    },
   },
   {
     slug: "kanlykul",
@@ -539,6 +767,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-QR",
     names: { en: "Kanlykul", uz: "Qanliko'l", uzc: "Қанликўл", ru: "Канлыкуль" },
     titles: { en: "Kanlykul District", uz: "Qanliko'l tumani", uzc: "Қанликўл тумани", ru: "Канлыкульский район" },
+    locatives: {
+      name: { en: "in Kanlykul", uz: "Qanliko'lda", uzc: "Қанликўлда", ru: "в Канлыкуле" },
+      title: { en: "in the Kanlykul District", uz: "Qanliko'l tumanida", uzc: "Қанликўл туманида", ru: "в Канлыкульском районе" },
+    },
   },
   {
     slug: "muynak",
@@ -548,6 +780,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-QR",
     names: { en: "Muynak", uz: "Mo'ynoq", uzc: "Мўйноқ", ru: "Муйнак" },
     titles: { en: "Muynak District", uz: "Mo'ynoq tumani", uzc: "Мўйноқ тумани", ru: "Муйнакский район" },
+    locatives: {
+      name: { en: "in Muynak", uz: "Mo'ynoqda", uzc: "Мўйноқда", ru: "в Муйнаке" },
+      title: { en: "in the Muynak District", uz: "Mo'ynoq tumanida", uzc: "Мўйноқ туманида", ru: "в Муйнакском районе" },
+    },
   },
   {
     slug: "nukus",
@@ -557,6 +793,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-QR",
     names: { en: "Nukus", uz: "Nukus", uzc: "Нукус", ru: "Нукус" },
     titles: { en: "Nukus District", uz: "Nukus tumani", uzc: "Нукус тумани", ru: "Нукусский район" },
+    locatives: {
+      name: { en: "in Nukus", uz: "Nukusda", uzc: "Нукусда", ru: "в Нукусе" },
+      title: { en: "in the Nukus District", uz: "Nukus tumanida", uzc: "Нукус туманида", ru: "в Нукусском районе" },
+    },
   },
   {
     slug: "takhiatash",
@@ -566,6 +806,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-QR",
     names: { en: "Takhiatash", uz: "Taxiatosh", uzc: "Тахиатош", ru: "Тахиаташ" },
     titles: { en: "Takhiatash District", uz: "Taxiatosh tumani", uzc: "Тахиатош тумани", ru: "Тахиаташский район" },
+    locatives: {
+      name: { en: "in Takhiatash", uz: "Taxiatoshda", uzc: "Тахиатошда", ru: "в Тахиаташе" },
+      title: { en: "in the Takhiatash District", uz: "Taxiatosh tumanida", uzc: "Тахиатош туманида", ru: "в Тахиаташском районе" },
+    },
   },
   {
     slug: "takhtakupyr",
@@ -575,6 +819,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-QR",
     names: { en: "Takhtakupyr", uz: "Taxtako'pir", uzc: "Тахтакўпир", ru: "Тахтакупыр" },
     titles: { en: "Takhtakupyr District", uz: "Taxtako'pir tumani", uzc: "Тахтакўпир тумани", ru: "Тахтакупырский район" },
+    locatives: {
+      name: { en: "in Takhtakupyr", uz: "Taxtako'pirda", uzc: "Тахтакўпирда", ru: "в Тахтакупыре" },
+      title: { en: "in the Takhtakupyr District", uz: "Taxtako'pir tumanida", uzc: "Тахтакўпир туманида", ru: "в Тахтакупырском районе" },
+    },
   },
   {
     slug: "turtkul",
@@ -584,6 +832,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-QR",
     names: { en: "Turtkul", uz: "To'rtko'l", uzc: "Тўрткўл", ru: "Турткуль" },
     titles: { en: "Turtkul District", uz: "To'rtko'l tumani", uzc: "Тўрткўл тумани", ru: "Турткульский район" },
+    locatives: {
+      name: { en: "in Turtkul", uz: "To'rtko'lda", uzc: "Тўрткўлда", ru: "в Турткуле" },
+      title: { en: "in the Turtkul District", uz: "To'rtko'l tumanida", uzc: "Тўрткўл туманида", ru: "в Турткульском районе" },
+    },
   },
   {
     slug: "khojeyli",
@@ -593,6 +845,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-QR",
     names: { en: "Khojeyli", uz: "Xo'jayli", uzc: "Хўжайли", ru: "Ходжейли" },
     titles: { en: "Khojeyli District", uz: "Xo'jayli tumani", uzc: "Хўжайли тумани", ru: "Ходжейлийский район" },
+    locatives: {
+      name: { en: "in Khojeyli", uz: "Xo'jaylida", uzc: "Хўжайлида", ru: "в Ходжейли" },
+      title: { en: "in the Khojeyli District", uz: "Xo'jayli tumanida", uzc: "Хўжайли туманида", ru: "в Ходжейлийском районе" },
+    },
   },
   {
     slug: "chimbay",
@@ -602,6 +858,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-QR",
     names: { en: "Chimbay", uz: "Chimboy", uzc: "Чимбой", ru: "Чимбай" },
     titles: { en: "Chimbay District", uz: "Chimboy tumani", uzc: "Чимбой тумани", ru: "Чимбайский район" },
+    locatives: {
+      name: { en: "in Chimbay", uz: "Chimboyda", uzc: "Чимбойда", ru: "в Чимбае" },
+      title: { en: "in the Chimbay District", uz: "Chimboy tumanida", uzc: "Чимбой туманида", ru: "в Чимбайском районе" },
+    },
   },
   {
     slug: "shumanai",
@@ -611,6 +871,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-QR",
     names: { en: "Shumanai", uz: "Shumanay", uzc: "Шуманай", ru: "Шуманай" },
     titles: { en: "Shumanai District", uz: "Shumanay tumani", uzc: "Шуманай тумани", ru: "Шуманайский район" },
+    locatives: {
+      name: { en: "in Shumanai", uz: "Shumanayda", uzc: "Шуманайда", ru: "в Шуманае" },
+      title: { en: "in the Shumanai District", uz: "Shumanay tumanida", uzc: "Шуманай туманида", ru: "в Шуманайском районе" },
+    },
   },
   {
     slug: "ellikkala",
@@ -620,6 +884,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-QR",
     names: { en: "Ellikkala", uz: "Ellikkala", uzc: "Елликкала", ru: "Элликкала" },
     titles: { en: "Ellikkala District", uz: "Ellikkala tumani", uzc: "Елликкала тумани", ru: "Элликкалинский район" },
+    locatives: {
+      name: { en: "in Ellikkala", uz: "Ellikkalada", uzc: "Елликкалада", ru: "в Элликкале" },
+      title: { en: "in the Ellikkala District", uz: "Ellikkala tumanida", uzc: "Елликкала туманида", ru: "в Элликкалинском районе" },
+    },
   },
 
   // ===== Samarkand (UZ-SA) — 14 districts =====
@@ -631,6 +899,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SA",
     names: { en: "Akdarya", uz: "Oqdaryo", uzc: "Оқдарё", ru: "Акдарья" },
     titles: { en: "Akdarya District", uz: "Oqdaryo tumani", uzc: "Оқдарё тумани", ru: "Акдарьинский район" },
+    locatives: {
+      name: { en: "in Akdarya", uz: "Oqdaryoda", uzc: "Оқдарёда", ru: "в Акдарье" },
+      title: { en: "in the Akdarya District", uz: "Oqdaryo tumanida", uzc: "Оқдарё туманида", ru: "в Акдарьинском районе" },
+    },
   },
   {
     slug: "bulungur",
@@ -640,6 +912,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SA",
     names: { en: "Bulungur", uz: "Bulung'ur", uzc: "Булунғур", ru: "Булунгур" },
     titles: { en: "Bulungur District", uz: "Bulung'ur tumani", uzc: "Булунғур тумани", ru: "Булунгурский район" },
+    locatives: {
+      name: { en: "in Bulungur", uz: "Bulung'urda", uzc: "Булунғурда", ru: "в Булунгуре" },
+      title: { en: "in the Bulungur District", uz: "Bulung'ur tumanida", uzc: "Булунғур туманида", ru: "в Булунгурском районе" },
+    },
   },
   {
     slug: "jomboy",
@@ -649,6 +925,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SA",
     names: { en: "Jomboy", uz: "Jomboy", uzc: "Жомбой", ru: "Джамбай" },
     titles: { en: "Jomboy District", uz: "Jomboy tumani", uzc: "Жомбой тумани", ru: "Джамбайский район" },
+    locatives: {
+      name: { en: "in Jomboy", uz: "Jomboyda", uzc: "Жомбойда", ru: "в Джамбае" },
+      title: { en: "in the Jomboy District", uz: "Jomboy tumanida", uzc: "Жомбой туманида", ru: "в Джамбайском районе" },
+    },
   },
   {
     slug: "ishtykhan",
@@ -658,6 +938,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SA",
     names: { en: "Ishtykhan", uz: "Ishtixon", uzc: "Иштихон", ru: "Иштыхан" },
     titles: { en: "Ishtykhan District", uz: "Ishtixon tumani", uzc: "Иштихон тумани", ru: "Иштыханский район" },
+    locatives: {
+      name: { en: "in Ishtykhan", uz: "Ishtixonda", uzc: "Иштихонда", ru: "в Иштыхане" },
+      title: { en: "in the Ishtykhan District", uz: "Ishtixon tumanida", uzc: "Иштихон туманида", ru: "в Иштыханском районе" },
+    },
   },
   {
     slug: "kattakurgan",
@@ -667,6 +951,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SA",
     names: { en: "Kattakurgan", uz: "Kattaqo'rg'on", uzc: "Каттақўрғон", ru: "Каттакурган" },
     titles: { en: "Kattakurgan District", uz: "Kattaqo'rg'on tumani", uzc: "Каттақўрғон тумани", ru: "Каттакурганский район" },
+    locatives: {
+      name: { en: "in Kattakurgan", uz: "Kattaqo'rg'onda", uzc: "Каттақўрғонда", ru: "в Каттакургане" },
+      title: { en: "in the Kattakurgan District", uz: "Kattaqo'rg'on tumanida", uzc: "Каттақўрғон туманида", ru: "в Каттакурганском районе" },
+    },
   },
   {
     slug: "koshrabad",
@@ -676,6 +964,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SA",
     names: { en: "Koshrabad", uz: "Qo'shrabot", uzc: "Қўшработ", ru: "Кошрабад" },
     titles: { en: "Koshrabad District", uz: "Qo'shrabot tumani", uzc: "Қўшработ тумани", ru: "Кошрабадский район" },
+    locatives: {
+      name: { en: "in Koshrabad", uz: "Qo'shrabotda", uzc: "Қўшработда", ru: "в Кошрабаде" },
+      title: { en: "in the Koshrabad District", uz: "Qo'shrabot tumanida", uzc: "Қўшработ туманида", ru: "в Кошрабадском районе" },
+    },
   },
   {
     slug: "narpai",
@@ -685,6 +977,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SA",
     names: { en: "Narpai", uz: "Narpay", uzc: "Нарпай", ru: "Нарпай" },
     titles: { en: "Narpai District", uz: "Narpay tumani", uzc: "Нарпай тумани", ru: "Нарпайский район" },
+    locatives: {
+      name: { en: "in Narpai", uz: "Narpayda", uzc: "Нарпайда", ru: "в Нарпае" },
+      title: { en: "in the Narpai District", uz: "Narpay tumanida", uzc: "Нарпай туманида", ru: "в Нарпайском районе" },
+    },
   },
   {
     slug: "payaryk",
@@ -694,6 +990,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SA",
     names: { en: "Payaryk", uz: "Payariq", uzc: "Паяриқ", ru: "Пайарык" },
     titles: { en: "Payaryk District", uz: "Payariq tumani", uzc: "Паяриқ тумани", ru: "Пайарыкский район" },
+    locatives: {
+      name: { en: "in Payaryk", uz: "Payariqda", uzc: "Паяриқда", ru: "в Пайарыке" },
+      title: { en: "in the Payaryk District", uz: "Payariq tumanida", uzc: "Паяриқ туманида", ru: "в Пайарыкском районе" },
+    },
   },
   {
     slug: "pastdargom",
@@ -703,6 +1003,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SA",
     names: { en: "Pastdargom", uz: "Pastdarg'om", uzc: "Пастдарғом", ru: "Пастдаргом" },
     titles: { en: "Pastdargom District", uz: "Pastdarg'om tumani", uzc: "Пастдарғом тумани", ru: "Пастдаргомский район" },
+    locatives: {
+      name: { en: "in Pastdargom", uz: "Pastdarg'omda", uzc: "Пастдарғомда", ru: "в Пастдаргоме" },
+      title: { en: "in the Pastdargom District", uz: "Pastdarg'om tumanida", uzc: "Пастдарғом туманида", ru: "в Пастдаргомском районе" },
+    },
   },
   {
     slug: "pakhtachi",
@@ -712,6 +1016,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SA",
     names: { en: "Pakhtachi", uz: "Paxtachi", uzc: "Пахтачи", ru: "Пахтачи" },
     titles: { en: "Pakhtachi District", uz: "Paxtachi tumani", uzc: "Пахтачи тумани", ru: "Пахтачийский район" },
+    locatives: {
+      name: { en: "in Pakhtachi", uz: "Paxtachida", uzc: "Пахтачида", ru: "в Пахтачи" },
+      title: { en: "in the Pakhtachi District", uz: "Paxtachi tumanida", uzc: "Пахтачи туманида", ru: "в Пахтачийском районе" },
+    },
   },
   {
     slug: "samarkand",
@@ -721,6 +1029,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SA",
     names: { en: "Samarkand", uz: "Samarqand", uzc: "Самарқанд", ru: "Самарканд" },
     titles: { en: "Samarkand District", uz: "Samarqand tumani", uzc: "Самарқанд тумани", ru: "Самаркандский район" },
+    locatives: {
+      name: { en: "in Samarkand", uz: "Samarqandda", uzc: "Самарқандда", ru: "в Самарканде" },
+      title: { en: "in the Samarkand District", uz: "Samarqand tumanida", uzc: "Самарқанд туманида", ru: "в Самаркандском районе" },
+    },
   },
   {
     slug: "nurabad",
@@ -730,6 +1042,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SA",
     names: { en: "Nurabad", uz: "Nurobod", uzc: "Нуробод", ru: "Нурабад" },
     titles: { en: "Nurabad District", uz: "Nurobod tumani", uzc: "Нуробод тумани", ru: "Нурабадский район" },
+    locatives: {
+      name: { en: "in Nurabad", uz: "Nurobodda", uzc: "Нурободда", ru: "в Нурабаде" },
+      title: { en: "in the Nurabad District", uz: "Nurobod tumanida", uzc: "Нуробод туманида", ru: "в Нурабадском районе" },
+    },
   },
   {
     slug: "urgut",
@@ -739,6 +1055,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SA",
     names: { en: "Urgut", uz: "Urgut", uzc: "Ургут", ru: "Ургут" },
     titles: { en: "Urgut District", uz: "Urgut tumani", uzc: "Ургут тумани", ru: "Ургутский район" },
+    locatives: {
+      name: { en: "in Urgut", uz: "Urgutda", uzc: "Ургутда", ru: "в Ургуте" },
+      title: { en: "in the Urgut District", uz: "Urgut tumanida", uzc: "Ургут туманида", ru: "в Ургутском районе" },
+    },
   },
   {
     slug: "tailak",
@@ -748,6 +1068,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SA",
     names: { en: "Tailak", uz: "Tayloq", uzc: "Тайлоқ", ru: "Тайляк" },
     titles: { en: "Tailak District", uz: "Tayloq tumani", uzc: "Тайлоқ тумани", ru: "Тайлякский район" },
+    locatives: {
+      name: { en: "in Tailak", uz: "Tayloqda", uzc: "Тайлоқда", ru: "в Тайляке" },
+      title: { en: "in the Tailak District", uz: "Tayloq tumanida", uzc: "Тайлоқ туманида", ru: "в Тайлякском районе" },
+    },
   },
 
   // ===== Syrdarya (UZ-SI) — 8 districts =====
@@ -759,6 +1083,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SI",
     names: { en: "Akaltyn", uz: "Oqoltin", uzc: "Оқолтин", ru: "Акалтын" },
     titles: { en: "Akaltyn District", uz: "Oqoltin tumani", uzc: "Оқолтин тумани", ru: "Акалтынский район" },
+    locatives: {
+      name: { en: "in Akaltyn", uz: "Oqoltinda", uzc: "Оқолтинда", ru: "в Акалтыне" },
+      title: { en: "in the Akaltyn District", uz: "Oqoltin tumanida", uzc: "Оқолтин туманида", ru: "в Акалтынском районе" },
+    },
   },
   {
     slug: "bayaut",
@@ -768,6 +1096,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SI",
     names: { en: "Bayaut", uz: "Boyovut", uzc: "Боёвут", ru: "Баяут" },
     titles: { en: "Bayaut District", uz: "Boyovut tumani", uzc: "Боёвут тумани", ru: "Баяутский район" },
+    locatives: {
+      name: { en: "in Bayaut", uz: "Boyovutda", uzc: "Боёвутда", ru: "в Баяуте" },
+      title: { en: "in the Bayaut District", uz: "Boyovut tumanida", uzc: "Боёвут туманида", ru: "в Баяутском районе" },
+    },
   },
   {
     slug: "saykhunabad",
@@ -777,6 +1109,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SI",
     names: { en: "Saykhunabad", uz: "Sayxunobod", uzc: "Сайхунобод", ru: "Сайхунабад" },
     titles: { en: "Saykhunabad District", uz: "Sayxunobod tumani", uzc: "Сайхунобод тумани", ru: "Сайхунабадский район" },
+    locatives: {
+      name: { en: "in Saykhunabad", uz: "Sayxunobodda", uzc: "Сайхунободда", ru: "в Сайхунабаде" },
+      title: { en: "in the Saykhunabad District", uz: "Sayxunobod tumanida", uzc: "Сайхунобод туманида", ru: "в Сайхунабадском районе" },
+    },
   },
   {
     slug: "gulistan",
@@ -786,6 +1122,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SI",
     names: { en: "Gulistan", uz: "Guliston", uzc: "Гулистон", ru: "Гулистан" },
     titles: { en: "Gulistan District", uz: "Guliston tumani", uzc: "Гулистон тумани", ru: "Гулистанский район" },
+    locatives: {
+      name: { en: "in Gulistan", uz: "Gulistonda", uzc: "Гулистонда", ru: "в Гулистане" },
+      title: { en: "in the Gulistan District", uz: "Guliston tumanida", uzc: "Гулистон туманида", ru: "в Гулистанском районе" },
+    },
   },
   {
     slug: "sardoba",
@@ -795,6 +1135,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SI",
     names: { en: "Sardoba", uz: "Sardoba", uzc: "Сардоба", ru: "Сардоба" },
     titles: { en: "Sardoba District", uz: "Sardoba tumani", uzc: "Сардоба тумани", ru: "Сардобский район" },
+    locatives: {
+      name: { en: "in Sardoba", uz: "Sardobada", uzc: "Сардобада", ru: "в Сардобе" },
+      title: { en: "in the Sardoba District", uz: "Sardoba tumanida", uzc: "Сардоба туманида", ru: "в Сардобском районе" },
+    },
   },
   {
     slug: "mirzaabad",
@@ -804,6 +1148,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SI",
     names: { en: "Mirzaabad", uz: "Mirzaobod", uzc: "Мирзаобод", ru: "Мирзаабад" },
     titles: { en: "Mirzaabad District", uz: "Mirzaobod tumani", uzc: "Мирзаобод тумани", ru: "Мирзаабадский район" },
+    locatives: {
+      name: { en: "in Mirzaabad", uz: "Mirzaobodda", uzc: "Мирзаободда", ru: "в Мирзаабаде" },
+      title: { en: "in the Mirzaabad District", uz: "Mirzaobod tumanida", uzc: "Мирзаобод туманида", ru: "в Мирзаабадском районе" },
+    },
   },
   {
     slug: "syrdarya",
@@ -813,6 +1161,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SI",
     names: { en: "Syrdarya", uz: "Sirdaryo", uzc: "Сирдарё", ru: "Сырдарья" },
     titles: { en: "Syrdarya District", uz: "Sirdaryo tumani", uzc: "Сирдарё тумани", ru: "Сырдарьинский район" },
+    locatives: {
+      name: { en: "in Syrdarya", uz: "Sirdaryoda", uzc: "Сирдарёда", ru: "в Сырдарье" },
+      title: { en: "in the Syrdarya District", uz: "Sirdaryo tumanida", uzc: "Сирдарё туманида", ru: "в Сырдарьинском районе" },
+    },
   },
   {
     slug: "khovos",
@@ -822,6 +1174,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SI",
     names: { en: "Khovos", uz: "Xovos", uzc: "Ховос", ru: "Хавас" },
     titles: { en: "Khovos District", uz: "Xovos tumani", uzc: "Ховос тумани", ru: "Хавасский район" },
+    locatives: {
+      name: { en: "in Khovos", uz: "Xovosda", uzc: "Ховосда", ru: "в Хавасе" },
+      title: { en: "in the Khovos District", uz: "Xovos tumanida", uzc: "Ховос туманида", ru: "в Хавасском районе" },
+    },
   },
 
   // ===== Surkhandarya (UZ-SU) — 14 districts =====
@@ -833,6 +1189,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SU",
     names: { en: "Altynsay", uz: "Oltinsoy", uzc: "Олтинсой", ru: "Алтынсай" },
     titles: { en: "Altynsay District", uz: "Oltinsoy tumani", uzc: "Олтинсой тумани", ru: "Алтынсайский район" },
+    locatives: {
+      name: { en: "in Altynsay", uz: "Oltinsoyda", uzc: "Олтинсойда", ru: "в Алтынсае" },
+      title: { en: "in the Altynsay District", uz: "Oltinsoy tumanida", uzc: "Олтинсой туманида", ru: "в Алтынсайском районе" },
+    },
   },
   {
     slug: "angor",
@@ -842,6 +1202,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SU",
     names: { en: "Angor", uz: "Angor", uzc: "Ангор", ru: "Ангор" },
     titles: { en: "Angor District", uz: "Angor tumani", uzc: "Ангор тумани", ru: "Ангорский район" },
+    locatives: {
+      name: { en: "in Angor", uz: "Angorda", uzc: "Ангорда", ru: "в Ангоре" },
+      title: { en: "in the Angor District", uz: "Angor tumanida", uzc: "Ангор туманида", ru: "в Ангорском районе" },
+    },
   },
   {
     slug: "bandykhan",
@@ -851,6 +1215,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SU",
     names: { en: "Bandykhan", uz: "Bandixon", uzc: "Бандихон", ru: "Бандихон" },
     titles: { en: "Bandykhan District", uz: "Bandixon tumani", uzc: "Бандихон тумани", ru: "Бандихонский район" },
+    locatives: {
+      name: { en: "in Bandykhan", uz: "Bandixonda", uzc: "Бандихонда", ru: "в Бандихоне" },
+      title: { en: "in the Bandykhan District", uz: "Bandixon tumanida", uzc: "Бандихон туманида", ru: "в Бандихонском районе" },
+    },
   },
   {
     slug: "baysun",
@@ -860,6 +1228,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SU",
     names: { en: "Baysun", uz: "Boysun", uzc: "Бойсун", ru: "Байсун" },
     titles: { en: "Baysun District", uz: "Boysun tumani", uzc: "Бойсун тумани", ru: "Байсунский район" },
+    locatives: {
+      name: { en: "in Baysun", uz: "Boysunda", uzc: "Бойсунда", ru: "в Байсуне" },
+      title: { en: "in the Baysun District", uz: "Boysun tumanida", uzc: "Бойсун туманида", ru: "в Байсунском районе" },
+    },
   },
   {
     slug: "muzrabad",
@@ -869,6 +1241,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SU",
     names: { en: "Muzrabad", uz: "Muzrabot", uzc: "Музработ", ru: "Музрабад" },
     titles: { en: "Muzrabad District", uz: "Muzrabot tumani", uzc: "Музработ тумани", ru: "Музрабадский район" },
+    locatives: {
+      name: { en: "in Muzrabad", uz: "Muzrabotda", uzc: "Музработда", ru: "в Музрабаде" },
+      title: { en: "in the Muzrabad District", uz: "Muzrabot tumanida", uzc: "Музработ туманида", ru: "в Музрабадском районе" },
+    },
   },
   {
     slug: "denau",
@@ -878,6 +1254,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SU",
     names: { en: "Denau", uz: "Denov", uzc: "Денов", ru: "Денау" },
     titles: { en: "Denau District", uz: "Denov tumani", uzc: "Денов тумани", ru: "Денауский район" },
+    locatives: {
+      name: { en: "in Denau", uz: "Denovda", uzc: "Деновда", ru: "в Денау" },
+      title: { en: "in the Denau District", uz: "Denov tumanida", uzc: "Денов туманида", ru: "в Денауском районе" },
+    },
   },
   {
     slug: "jarkurgan",
@@ -887,6 +1267,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SU",
     names: { en: "Jarkurgan", uz: "Jarqo'rg'on", uzc: "Жарқўрғон", ru: "Джаркурган" },
     titles: { en: "Jarkurgan District", uz: "Jarqo'rg'on tumani", uzc: "Жарқўрғон тумани", ru: "Джаркурганский район" },
+    locatives: {
+      name: { en: "in Jarkurgan", uz: "Jarqo'rg'onda", uzc: "Жарқўрғонда", ru: "в Джаркургане" },
+      title: { en: "in the Jarkurgan District", uz: "Jarqo'rg'on tumanida", uzc: "Жарқўрғон туманида", ru: "в Джаркурганском районе" },
+    },
   },
   {
     slug: "kumkurgan",
@@ -896,6 +1280,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SU",
     names: { en: "Kumkurgan", uz: "Qumqo'rg'on", uzc: "Қумқўрғон", ru: "Кумкурган" },
     titles: { en: "Kumkurgan District", uz: "Qumqo'rg'on tumani", uzc: "Қумқўрғон тумани", ru: "Кумкурганский район" },
+    locatives: {
+      name: { en: "in Kumkurgan", uz: "Qumqo'rg'onda", uzc: "Қумқўрғонда", ru: "в Кумкургане" },
+      title: { en: "in the Kumkurgan District", uz: "Qumqo'rg'on tumanida", uzc: "Қумқўрғон туманида", ru: "в Кумкурганском районе" },
+    },
   },
   {
     slug: "kizirik",
@@ -905,6 +1293,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SU",
     names: { en: "Kizirik", uz: "Qiziriq", uzc: "Қизириқ", ru: "Кизирик" },
     titles: { en: "Kizirik District", uz: "Qiziriq tumani", uzc: "Қизириқ тумани", ru: "Кизирикский район" },
+    locatives: {
+      name: { en: "in Kizirik", uz: "Qiziriqda", uzc: "Қизириқда", ru: "в Кизирике" },
+      title: { en: "in the Kizirik District", uz: "Qiziriq tumanida", uzc: "Қизириқ туманида", ru: "в Кизирикском районе" },
+    },
   },
   {
     slug: "sariosia",
@@ -914,6 +1306,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SU",
     names: { en: "Sariosia", uz: "Sariosiyo", uzc: "Сариосиё", ru: "Сариасия" },
     titles: { en: "Sariosia District", uz: "Sariosiyo tumani", uzc: "Сариосиё тумани", ru: "Сариасийский район" },
+    locatives: {
+      name: { en: "in Sariosia", uz: "Sariosiyoda", uzc: "Сариосиёда", ru: "в Сариасии" },
+      title: { en: "in the Sariosia District", uz: "Sariosiyo tumanida", uzc: "Сариосиё туманида", ru: "в Сариасийском районе" },
+    },
   },
   {
     slug: "termiz",
@@ -923,6 +1319,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SU",
     names: { en: "Termiz", uz: "Termiz", uzc: "Термиз", ru: "Термез" },
     titles: { en: "Termiz District", uz: "Termiz tumani", uzc: "Термиз тумани", ru: "Термезский район" },
+    locatives: {
+      name: { en: "in Termiz", uz: "Termizda", uzc: "Термизда", ru: "в Термезе" },
+      title: { en: "in the Termiz District", uz: "Termiz tumanida", uzc: "Термиз туманида", ru: "в Термезском районе" },
+    },
   },
   {
     slug: "uzun",
@@ -932,6 +1332,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SU",
     names: { en: "Uzun", uz: "Uzun", uzc: "Узун", ru: "Узун" },
     titles: { en: "Uzun District", uz: "Uzun tumani", uzc: "Узун тумани", ru: "Узунский район" },
+    locatives: {
+      name: { en: "in Uzun", uz: "Uzunda", uzc: "Узунда", ru: "в Узуне" },
+      title: { en: "in the Uzun District", uz: "Uzun tumanida", uzc: "Узун туманида", ru: "в Узунском районе" },
+    },
   },
   {
     slug: "sherabad",
@@ -941,6 +1345,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SU",
     names: { en: "Sherabad", uz: "Sherobod", uzc: "Шеробод", ru: "Шерабад" },
     titles: { en: "Sherabad District", uz: "Sherobod tumani", uzc: "Шеробод тумани", ru: "Шерабадский район" },
+    locatives: {
+      name: { en: "in Sherabad", uz: "Sherobodda", uzc: "Шерободда", ru: "в Шерабаде" },
+      title: { en: "in the Sherabad District", uz: "Sherobod tumanida", uzc: "Шеробод туманида", ru: "в Шерабадском районе" },
+    },
   },
   {
     slug: "shurchi",
@@ -950,6 +1358,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-SU",
     names: { en: "Shurchi", uz: "Sho'rchi", uzc: "Шўрчи", ru: "Шурчи" },
     titles: { en: "Shurchi District", uz: "Sho'rchi tumani", uzc: "Шўрчи тумани", ru: "Шурчинский район" },
+    locatives: {
+      name: { en: "in Shurchi", uz: "Sho'rchida", uzc: "Шўрчида", ru: "в Шурчи" },
+      title: { en: "in the Shurchi District", uz: "Sho'rchi tumanida", uzc: "Шўрчи туманида", ru: "в Шурчинском районе" },
+    },
   },
 
   // ===== Tashkent City (UZ-TK) — 12 districts =====
@@ -961,6 +1373,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-TK",
     names: { en: "Uchtepa", uz: "Uchtepa", uzc: "Учтепа", ru: "Учтепа" },
     titles: { en: "Uchtepa District", uz: "Uchtepa tumani", uzc: "Учтепа тумани", ru: "Учтепинский район" },
+    locatives: {
+      name: { en: "in Uchtepa", uz: "Uchtepada", uzc: "Учтепада", ru: "в Учтепе" },
+      title: { en: "in the Uchtepa District", uz: "Uchtepa tumanida", uzc: "Учтепа туманида", ru: "в Учтепинском районе" },
+    },
   },
   {
     slug: "bektemir",
@@ -970,6 +1386,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-TK",
     names: { en: "Bektemir", uz: "Bektemir", uzc: "Бектемир", ru: "Бектемир" },
     titles: { en: "Bektemir District", uz: "Bektemir tumani", uzc: "Бектемир тумани", ru: "Бектемирский район" },
+    locatives: {
+      name: { en: "in Bektemir", uz: "Bektemirda", uzc: "Бектемирда", ru: "в Бектемире" },
+      title: { en: "in the Bektemir District", uz: "Bektemir tumanida", uzc: "Бектемир туманида", ru: "в Бектемирском районе" },
+    },
   },
   {
     slug: "yunusabad",
@@ -979,6 +1399,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-TK",
     names: { en: "Yunusabad", uz: "Yunusobod", uzc: "Юнусобод", ru: "Юнусабад" },
     titles: { en: "Yunusabad District", uz: "Yunusobod tumani", uzc: "Юнусобод тумани", ru: "Юнусабадский район" },
+    locatives: {
+      name: { en: "in Yunusabad", uz: "Yunusobodda", uzc: "Юнусободда", ru: "в Юнусабаде" },
+      title: { en: "in the Yunusabad District", uz: "Yunusobod tumanida", uzc: "Юнусобод туманида", ru: "в Юнусабадском районе" },
+    },
   },
   {
     slug: "mirzo_ulugbek",
@@ -988,6 +1412,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-TK",
     names: { en: "Mirzo Ulugbek", uz: "Mirzo Ulug'bek", uzc: "Мирзо Улуғбек", ru: "Мирзо Улугбек" },
     titles: { en: "Mirzo Ulugbek District", uz: "Mirzo Ulug'bek tumani", uzc: "Мирзо Улуғбек тумани", ru: "Мирзо-Улугбекский район" },
+    locatives: {
+      name: { en: "in Mirzo Ulugbek", uz: "Mirzo Ulug'bekda", uzc: "Мирзо Улуғбекда", ru: "в Мирзо Улугбеке" },
+      title: { en: "in the Mirzo Ulugbek District", uz: "Mirzo Ulug'bek tumanida", uzc: "Мирзо Улуғбек туманида", ru: "в Мирзо-Улугбекском районе" },
+    },
   },
   {
     slug: "mirabad",
@@ -997,6 +1425,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-TK",
     names: { en: "Mirabad", uz: "Mirobod", uzc: "Миробод", ru: "Мирабад" },
     titles: { en: "Mirabad District", uz: "Mirobod tumani", uzc: "Миробод тумани", ru: "Мирабадский район" },
+    locatives: {
+      name: { en: "in Mirabad", uz: "Mirobodda", uzc: "Мирободда", ru: "в Мирабаде" },
+      title: { en: "in the Mirabad District", uz: "Mirobod tumanida", uzc: "Миробод туманида", ru: "в Мирабадском районе" },
+    },
   },
   {
     slug: "shaykhantakhur",
@@ -1006,6 +1438,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-TK",
     names: { en: "Shaykhantakhur", uz: "Shayxontoxur", uzc: "Шайхонтохур", ru: "Шайхантахур" },
     titles: { en: "Shaykhantakhur District", uz: "Shayxontoxur tumani", uzc: "Шайхонтохур тумани", ru: "Шайхантахурский район" },
+    locatives: {
+      name: { en: "in Shaykhantakhur", uz: "Shayxontoxurda", uzc: "Шайхонтохурда", ru: "в Шайхантахуре" },
+      title: { en: "in the Shaykhantakhur District", uz: "Shayxontoxur tumanida", uzc: "Шайхонтохур туманида", ru: "в Шайхантахурском районе" },
+    },
   },
   {
     slug: "almazar",
@@ -1015,6 +1451,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-TK",
     names: { en: "Almazar", uz: "Olmazor", uzc: "Олмазор", ru: "Алмазар" },
     titles: { en: "Almazar District", uz: "Olmazor tumani", uzc: "Олмазор тумани", ru: "Алмазарский район" },
+    locatives: {
+      name: { en: "in Almazar", uz: "Olmazorda", uzc: "Олмазорда", ru: "в Алмазаре" },
+      title: { en: "in the Almazar District", uz: "Olmazor tumanida", uzc: "Олмазор туманида", ru: "в Алмазарском районе" },
+    },
   },
   {
     slug: "sergeli",
@@ -1024,6 +1464,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-TK",
     names: { en: "Sergeli", uz: "Sirg'ali", uzc: "Сирғали", ru: "Сергели" },
     titles: { en: "Sergeli District", uz: "Sirg'ali tumani", uzc: "Сирғали тумани", ru: "Сергелийский район" },
+    locatives: {
+      name: { en: "in Sergeli", uz: "Sirg'alida", uzc: "Сирғалида", ru: "в Сергели" },
+      title: { en: "in the Sergeli District", uz: "Sirg'ali tumanida", uzc: "Сирғали туманида", ru: "в Сергелийском районе" },
+    },
   },
   {
     slug: "yakkasaray",
@@ -1033,6 +1477,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-TK",
     names: { en: "Yakkasaray", uz: "Yakkasaroy", uzc: "Яккасарой", ru: "Яккасарай" },
     titles: { en: "Yakkasaray District", uz: "Yakkasaroy tumani", uzc: "Яккасарой тумани", ru: "Яккасарайский район" },
+    locatives: {
+      name: { en: "in Yakkasaray", uz: "Yakkasaroyda", uzc: "Яккасаройда", ru: "в Яккасарае" },
+      title: { en: "in the Yakkasaray District", uz: "Yakkasaroy tumanida", uzc: "Яккасарой туманида", ru: "в Яккасарайском районе" },
+    },
   },
   {
     slug: "yashnabad",
@@ -1042,6 +1490,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-TK",
     names: { en: "Yashnabad", uz: "Yashnobod", uzc: "Яшнобод", ru: "Яшнабад" },
     titles: { en: "Yashnabad District", uz: "Yashnobod tumani", uzc: "Яшнобод тумани", ru: "Яшнабадский район" },
+    locatives: {
+      name: { en: "in Yashnabad", uz: "Yashnobodda", uzc: "Яшнободда", ru: "в Яшнабаде" },
+      title: { en: "in the Yashnabad District", uz: "Yashnobod tumanida", uzc: "Яшнобод туманида", ru: "в Яшнабадском районе" },
+    },
   },
   {
     slug: "yangikhayot",
@@ -1051,6 +1503,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-TK",
     names: { en: "Yangikhayot", uz: "Yangihayot", uzc: "Янгиҳаёт", ru: "Янгихаёт" },
     titles: { en: "Yangikhayot District", uz: "Yangihayot tumani", uzc: "Янгиҳаёт тумани", ru: "Янгихаётский район" },
+    locatives: {
+      name: { en: "in Yangikhayot", uz: "Yangihayotda", uzc: "Янгиҳаётда", ru: "в Янгихаёте" },
+      title: { en: "in the Yangikhayot District", uz: "Yangihayot tumanida", uzc: "Янгиҳаёт туманида", ru: "в Янгихаётском районе" },
+    },
   },
   {
     slug: "chilanzar",
@@ -1060,6 +1516,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-TK",
     names: { en: "Chilanzar", uz: "Chilonzor", uzc: "Чилонзор", ru: "Чиланзар" },
     titles: { en: "Chilanzar District", uz: "Chilonzor tumani", uzc: "Чилонзор тумани", ru: "Чиланзарский район" },
+    locatives: {
+      name: { en: "in Chilanzar", uz: "Chilonzorda", uzc: "Чилонзорда", ru: "в Чиланзаре" },
+      title: { en: "in the Chilanzar District", uz: "Chilonzor tumanida", uzc: "Чилонзор туманида", ru: "в Чиланзарском районе" },
+    },
   },
 
   // ===== Tashkent Region (UZ-TO) — 15 districts =====
@@ -1071,6 +1531,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-TO",
     names: { en: "Akkurgan", uz: "Oqqo'rg'on", uzc: "Оққўрғон", ru: "Аккурган" },
     titles: { en: "Akkurgan District", uz: "Oqqo'rg'on tumani", uzc: "Оққўрғон тумани", ru: "Аккурганский район" },
+    locatives: {
+      name: { en: "in Akkurgan", uz: "Oqqo'rg'onda", uzc: "Оққўрғонда", ru: "в Аккургане" },
+      title: { en: "in the Akkurgan District", uz: "Oqqo'rg'on tumanida", uzc: "Оққўрғон туманида", ru: "в Аккурганском районе" },
+    },
   },
   {
     slug: "akhangaran",
@@ -1080,6 +1544,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-TO",
     names: { en: "Akhangaran", uz: "Ohangaron", uzc: "Оҳангарон", ru: "Ахангаран" },
     titles: { en: "Akhangaran District", uz: "Ohangaron tumani", uzc: "Оҳангарон тумани", ru: "Ахангаранский район" },
+    locatives: {
+      name: { en: "in Akhangaran", uz: "Ohangaronda", uzc: "Оҳангаронда", ru: "в Ахангаране" },
+      title: { en: "in the Akhangaran District", uz: "Ohangaron tumanida", uzc: "Оҳангарон туманида", ru: "в Ахангаранском районе" },
+    },
   },
   {
     slug: "bekabad",
@@ -1089,6 +1557,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-TO",
     names: { en: "Bekabad", uz: "Bekobod", uzc: "Бекобод", ru: "Бекабад" },
     titles: { en: "Bekabad District", uz: "Bekobod tumani", uzc: "Бекобод тумани", ru: "Бекабадский район" },
+    locatives: {
+      name: { en: "in Bekabad", uz: "Bekobodda", uzc: "Бекободда", ru: "в Бекабаде" },
+      title: { en: "in the Bekabad District", uz: "Bekobod tumanida", uzc: "Бекобод туманида", ru: "в Бекабадском районе" },
+    },
   },
   {
     slug: "bostanlyk",
@@ -1098,6 +1570,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-TO",
     names: { en: "Bostanlyk", uz: "Bo'stonliq", uzc: "Бўстонлиқ", ru: "Бостанлык" },
     titles: { en: "Bostanlyk District", uz: "Bo'stonliq tumani", uzc: "Бўстонлиқ тумани", ru: "Бостанлыкский район" },
+    locatives: {
+      name: { en: "in Bostanlyk", uz: "Bo'stonliqda", uzc: "Бўстонлиқда", ru: "в Бостанлыке" },
+      title: { en: "in the Bostanlyk District", uz: "Bo'stonliq tumanida", uzc: "Бўстонлиқ туманида", ru: "в Бостанлыкском районе" },
+    },
   },
   {
     slug: "buka",
@@ -1107,6 +1583,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-TO",
     names: { en: "Buka", uz: "Bo'ka", uzc: "Бўка", ru: "Бука" },
     titles: { en: "Buka District", uz: "Bo'ka tumani", uzc: "Бўка тумани", ru: "Букинский район" },
+    locatives: {
+      name: { en: "in Buka", uz: "Bo'kada", uzc: "Бўкада", ru: "в Буке" },
+      title: { en: "in the Buka District", uz: "Bo'ka tumanida", uzc: "Бўка туманида", ru: "в Букинском районе" },
+    },
   },
   {
     slug: "kuyichirchik",
@@ -1116,6 +1596,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-TO",
     names: { en: "Kuyichirchik", uz: "Quyichirchiq", uzc: "Қуйичирчиқ", ru: "Куйичирчик" },
     titles: { en: "Kuyichirchik District", uz: "Quyichirchiq tumani", uzc: "Қуйичирчиқ тумани", ru: "Куйичирчикский район" },
+    locatives: {
+      name: { en: "in Kuyichirchik", uz: "Quyichirchiqda", uzc: "Қуйичирчиқда", ru: "в Куйичирчике" },
+      title: { en: "in the Kuyichirchik District", uz: "Quyichirchiq tumanida", uzc: "Қуйичирчиқ туманида", ru: "в Куйичирчикском районе" },
+    },
   },
   {
     slug: "zangiata",
@@ -1125,6 +1609,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-TO",
     names: { en: "Zangiata", uz: "Zangiota", uzc: "Зангиота", ru: "Зангиата" },
     titles: { en: "Zangiata District", uz: "Zangiota tumani", uzc: "Зангиота тумани", ru: "Зангиатинский район" },
+    locatives: {
+      name: { en: "in Zangiata", uz: "Zangiotada", uzc: "Зангиотада", ru: "в Зангиате" },
+      title: { en: "in the Zangiata District", uz: "Zangiota tumanida", uzc: "Зангиота туманида", ru: "в Зангиатинском районе" },
+    },
   },
   {
     slug: "yukorichirchik",
@@ -1134,6 +1622,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-TO",
     names: { en: "Yukorichirchik", uz: "Yuqorichirchiq", uzc: "Юқоричирчиқ", ru: "Юкоричирчик" },
     titles: { en: "Yukorichirchik District", uz: "Yuqorichirchiq tumani", uzc: "Юқоричирчиқ тумани", ru: "Юкоричирчикский район" },
+    locatives: {
+      name: { en: "in Yukorichirchik", uz: "Yuqorichirchiqda", uzc: "Юқоричирчиқда", ru: "в Юкоричирчике" },
+      title: { en: "in the Yukorichirchik District", uz: "Yuqorichirchiq tumanida", uzc: "Юқоричирчиқ туманида", ru: "в Юкоричирчикском районе" },
+    },
   },
   {
     slug: "kibray",
@@ -1143,6 +1635,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-TO",
     names: { en: "Kibray", uz: "Qibray", uzc: "Қибрай", ru: "Кибрай" },
     titles: { en: "Kibray District", uz: "Qibray tumani", uzc: "Қибрай тумани", ru: "Кибрайский район" },
+    locatives: {
+      name: { en: "in Kibray", uz: "Qibrayda", uzc: "Қибрайда", ru: "в Кибрае" },
+      title: { en: "in the Kibray District", uz: "Qibray tumanida", uzc: "Қибрай туманида", ru: "в Кибрайском районе" },
+    },
   },
   {
     slug: "parkent",
@@ -1152,6 +1648,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-TO",
     names: { en: "Parkent", uz: "Parkent", uzc: "Паркент", ru: "Паркент" },
     titles: { en: "Parkent District", uz: "Parkent tumani", uzc: "Паркент тумани", ru: "Паркентский район" },
+    locatives: {
+      name: { en: "in Parkent", uz: "Parkentda", uzc: "Паркентда", ru: "в Паркенте" },
+      title: { en: "in the Parkent District", uz: "Parkent tumanida", uzc: "Паркент туманида", ru: "в Паркентском районе" },
+    },
   },
   {
     slug: "piskent",
@@ -1161,6 +1661,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-TO",
     names: { en: "Piskent", uz: "Piskent", uzc: "Пискент", ru: "Пскент" },
     titles: { en: "Piskent District", uz: "Piskent tumani", uzc: "Пискент тумани", ru: "Пскентский район" },
+    locatives: {
+      name: { en: "in Piskent", uz: "Piskentda", uzc: "Пискентда", ru: "в Пскенте" },
+      title: { en: "in the Piskent District", uz: "Piskent tumanida", uzc: "Пискент туманида", ru: "в Пскентском районе" },
+    },
   },
   {
     slug: "urtachirchik",
@@ -1170,6 +1674,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-TO",
     names: { en: "Urtachirchik", uz: "O'rtachirchiq", uzc: "Ўртачирчиқ", ru: "Уртачирчик" },
     titles: { en: "Urtachirchik District", uz: "O'rtachirchiq tumani", uzc: "Ўртачирчиқ тумани", ru: "Уртачирчикский район" },
+    locatives: {
+      name: { en: "in Urtachirchik", uz: "O'rtachirchiqda", uzc: "Ўртачирчиқда", ru: "в Уртачирчике" },
+      title: { en: "in the Urtachirchik District", uz: "O'rtachirchiq tumanida", uzc: "Ўртачирчиқ туманида", ru: "в Уртачирчикском районе" },
+    },
   },
   {
     slug: "chinaz",
@@ -1179,6 +1687,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-TO",
     names: { en: "Chinaz", uz: "Chinoz", uzc: "Чиноз", ru: "Чиназ" },
     titles: { en: "Chinaz District", uz: "Chinoz tumani", uzc: "Чиноз тумани", ru: "Чиназский район" },
+    locatives: {
+      name: { en: "in Chinaz", uz: "Chinozda", uzc: "Чинозда", ru: "в Чиназе" },
+      title: { en: "in the Chinaz District", uz: "Chinoz tumanida", uzc: "Чиноз туманида", ru: "в Чиназском районе" },
+    },
   },
   {
     slug: "yangiyul",
@@ -1188,6 +1700,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-TO",
     names: { en: "Yangiyul", uz: "Yangiyo'l", uzc: "Янгийўл", ru: "Янгиюль" },
     titles: { en: "Yangiyul District", uz: "Yangiyo'l tumani", uzc: "Янгийўл тумани", ru: "Янгиюльский район" },
+    locatives: {
+      name: { en: "in Yangiyul", uz: "Yangiyo'lda", uzc: "Янгийўлда", ru: "в Янгиюле" },
+      title: { en: "in the Yangiyul District", uz: "Yangiyo'l tumanida", uzc: "Янгийўл туманида", ru: "в Янгиюльском районе" },
+    },
   },
   {
     slug: "tashkent",
@@ -1197,6 +1713,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-TO",
     names: { en: "Tashkent", uz: "Toshkent", uzc: "Тошкент", ru: "Ташкент" },
     titles: { en: "Tashkent District", uz: "Toshkent tumani", uzc: "Тошкент тумани", ru: "Ташкентский район" },
+    locatives: {
+      name: { en: "in Tashkent", uz: "Toshkentda", uzc: "Тошкентда", ru: "в Ташкенте" },
+      title: { en: "in the Tashkent District", uz: "Toshkent tumanida", uzc: "Тошкент туманида", ru: "в Ташкентском районе" },
+    },
   },
 
   // ===== Fergana (UZ-FA) — 15 districts =====
@@ -1208,6 +1728,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-FA",
     names: { en: "Altyaryk", uz: "Oltiariq", uzc: "Олтиариқ", ru: "Алтыарык" },
     titles: { en: "Altyaryk District", uz: "Oltiariq tumani", uzc: "Олтиариқ тумани", ru: "Алтыарыкский район" },
+    locatives: {
+      name: { en: "in Altyaryk", uz: "Oltiariqda", uzc: "Олтиариқда", ru: "в Алтыарыке" },
+      title: { en: "in the Altyaryk District", uz: "Oltiariq tumanida", uzc: "Олтиариқ туманида", ru: "в Алтыарыкском районе" },
+    },
   },
   {
     slug: "kushtepa",
@@ -1217,6 +1741,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-FA",
     names: { en: "Kushtepa", uz: "Qo'shtepa", uzc: "Қўштепа", ru: "Куштепа" },
     titles: { en: "Kushtepa District", uz: "Qo'shtepa tumani", uzc: "Қўштепа тумани", ru: "Куштепинский район" },
+    locatives: {
+      name: { en: "in Kushtepa", uz: "Qo'shtepada", uzc: "Қўштепада", ru: "в Куштепе" },
+      title: { en: "in the Kushtepa District", uz: "Qo'shtepa tumanida", uzc: "Қўштепа туманида", ru: "в Куштепинском районе" },
+    },
   },
   {
     slug: "baghdad",
@@ -1226,6 +1754,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-FA",
     names: { en: "Baghdad", uz: "Bog'dod", uzc: "Боғдод", ru: "Багдад" },
     titles: { en: "Baghdad District", uz: "Bog'dod tumani", uzc: "Боғдод тумани", ru: "Багдадский район" },
+    locatives: {
+      name: { en: "in Baghdad", uz: "Bog'dodda", uzc: "Боғдодда", ru: "в Багдаде" },
+      title: { en: "in the Baghdad District", uz: "Bog'dod tumanida", uzc: "Боғдод туманида", ru: "в Багдадском районе" },
+    },
   },
   {
     slug: "buvayda",
@@ -1235,6 +1767,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-FA",
     names: { en: "Buvayda", uz: "Buvayda", uzc: "Бувайда", ru: "Бувайда" },
     titles: { en: "Buvayda District", uz: "Buvayda tumani", uzc: "Бувайда тумани", ru: "Бувайдинский район" },
+    locatives: {
+      name: { en: "in Buvayda", uz: "Buvaydada", uzc: "Бувайдада", ru: "в Бувайде" },
+      title: { en: "in the Buvayda District", uz: "Buvayda tumanida", uzc: "Бувайда туманида", ru: "в Бувайдинском районе" },
+    },
   },
   {
     slug: "besharik",
@@ -1244,6 +1780,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-FA",
     names: { en: "Besharik", uz: "Beshariq", uzc: "Бешариқ", ru: "Бешарык" },
     titles: { en: "Besharik District", uz: "Beshariq tumani", uzc: "Бешариқ тумани", ru: "Бешарыкский район" },
+    locatives: {
+      name: { en: "in Besharik", uz: "Beshariqda", uzc: "Бешариқда", ru: "в Бешарыке" },
+      title: { en: "in the Besharik District", uz: "Beshariq tumanida", uzc: "Бешариқ туманида", ru: "в Бешарыкском районе" },
+    },
   },
   {
     slug: "kuva",
@@ -1253,6 +1793,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-FA",
     names: { en: "Kuva", uz: "Quva", uzc: "Қува", ru: "Кува" },
     titles: { en: "Kuva District", uz: "Quva tumani", uzc: "Қува тумани", ru: "Кувинский район" },
+    locatives: {
+      name: { en: "in Kuva", uz: "Quvada", uzc: "Қувада", ru: "в Куве" },
+      title: { en: "in the Kuva District", uz: "Quva tumanida", uzc: "Қува туманида", ru: "в Кувинском районе" },
+    },
   },
   {
     slug: "uchkuprik",
@@ -1262,6 +1806,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-FA",
     names: { en: "Uchkuprik", uz: "Uchko'prik", uzc: "Учкўприк", ru: "Учкуприк" },
     titles: { en: "Uchkuprik District", uz: "Uchko'prik tumani", uzc: "Учкўприк тумани", ru: "Учкуприкский район" },
+    locatives: {
+      name: { en: "in Uchkuprik", uz: "Uchko'prikda", uzc: "Учкўприкда", ru: "в Учкуприке" },
+      title: { en: "in the Uchkuprik District", uz: "Uchko'prik tumanida", uzc: "Учкўприк туманида", ru: "в Учкуприкском районе" },
+    },
   },
   {
     slug: "rishtan",
@@ -1271,6 +1819,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-FA",
     names: { en: "Rishtan", uz: "Rishton", uzc: "Риштон", ru: "Риштан" },
     titles: { en: "Rishtan District", uz: "Rishton tumani", uzc: "Риштон тумани", ru: "Риштанский район" },
+    locatives: {
+      name: { en: "in Rishtan", uz: "Rishtonda", uzc: "Риштонда", ru: "в Риштане" },
+      title: { en: "in the Rishtan District", uz: "Rishton tumanida", uzc: "Риштон туманида", ru: "в Риштанском районе" },
+    },
   },
   {
     slug: "sokh",
@@ -1280,6 +1832,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-FA",
     names: { en: "Sokh", uz: "So'x", uzc: "Сўх", ru: "Сох" },
     titles: { en: "Sokh District", uz: "So'x tumani", uzc: "Сўх тумани", ru: "Сохский район" },
+    locatives: {
+      name: { en: "in Sokh", uz: "So'xda", uzc: "Сўхда", ru: "в Сохе" },
+      title: { en: "in the Sokh District", uz: "So'x tumanida", uzc: "Сўх туманида", ru: "в Сохском районе" },
+    },
   },
   {
     slug: "tashlak",
@@ -1289,6 +1845,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-FA",
     names: { en: "Tashlak", uz: "Toshloq", uzc: "Тошлоқ", ru: "Ташлак" },
     titles: { en: "Tashlak District", uz: "Toshloq tumani", uzc: "Тошлоқ тумани", ru: "Ташлакский район" },
+    locatives: {
+      name: { en: "in Tashlak", uz: "Toshloqda", uzc: "Тошлоқда", ru: "в Ташлаке" },
+      title: { en: "in the Tashlak District", uz: "Toshloq tumanida", uzc: "Тошлоқ туманида", ru: "в Ташлакском районе" },
+    },
   },
   {
     slug: "uzbekistan",
@@ -1298,6 +1858,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-FA",
     names: { en: "Uzbekistan", uz: "O'zbekiston", uzc: "Ўзбекистон", ru: "Узбекистан" },
     titles: { en: "Uzbekistan District", uz: "O'zbekiston tumani", uzc: "Ўзбекистон тумани", ru: "Узбекистанский район" },
+    locatives: {
+      name: { en: "in Uzbekistan", uz: "O'zbekistonda", uzc: "Ўзбекистонда", ru: "в Узбекистане" },
+      title: { en: "in the Uzbekistan District", uz: "O'zbekiston tumanida", uzc: "Ўзбекистон туманида", ru: "в Узбекистанском районе" },
+    },
   },
   {
     slug: "fergana",
@@ -1307,6 +1871,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-FA",
     names: { en: "Fergana", uz: "Farg'ona", uzc: "Фарғона", ru: "Фергана" },
     titles: { en: "Fergana District", uz: "Farg'ona tumani", uzc: "Фарғона тумани", ru: "Ферганский район" },
+    locatives: {
+      name: { en: "in Fergana", uz: "Farg'onada", uzc: "Фарғонада", ru: "в Фергане" },
+      title: { en: "in the Fergana District", uz: "Farg'ona tumanida", uzc: "Фарғона туманида", ru: "в Ферганском районе" },
+    },
   },
   {
     slug: "dangara",
@@ -1316,6 +1884,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-FA",
     names: { en: "Dangara", uz: "Dang'ara", uzc: "Данғара", ru: "Дангара" },
     titles: { en: "Dangara District", uz: "Dang'ara tumani", uzc: "Данғара тумани", ru: "Дангаринский район" },
+    locatives: {
+      name: { en: "in Dangara", uz: "Dang'arada", uzc: "Данғарада", ru: "в Дангаре" },
+      title: { en: "in the Dangara District", uz: "Dang'ara tumanida", uzc: "Данғара туманида", ru: "в Дангаринском районе" },
+    },
   },
   {
     slug: "furkat",
@@ -1325,6 +1897,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-FA",
     names: { en: "Furkat", uz: "Furqat", uzc: "Фурқат", ru: "Фуркат" },
     titles: { en: "Furkat District", uz: "Furqat tumani", uzc: "Фурқат тумани", ru: "Фуркатский район" },
+    locatives: {
+      name: { en: "in Furkat", uz: "Furqatda", uzc: "Фурқатда", ru: "в Фуркате" },
+      title: { en: "in the Furkat District", uz: "Furqat tumanida", uzc: "Фурқат туманида", ru: "в Фуркатском районе" },
+    },
   },
   {
     slug: "yazyavan",
@@ -1334,6 +1910,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-FA",
     names: { en: "Yazyavan", uz: "Yozyovon", uzc: "Ёзёвон", ru: "Язъяван" },
     titles: { en: "Yazyavan District", uz: "Yozyovon tumani", uzc: "Ёзёвон тумани", ru: "Язъяванский район" },
+    locatives: {
+      name: { en: "in Yazyavan", uz: "Yozyovonda", uzc: "Ёзёвонда", ru: "в Язъяване" },
+      title: { en: "in the Yazyavan District", uz: "Yozyovon tumanida", uzc: "Ёзёвон туманида", ru: "в Язъяванском районе" },
+    },
   },
 
   // ===== Namangan (UZ-NG) — 11 districts =====
@@ -1345,6 +1925,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-NG",
     names: { en: "Mingbulak", uz: "Mingbuloq", uzc: "Мингбулоқ", ru: "Мингбулак" },
     titles: { en: "Mingbulak District", uz: "Mingbuloq tumani", uzc: "Мингбулоқ тумани", ru: "Мингбулакский район" },
+    locatives: {
+      name: { en: "in Mingbulak", uz: "Mingbuloqda", uzc: "Мингбулоқда", ru: "в Мингбулаке" },
+      title: { en: "in the Mingbulak District", uz: "Mingbuloq tumanida", uzc: "Мингбулоқ туманида", ru: "в Мингбулакском районе" },
+    },
   },
   {
     slug: "kasansay",
@@ -1354,6 +1938,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-NG",
     names: { en: "Kasansay", uz: "Kosonsoy", uzc: "Косонсой", ru: "Касансай" },
     titles: { en: "Kasansay District", uz: "Kosonsoy tumani", uzc: "Косонсой тумани", ru: "Касансайский район" },
+    locatives: {
+      name: { en: "in Kasansay", uz: "Kosonsoyda", uzc: "Косонсойда", ru: "в Касансае" },
+      title: { en: "in the Kasansay District", uz: "Kosonsoy tumanida", uzc: "Косонсой туманида", ru: "в Касансайском районе" },
+    },
   },
   {
     slug: "namangan",
@@ -1363,6 +1951,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-NG",
     names: { en: "Namangan", uz: "Namangan", uzc: "Наманган", ru: "Наманган" },
     titles: { en: "Namangan District", uz: "Namangan tumani", uzc: "Наманган тумани", ru: "Наманганский район" },
+    locatives: {
+      name: { en: "in Namangan", uz: "Namanganda", uzc: "Наманганда", ru: "в Намангане" },
+      title: { en: "in the Namangan District", uz: "Namangan tumanida", uzc: "Наманган туманида", ru: "в Наманганском районе" },
+    },
   },
   {
     slug: "naryn",
@@ -1372,6 +1964,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-NG",
     names: { en: "Naryn", uz: "Norin", uzc: "Норин", ru: "Нарын" },
     titles: { en: "Naryn District", uz: "Norin tumani", uzc: "Норин тумани", ru: "Нарынский район" },
+    locatives: {
+      name: { en: "in Naryn", uz: "Norinda", uzc: "Норинда", ru: "в Нарыне" },
+      title: { en: "in the Naryn District", uz: "Norin tumanida", uzc: "Норин туманида", ru: "в Нарынском районе" },
+    },
   },
   {
     slug: "pop",
@@ -1381,6 +1977,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-NG",
     names: { en: "Pop", uz: "Pop", uzc: "Поп", ru: "Пап" },
     titles: { en: "Pop District", uz: "Pop tumani", uzc: "Поп тумани", ru: "Папский район" },
+    locatives: {
+      name: { en: "in Pop", uz: "Popda", uzc: "Попда", ru: "в Папе" },
+      title: { en: "in the Pop District", uz: "Pop tumanida", uzc: "Поп туманида", ru: "в Папском районе" },
+    },
   },
   {
     slug: "turakurgan",
@@ -1390,6 +1990,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-NG",
     names: { en: "Turakurgan", uz: "To'raqo'rg'on", uzc: "Тўрақўрғон", ru: "Туракурган" },
     titles: { en: "Turakurgan District", uz: "To'raqo'rg'on tumani", uzc: "Тўрақўрғон тумани", ru: "Туракурганский район" },
+    locatives: {
+      name: { en: "in Turakurgan", uz: "To'raqo'rg'onda", uzc: "Тўрақўрғонда", ru: "в Туракургане" },
+      title: { en: "in the Turakurgan District", uz: "To'raqo'rg'on tumanida", uzc: "Тўрақўрғон туманида", ru: "в Туракурганском районе" },
+    },
   },
   {
     slug: "uychi",
@@ -1399,6 +2003,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-NG",
     names: { en: "Uychi", uz: "Uychi", uzc: "Уйчи", ru: "Уйчи" },
     titles: { en: "Uychi District", uz: "Uychi tumani", uzc: "Уйчи тумани", ru: "Уйчинский район" },
+    locatives: {
+      name: { en: "in Uychi", uz: "Uychida", uzc: "Уйчида", ru: "в Уйчи" },
+      title: { en: "in the Uychi District", uz: "Uychi tumanida", uzc: "Уйчи туманида", ru: "в Уйчинском районе" },
+    },
   },
   {
     slug: "uchkurgan",
@@ -1408,6 +2016,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-NG",
     names: { en: "Uchkurgan", uz: "Uchqo'rg'on", uzc: "Учқўрғон", ru: "Учкурган" },
     titles: { en: "Uchkurgan District", uz: "Uchqo'rg'on tumani", uzc: "Учқўрғон тумани", ru: "Учкурганский район" },
+    locatives: {
+      name: { en: "in Uchkurgan", uz: "Uchqo'rg'onda", uzc: "Учқўрғонда", ru: "в Учкургане" },
+      title: { en: "in the Uchkurgan District", uz: "Uchqo'rg'on tumanida", uzc: "Учқўрғон туманида", ru: "в Учкурганском районе" },
+    },
   },
   {
     slug: "chartak",
@@ -1417,6 +2029,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-NG",
     names: { en: "Chartak", uz: "Chortoq", uzc: "Чортоқ", ru: "Чартак" },
     titles: { en: "Chartak District", uz: "Chortoq tumani", uzc: "Чортоқ тумани", ru: "Чартакский район" },
+    locatives: {
+      name: { en: "in Chartak", uz: "Chortoqda", uzc: "Чортоқда", ru: "в Чартаке" },
+      title: { en: "in the Chartak District", uz: "Chortoq tumanida", uzc: "Чортоқ туманида", ru: "в Чартакском районе" },
+    },
   },
   {
     slug: "chust",
@@ -1426,6 +2042,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-NG",
     names: { en: "Chust", uz: "Chust", uzc: "Чуст", ru: "Чуст" },
     titles: { en: "Chust District", uz: "Chust tumani", uzc: "Чуст тумани", ru: "Чустский район" },
+    locatives: {
+      name: { en: "in Chust", uz: "Chustda", uzc: "Чустда", ru: "в Чусте" },
+      title: { en: "in the Chust District", uz: "Chust tumanida", uzc: "Чуст туманида", ru: "в Чустском районе" },
+    },
   },
   {
     slug: "yangikurgan",
@@ -1435,6 +2055,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-NG",
     names: { en: "Yangikurgan", uz: "Yangiqo'rg'on", uzc: "Янгиқўрғон", ru: "Янгикурган" },
     titles: { en: "Yangikurgan District", uz: "Yangiqo'rg'on tumani", uzc: "Янгиқўрғон тумани", ru: "Янгикурганский район" },
+    locatives: {
+      name: { en: "in Yangikurgan", uz: "Yangiqo'rg'onda", uzc: "Янгиқўрғонда", ru: "в Янгикургане" },
+      title: { en: "in the Yangikurgan District", uz: "Yangiqo'rg'on tumanida", uzc: "Янгиқўрғон туманида", ru: "в Янгикурганском районе" },
+    },
   },
 
   // ===== Navoi (UZ-NW) — 8 districts =====
@@ -1446,6 +2070,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-NW",
     names: { en: "Kanimekh", uz: "Konimex", uzc: "Конимех", ru: "Канимех" },
     titles: { en: "Kanimekh District", uz: "Konimex tumani", uzc: "Конимех тумани", ru: "Канимехский район" },
+    locatives: {
+      name: { en: "in Kanimekh", uz: "Konimexda", uzc: "Конимехда", ru: "в Канимехе" },
+      title: { en: "in the Kanimekh District", uz: "Konimex tumanida", uzc: "Конимех туманида", ru: "в Канимехском районе" },
+    },
   },
   {
     slug: "kyzyltepa",
@@ -1455,6 +2083,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-NW",
     names: { en: "Kyzyltepa", uz: "Qiziltepa", uzc: "Қизилтепа", ru: "Кызылтепа" },
     titles: { en: "Kyzyltepa District", uz: "Qiziltepa tumani", uzc: "Қизилтепа тумани", ru: "Кызылтепинский район" },
+    locatives: {
+      name: { en: "in Kyzyltepa", uz: "Qiziltepada", uzc: "Қизилтепада", ru: "в Кызылтепе" },
+      title: { en: "in the Kyzyltepa District", uz: "Qiziltepa tumanida", uzc: "Қизилтепа туманида", ru: "в Кызылтепинском районе" },
+    },
   },
   {
     slug: "navbahor",
@@ -1464,6 +2096,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-NW",
     names: { en: "Navbahor", uz: "Navbahor", uzc: "Навбаҳор", ru: "Навбахор" },
     titles: { en: "Navbahor District", uz: "Navbahor tumani", uzc: "Навбаҳор тумани", ru: "Навбахорский район" },
+    locatives: {
+      name: { en: "in Navbahor", uz: "Navbahorda", uzc: "Навбаҳорда", ru: "в Навбахоре" },
+      title: { en: "in the Navbahor District", uz: "Navbahor tumanida", uzc: "Навбаҳор туманида", ru: "в Навбахорском районе" },
+    },
   },
   {
     slug: "karmana",
@@ -1473,6 +2109,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-NW",
     names: { en: "Karmana", uz: "Karmana", uzc: "Кармана", ru: "Кармана" },
     titles: { en: "Karmana District", uz: "Karmana tumani", uzc: "Кармана тумани", ru: "Карманинский район" },
+    locatives: {
+      name: { en: "in Karmana", uz: "Karmanada", uzc: "Карманада", ru: "в Кармане" },
+      title: { en: "in the Karmana District", uz: "Karmana tumanida", uzc: "Кармана туманида", ru: "в Карманинском районе" },
+    },
   },
   {
     slug: "nurota",
@@ -1482,6 +2122,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-NW",
     names: { en: "Nurota", uz: "Nurota", uzc: "Нурота", ru: "Нурата" },
     titles: { en: "Nurota District", uz: "Nurota tumani", uzc: "Нурота тумани", ru: "Нуратинский район" },
+    locatives: {
+      name: { en: "in Nurota", uz: "Nurotada", uzc: "Нуротада", ru: "в Нурате" },
+      title: { en: "in the Nurota District", uz: "Nurota tumanida", uzc: "Нурота туманида", ru: "в Нуратинском районе" },
+    },
   },
   {
     slug: "tomdy",
@@ -1491,6 +2135,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-NW",
     names: { en: "Tomdy", uz: "Tomdi", uzc: "Томди", ru: "Тамды" },
     titles: { en: "Tomdy District", uz: "Tomdi tumani", uzc: "Томди тумани", ru: "Тамдынский район" },
+    locatives: {
+      name: { en: "in Tomdy", uz: "Tomdida", uzc: "Томдида", ru: "в Тамды" },
+      title: { en: "in the Tomdy District", uz: "Tomdi tumanida", uzc: "Томди туманида", ru: "в Тамдынском районе" },
+    },
   },
   {
     slug: "uchkuduk",
@@ -1500,6 +2148,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-NW",
     names: { en: "Uchkuduk", uz: "Uchquduq", uzc: "Учқудуқ", ru: "Учкудук" },
     titles: { en: "Uchkuduk District", uz: "Uchquduq tumani", uzc: "Учқудуқ тумани", ru: "Учкудукский район" },
+    locatives: {
+      name: { en: "in Uchkuduk", uz: "Uchquduqda", uzc: "Учқудуқда", ru: "в Учкудуке" },
+      title: { en: "in the Uchkuduk District", uz: "Uchquduq tumanida", uzc: "Учқудуқ туманида", ru: "в Учкудукском районе" },
+    },
   },
   {
     slug: "khatyrchi",
@@ -1509,6 +2161,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-NW",
     names: { en: "Khatyrchi", uz: "Xatirchi", uzc: "Хатирчи", ru: "Хатырчи" },
     titles: { en: "Khatyrchi District", uz: "Xatirchi tumani", uzc: "Хатирчи тумани", ru: "Хатырчинский район" },
+    locatives: {
+      name: { en: "in Khatyrchi", uz: "Xatirchida", uzc: "Хатирчида", ru: "в Хатырчи" },
+      title: { en: "in the Khatyrchi District", uz: "Xatirchi tumanida", uzc: "Хатирчи туманида", ru: "в Хатырчинском районе" },
+    },
   },
 
   // ===== Khorezm (UZ-XO) — 11 districts =====
@@ -1520,6 +2176,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-XO",
     names: { en: "Bagat", uz: "Bog'ot", uzc: "Боғот", ru: "Багат" },
     titles: { en: "Bagat District", uz: "Bog'ot tumani", uzc: "Боғот тумани", ru: "Багатский район" },
+    locatives: {
+      name: { en: "in Bagat", uz: "Bog'otda", uzc: "Боғотда", ru: "в Багате" },
+      title: { en: "in the Bagat District", uz: "Bog'ot tumanida", uzc: "Боғот туманида", ru: "в Багатском районе" },
+    },
   },
   {
     slug: "gurlan",
@@ -1529,6 +2189,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-XO",
     names: { en: "Gurlan", uz: "Gurlan", uzc: "Гурлан", ru: "Гурлен" },
     titles: { en: "Gurlan District", uz: "Gurlan tumani", uzc: "Гурлан тумани", ru: "Гурленский район" },
+    locatives: {
+      name: { en: "in Gurlan", uz: "Gurlanda", uzc: "Гурланда", ru: "в Гурлене" },
+      title: { en: "in the Gurlan District", uz: "Gurlan tumanida", uzc: "Гурлан туманида", ru: "в Гурленском районе" },
+    },
   },
   {
     slug: "kushkupyr",
@@ -1538,6 +2202,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-XO",
     names: { en: "Kushkupyr", uz: "Qo'shko'pir", uzc: "Қўшкўпир", ru: "Кошкупыр" },
     titles: { en: "Kushkupyr District", uz: "Qo'shko'pir tumani", uzc: "Қўшкўпир тумани", ru: "Кошкупырский район" },
+    locatives: {
+      name: { en: "in Kushkupyr", uz: "Qo'shko'pirda", uzc: "Қўшкўпирда", ru: "в Кошкупыре" },
+      title: { en: "in the Kushkupyr District", uz: "Qo'shko'pir tumanida", uzc: "Қўшкўпир туманида", ru: "в Кошкупырском районе" },
+    },
   },
   {
     slug: "urgench",
@@ -1547,6 +2215,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-XO",
     names: { en: "Urgench", uz: "Urganch", uzc: "Урганч", ru: "Ургенч" },
     titles: { en: "Urgench District", uz: "Urganch tumani", uzc: "Урганч тумани", ru: "Ургенчский район" },
+    locatives: {
+      name: { en: "in Urgench", uz: "Urganchda", uzc: "Урганчда", ru: "в Ургенче" },
+      title: { en: "in the Urgench District", uz: "Urganch tumanida", uzc: "Урганч туманида", ru: "в Ургенчском районе" },
+    },
   },
   {
     slug: "khazarasp",
@@ -1556,6 +2228,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-XO",
     names: { en: "Khazarasp", uz: "Xazorasp", uzc: "Хазорасп", ru: "Хазарасп" },
     titles: { en: "Khazarasp District", uz: "Xazorasp tumani", uzc: "Хазорасп тумани", ru: "Хазараспский район" },
+    locatives: {
+      name: { en: "in Khazarasp", uz: "Xazoraspda", uzc: "Хазораспда", ru: "в Хазараспе" },
+      title: { en: "in the Khazarasp District", uz: "Xazorasp tumanida", uzc: "Хазорасп туманида", ru: "в Хазараспском районе" },
+    },
   },
   {
     slug: "tuprakkala",
@@ -1565,6 +2241,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-XO",
     names: { en: "Tuprakkala", uz: "Tuproqqal'a", uzc: "Тупроққалъа", ru: "Тупраккала" },
     titles: { en: "Tuprakkala District", uz: "Tuproqqal'a tumani", uzc: "Тупроққалъа тумани", ru: "Тупроккалинский район" },
+    locatives: {
+      name: { en: "in Tuprakkala", uz: "Tuproqqal'ada", uzc: "Тупроққалъада", ru: "в Тупраккале" },
+      title: { en: "in the Tuprakkala District", uz: "Tuproqqal'a tumanida", uzc: "Тупроққалъа туманида", ru: "в Тупроккалинском районе" },
+    },
   },
   {
     slug: "khanka",
@@ -1574,6 +2254,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-XO",
     names: { en: "Khanka", uz: "Xonqa", uzc: "Хонқа", ru: "Ханка" },
     titles: { en: "Khanka District", uz: "Xonqa tumani", uzc: "Хонқа тумани", ru: "Ханкинский район" },
+    locatives: {
+      name: { en: "in Khanka", uz: "Xonqada", uzc: "Хонқада", ru: "в Ханке" },
+      title: { en: "in the Khanka District", uz: "Xonqa tumanida", uzc: "Хонқа туманида", ru: "в Ханкинском районе" },
+    },
   },
   {
     slug: "khiva",
@@ -1583,6 +2267,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-XO",
     names: { en: "Khiva", uz: "Xiva", uzc: "Хива", ru: "Хива" },
     titles: { en: "Khiva District", uz: "Xiva tumani", uzc: "Хива тумани", ru: "Хивинский район" },
+    locatives: {
+      name: { en: "in Khiva", uz: "Xivada", uzc: "Хивада", ru: "в Хиве" },
+      title: { en: "in the Khiva District", uz: "Xiva tumanida", uzc: "Хива туманида", ru: "в Хивинском районе" },
+    },
   },
   {
     slug: "shavat",
@@ -1592,6 +2280,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-XO",
     names: { en: "Shavat", uz: "Shovot", uzc: "Шовот", ru: "Шават" },
     titles: { en: "Shavat District", uz: "Shovot tumani", uzc: "Шовот тумани", ru: "Шаватский район" },
+    locatives: {
+      name: { en: "in Shavat", uz: "Shovotda", uzc: "Шовотда", ru: "в Шавате" },
+      title: { en: "in the Shavat District", uz: "Shovot tumanida", uzc: "Шовот туманида", ru: "в Шаватском районе" },
+    },
   },
   {
     slug: "yangiaryk",
@@ -1601,6 +2293,10 @@ export const districts: readonly District[] = [
     regionIso: "UZ-XO",
     names: { en: "Yangiaryk", uz: "Yangiariq", uzc: "Янгиариқ", ru: "Янгиарык" },
     titles: { en: "Yangiaryk District", uz: "Yangiariq tumani", uzc: "Янгиариқ тумани", ru: "Янгиарыкский район" },
+    locatives: {
+      name: { en: "in Yangiaryk", uz: "Yangiariqda", uzc: "Янгиариқда", ru: "в Янгиарыке" },
+      title: { en: "in the Yangiaryk District", uz: "Yangiariq tumanida", uzc: "Янгиариқ туманида", ru: "в Янгиарыкском районе" },
+    },
   },
   {
     slug: "yangibazar",
@@ -1610,5 +2306,9 @@ export const districts: readonly District[] = [
     regionIso: "UZ-XO",
     names: { en: "Yangibazar", uz: "Yangibozor", uzc: "Янгибозор", ru: "Янгибазар" },
     titles: { en: "Yangibazar District", uz: "Yangibozor tumani", uzc: "Янгибозор тумани", ru: "Янгибазарский район" },
+    locatives: {
+      name: { en: "in Yangibazar", uz: "Yangibozorda", uzc: "Янгибозорда", ru: "в Янгибазаре" },
+      title: { en: "in the Yangibazar District", uz: "Yangibozor tumanida", uzc: "Янгибозор туманида", ru: "в Янгибазарском районе" },
+    },
   },
 ];

@@ -2,10 +2,11 @@
 
 [English](./README.md) · **O'zbekcha** · [Русский](./README.ru.md)
 
-O'zbekiston Respublikasining geografik ma'lumotlari — viloyatlar, tumanlar va shaharlar, har biri 4 tilda (ingliz, o'zbek lotin, o'zbek kirill, rus) **qisqa nomlari** va **to'liq rasmiy unvonlari** bilan.
+O'zbekiston Respublikasining geografik ma'lumotlari — viloyatlar, tumanlar va shaharlar, har biri 4 tilda (ingliz, o'zbek lotin, o'zbek kirill, rus) **qisqa nomlari**, **to'liq rasmiy unvonlari** va **o'rin-payt shakllari** bilan.
 
 - **14** ta yuqori darajadagi ma'muriy birlik (12 viloyat + Qoraqalpog'iston + Toshkent shahri)
 - **175** ta tuman
+- Har bir birlik uchun **o'rin-payt shakllari** — `Buxoroda` / `в Бухаре` / `in Bukhara` ([batafsil](#orin-payt-shakllari))
 - **109** ta shahar — **31** ta viloyat ahamiyatiga molik + **78** ta tuman bo'ysunuvidagi
 - **Toshkent metropoliteni** — 4 ta yo'l, 50 ta bekat, yo'llararo o'tish joylari ([METRO.md](./METRO.md) ga qarang)
 - Barcha viloyatlar uchun **ISO 3166-2:UZ** kodlari
@@ -144,12 +145,18 @@ interface Names {
   ru: string;   // Rus
 }
 
+interface Locatives {
+  name: Names;                        // { uz: "Buxoroda", ru: "в Бухаре", ... }
+  title: Names;                       // { uz: "Buxoro viloyatida", ru: "в Бухарской области", ... }
+}
+
 interface Region {
   slug: string;                       // "bukhara"
   iso: string;                        // "UZ-BU"
   category: "region" | "republic" | "city";
   names: Names;                       // { en: "Bukhara", ru: "Бухара", ... }
   titles: Names;                      // { en: "Bukhara Region", ru: "Бухарская область", ... }
+  locatives: Locatives;
 }
 
 interface District {
@@ -160,6 +167,7 @@ interface District {
   regionIso: string;                  // "UZ-AN"
   names: Names;                       // { en: "Izbaskan", ru: "Избаскан", ... }
   titles: Names;                      // { en: "Izbaskan District", ru: "Избасканский район", ... }
+  locatives: Locatives;
 }
 
 interface City {
@@ -172,10 +180,15 @@ interface City {
   regionIso: string;                  // "UZ-BU" | "UZ-TO"
   names: Names;                       // { en: "Bukhara", ru: "Бухара", ... }
   titles: Names;                      // { en: "Bukhara City", ru: "Город Бухара", ... }
+  locatives: Locatives;
 }
 ```
 
 Iyerarxiya `parentSlug` orqali ifodalanadi: tumanning ota-birligi — viloyat, viloyat ahamiyatiga molik shaharning ota-birligi — viloyat, tuman bo'ysunuvidagi shaharning ota-birligi — tuman. Uni `getDistrict()` / `getRegion()` orqali yuqoriga ko'tarib boring. (`RegionalCity` `City` ning eskirgan (deprecated) sinonimi sifatida saqlanib qoladi.)
+
+### Tiplar barqarorligi
+
+`Region`, `District` va `City` **uzbgeo qaytaradigan ma'lumotni tavsiflaydi**; ular qo'lda yaratish uchun mo'ljallanmagan. Vaqt o'tishi bilan ularga yangi maydonlar qo'shiladi (2.1.0 da `locatives`) — bu minor reliz, qaytarilgan obyektlarni o'qish buzilmaydi. Agar siz shu tiplardan biri bilan literal yozsangiz (masalan, testdagi fikstura), yangi maydonni qo'shmaguningizcha kompilyatsiya o'tmaydi; haqiqiy ma'lumot uchun `getRegion()` / `getDistrict()` / `getCity()` dan foydalaning.
 
 ### `names` va `titles` qachon ishlatiladi
 
@@ -183,6 +196,54 @@ Iyerarxiya `parentSlug` orqali ifodalanadi: tumanning ota-birligi — viloyat, v
 - **`titles`** — to'liq rasmiy nom, tur so'zi bilan. Sahifa sarlavhalari, manzil satrlari, SEO meta-teglar uchun.
 
 `titles` maydoni ayniqsa rus tilida foydali, chunki to'liq ma'muriy shakl sifatdosh morfologiyasini talab qiladi (`Бухарская область`, `Бухарский район`), foydalanuvchilar buni ot shaklidan (`Бухара`) o'zlari osongina hosil qila olmaydilar.
+
+## O'rin-payt shakllari
+
+**"Buxoroda ish"** yoki **"Работа в Бухаре"** kabi sarlavha yasash uchun bosh kelishikdagi nom yetarli emas. `locatives` maydoni har bir birlik uchun tayyor shaklni to'rt tilda saqlaydi:
+
+```ts
+const bukhara = getRegion("bukhara");
+
+bukhara?.locatives.name.uz;    // "Buxoroda"
+bukhara?.locatives.name.uzc;   // "Бухорода"
+bukhara?.locatives.name.ru;    // "в Бухаре"
+bukhara?.locatives.name.en;    // "in Bukhara"
+
+bukhara?.locatives.title.uz;   // "Buxoro viloyatida"
+bukhara?.locatives.title.ru;   // "в Бухарской области"
+```
+
+Har bir qiymat — **butun ibora**, shunchaki turlangan ot emas, chunki har bir tilda yetishmayotgan narsa har xil:
+
+| | O'rin-payt uchun nima kerak | Misol |
+| --- | --- | --- |
+| O'zbek | `-da` qo'shimchasi — predlog umuman yo'q | `Buxoro` → `Buxoroda` |
+| Rus | predlog **+** predlog kelishigi | `Бухара` → `в Бухаре` |
+| Ingliz | `in`, kerak bo'lganda artikl bilan | `Bukhara` → `in Bukhara` |
+
+So'z tartibi tillarda farq qiladi, shuning uchun qiymatni har bir til uchun alohida shablonga qo'ying:
+
+```ts
+const t = { en: "Jobs {loc}", ru: "Работа {loc}", uz: "{loc} ish" };
+t[lang].replace("{loc}", unit.locatives.name[lang]);
+// "Jobs in Bukhara" / "Работа в Бухаре" / "Buxoroda ish"
+```
+
+### SEO uchun `name` yoki `title`
+
+Viloyat va tuman sahifalari uchun `locatives.title` dan foydalaning. Yettita slug bir vaqtning o'zida ham viloyat, ham tuman sifatida mavjud (`bukhara`, `samarkand`, `fergana`, `andijan`, `namangan`, `syrdarya`, `tashkent`), shu nomli shahar esa uchinchisini qo'shadi — va ularning hammasi **bir xil** `locatives.name` beradi:
+
+```ts
+getRegion("bukhara")?.locatives.name.ru;       // "в Бухаре"
+getCity("bukhara_city")?.locatives.name.ru;    // "в Бухаре"   ← bir xil
+getDistrict("bukhara")?.locatives.title.ru;    // "в Бухарском районе"  ← farqli
+```
+
+### Aniqlik haqida
+
+Ruscha shakllar qoida bilan emas, qo'lda yozilgan va tekshirilgan: rus tilida toponimlar turlanishida qoida qamrab olmaydigan istisnolar bor. `-и` va `-у` bilan tugaydigan nomlar turlanmaydi va bosh kelishik shaklini saqlaydi — `в Карши`, `в Навои`, `в Балыкчи`, `в Денау`, `в Карасу`. `-ия` bilan tugaydiganlari `-ии` oladi (`Галаасия` → `в Галаасии`). O'zbekcha `-da` muntazam va mexanik qo'llanadi, oxirgi `d` dan keyingi ikkilanish bilan birga (`Samarqand` → `Samarqandda`).
+
+Locative to'liqligi build bosqichida tekshiriladi, shuning uchun `locatives` majburiy maydon: u har doim to'rt tilda mavjud va ishlash vaqtida tekshiruvni talab qilmaydi.
 
 ## Viloyatlar ro'yxati
 

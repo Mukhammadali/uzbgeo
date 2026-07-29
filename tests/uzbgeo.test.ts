@@ -356,3 +356,118 @@ describe("namespace separation", () => {
     expect(getCity("bukhara_city")?.type).toBe("city");
   });
 });
+
+describe("locatives", () => {
+  const everything = [
+    ...getAllRegions(),
+    ...getAllDistricts(),
+    ...getAllCities(),
+  ];
+
+  test("all 298 units carry both forms in all four languages", () => {
+    expect(everything.length).toBe(298);
+    for (const u of everything) {
+      for (const form of ["name", "title"] as const) {
+        for (const lang of ["en", "uz", "uzc", "ru"] as const) {
+          expect(typeof u.locatives[form][lang]).toBe("string");
+          expect(u.locatives[form][lang].length).toBeGreaterThan(0);
+        }
+      }
+    }
+  });
+
+  test("the four languages each carry their own locative marker", () => {
+    for (const u of everything) {
+      for (const form of ["name", "title"] as const) {
+        const l = u.locatives[form];
+        expect(l.en.startsWith("in ")).toBe(true);
+        expect(l.uz.endsWith("da")).toBe(true);
+        expect(l.uzc.endsWith("да")).toBe(true);
+        expect(/^во? /.test(l.ru)).toBe(true);
+      }
+    }
+  });
+
+  test("Bukhara region reads as expected in all four languages", () => {
+    const r = getRegion("bukhara");
+    expect(r?.locatives.name).toEqual({
+      en: "in Bukhara",
+      uz: "Buxoroda",
+      uzc: "Бухорода",
+      ru: "в Бухаре",
+    });
+    expect(r?.locatives.title).toEqual({
+      en: "in the Bukhara Region",
+      uz: "Buxoro viloyatida",
+      uzc: "Бухоро вилоятида",
+      ru: "в Бухарской области",
+    });
+  });
+
+  test("same-named units differ on title but not on name", () => {
+    // Both render "в Бухаре" as a short name — only the title disambiguates,
+    // which is why region and district pages should key titles off `title`.
+    expect(getCity("bukhara_city")?.locatives.name.ru).toBe("в Бухаре");
+    expect(getRegion("bukhara")?.locatives.name.ru).toBe("в Бухаре");
+    expect(getCity("bukhara_city")?.locatives.title.ru).toBe("в городе Бухаре");
+    expect(getDistrict("bukhara")?.locatives.title.ru).toBe(
+      "в Бухарском районе",
+    );
+  });
+
+  test("indeclinable Russian toponyms keep their nominative form", () => {
+    // Names ending in -и / -у do not decline; a naive -е rule would corrupt these.
+    expect(getCity("karshi_city")?.locatives.name.ru).toBe("в Карши");
+    expect(getCity("navoi_city")?.locatives.name.ru).toBe("в Навои");
+    expect(getDistrict("balykchi")?.locatives.name.ru).toBe("в Балыкчи");
+    expect(getCity("karasu_city")?.locatives.name.ru).toBe("в Карасу");
+    expect(getCity("denau_city")?.locatives.name.ru).toBe("в Денау");
+    expect(getCity("beruniy_city")?.locatives.title.ru).toBe(
+      "в городе Беруни",
+    );
+  });
+
+  test("Russian feminine -ия takes -ии, not -е", () => {
+    expect(getCity("galaosiyo_city")?.locatives.name.ru).toBe("в Галаасии");
+    expect(getDistrict("sariosia")?.locatives.name.ru).toBe("в Сариасии");
+  });
+
+  test("Russian district titles inflect the adjective, not just the noun", () => {
+    for (const d of getAllDistricts()) {
+      expect(d.locatives.title.ru.endsWith("ом районе")).toBe(true);
+    }
+  });
+
+  test("Russian city titles inflect город", () => {
+    for (const c of getAllCities()) {
+      expect(c.locatives.title.ru.startsWith("в городе ")).toBe(true);
+    }
+  });
+
+  test("Uzbek locative preserves gemination after a final d", () => {
+    expect(getCity("samarkand_city")?.locatives.name.uz).toBe("Samarqandda");
+    expect(getCity("bekabad_city")?.locatives.name.uz).toBe("Bekobodda");
+  });
+
+  test("district-subordinate cities have locatives too", () => {
+    const g = getCity("gazalkent_city");
+    expect(g?.subordination).toBe("district");
+    expect(g?.locatives.name.ru).toBe("в Газалкенте");
+    expect(g?.locatives.name.uz).toBe("G'azalkentda");
+    expect(g?.locatives.title.ru).toBe("в городе Газалкенте");
+    for (const c of getAllCities().filter(
+      (x) => x.subordination === "district",
+    )) {
+      expect(c.locatives.name.ru.length).toBeGreaterThan(2);
+    }
+  });
+
+  test("locatives are derived from that unit's own names and titles", () => {
+    for (const u of everything) {
+      expect(u.locatives.name.en).toBe(`in ${u.names.en}`);
+      expect(u.locatives.name.uz).toBe(`${u.names.uz}da`);
+      expect(u.locatives.title.uz).toBe(`${u.titles.uz}da`);
+      expect(u.locatives.title.uzc).toBe(`${u.titles.uzc}да`);
+    }
+  });
+});

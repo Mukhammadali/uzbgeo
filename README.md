@@ -2,11 +2,12 @@
 
 **English** · [O'zbekcha](./README.uz.md) · [Русский](./README.ru.md)
 
-Geographical data for the Republic of Uzbekistan — regions, districts, and cities, with both **short names** and **full official titles** in 4 languages (English, Uzbek Latin, Uzbek Cyrillic, Russian).
+Geographical data for the Republic of Uzbekistan — regions, districts, and cities, with **short names**, **full official titles**, and **locative (“in X”) phrases** in 4 languages (English, Uzbek Latin, Uzbek Cyrillic, Russian).
 
 - **14** top-level administrative units (12 viloyats + Karakalpakstan + Tashkent City)
 - **175** districts (`tumani`)
 - **109** cities (`shahar`) — **31** of regional significance + **78** of district subordination
+- **Locatives** for every unit — `в Бухаре` / `Buxoroda` / `in Bukhara` (see [Locatives](#locatives))
 - **Tashkent Metro** — 4 lines, 50 stations, cross-line transfers (see [METRO.md](./METRO.md))
 - **ISO 3166-2:UZ** codes for all regions
 - **Zero runtime dependencies**, browser-safe, ESM + CJS, written in TypeScript
@@ -134,7 +135,7 @@ Slugs are suffixed with `_city` to distinguish them from same-named districts (e
 
 ## Data shape
 
-Every entity carries both a `names` object (short noun forms — good for labels, dropdowns, and short headings) and a `titles` object (full official administrative form — good for headings, addresses, SEO, and any context where the type word like "Region" or "район" belongs in the name).
+Every entity carries a `names` object (short noun forms — good for labels, dropdowns, and short headings), a `titles` object (full official administrative form — good for headings and addresses), and a `locatives` object (ready-to-use “in X” phrases — see [Locatives](#locatives)).
 
 ```ts
 interface Names {
@@ -144,12 +145,18 @@ interface Names {
   ru: string;   // Russian
 }
 
+interface Locatives {
+  name: Names;                        // { en: "in Bukhara", ru: "в Бухаре", ... }
+  title: Names;                       // { en: "in the Bukhara Region", ru: "в Бухарской области", ... }
+}
+
 interface Region {
   slug: string;                       // "bukhara"
   iso: string;                        // "UZ-BU"
   category: "region" | "republic" | "city";
   names: Names;                       // { en: "Bukhara", ru: "Бухара", ... }
   titles: Names;                      // { en: "Bukhara Region", ru: "Бухарская область", ... }
+  locatives: Locatives;
 }
 
 interface District {
@@ -160,6 +167,7 @@ interface District {
   regionIso: string;                  // "UZ-AN"
   names: Names;                       // { en: "Izbaskan", ru: "Избаскан", ... }
   titles: Names;                      // { en: "Izbaskan District", ru: "Избасканский район", ... }
+  locatives: Locatives;
 }
 
 interface City {
@@ -172,10 +180,15 @@ interface City {
   regionIso: string;                  // "UZ-BU" | "UZ-TO"
   names: Names;                       // { en: "Bukhara", ru: "Бухара", ... }
   titles: Names;                      // { en: "Bukhara City", ru: "Город Бухара", ... }
+  locatives: Locatives;
 }
 ```
 
 The hierarchy is expressed by `parentSlug`: a district's parent is its region, a regional city's parent is its region, and a district-subordinate city's parent is its district. Walk it up with `getDistrict()` / `getRegion()`. (`RegionalCity` remains exported as a deprecated alias of `City`.)
+
+### Type stability
+
+`Region`, `District` and `City` **describe data uzbgeo returns**; they are not meant to be constructed. New fields get added to them over time (`locatives` in 2.1.0), which is a minor release — reading returned objects is unaffected. If you hand-write a literal annotated with one of these types (a test fixture, say), a new field will fail to compile until you add it; prefer calling `getRegion()` / `getDistrict()` / `getCity()` for real data instead.
 
 ### When to use `names` vs `titles`
 
@@ -183,6 +196,56 @@ The hierarchy is expressed by `parentSlug`: a district's parent is its region, a
 - **`titles`** — full official name with the type word baked in. Use for page headings, address lines, SEO meta tags, any place where the administrative type matters. Example: `"Bukhara Region"`, `"Бухарская область"`.
 
 The `titles` field is especially useful for Russian, where the full administrative form requires adjective morphology (`Бухарская область`, `Бухарский район`) that consumers can't easily derive from the noun (`Бухара`).
+
+## Locatives
+
+Building a page title like **"Работа в Бухаре"** or **"Buxoroda ish"** needs more than the nominative name. The `locatives` field carries the finished "in X" phrase for every unit, in all four languages:
+
+```ts
+const bukhara = getRegion("bukhara");
+
+bukhara?.locatives.name.ru;    // "в Бухаре"
+bukhara?.locatives.name.uz;    // "Buxoroda"
+bukhara?.locatives.name.uzc;   // "Бухорода"
+bukhara?.locatives.name.en;    // "in Bukhara"
+
+bukhara?.locatives.title.ru;   // "в Бухарской области"
+bukhara?.locatives.title.uz;   // "Buxoro viloyatida"
+```
+
+Each value is a **complete phrase**, not a bare inflected noun, because what's missing differs by language:
+
+| | What the locative needs | Example |
+| --- | --- | --- |
+| Russian | preposition **+** prepositional case | `Бухара` → `в Бухаре` |
+| Uzbek | the `-da` suffix — no preposition exists | `Buxoro` → `Buxoroda` |
+| English | `in`, plus an article where required | `Bukhara` → `in Bukhara` |
+
+Storing whole phrases means consumers never pick a preposition, an article, or a case ending themselves. Word order still varies by language, so substitute these into a per-language template:
+
+```ts
+const t = { en: "Jobs {loc}", ru: "Работа {loc}", uz: "{loc} ish" };
+t[lang].replace("{loc}", unit.locatives.name[lang]);
+// "Jobs in Bukhara" / "Работа в Бухаре" / "Buxoroda ish"
+```
+
+### `name` vs `title` for SEO
+
+Use `locatives.title` for region and district pages. Seven slugs exist as both a region and a district (`bukhara`, `samarkand`, `fergana`, `andijan`, `namangan`, `syrdarya`, `tashkent`), and the same-named city adds a third — all of which produce the **same** `locatives.name`:
+
+```ts
+getRegion("bukhara")?.locatives.name.ru;       // "в Бухаре"
+getCity("bukhara_city")?.locatives.name.ru;    // "в Бухаре"   ← identical
+getDistrict("bukhara")?.locatives.title.ru;    // "в Бухарском районе"  ← distinct
+```
+
+Keying page titles off `name` alone gives several pairs of pages an identical `<title>`.
+
+### Accuracy notes
+
+Russian forms are hand-authored and reviewed, not rule-generated, because Russian toponym declension has exceptions no rule captures. Names ending in `-и` or `-у` are indeclinable and keep their nominative form — `в Карши`, `в Навои`, `в Балыкчи`, `в Денау`, `в Карасу` — where a naive "add `-е`" rule would produce garbage. Feminine names in `-ия` take `-ии` (`Галаасия` → `в Галаасии`). Uzbek `-da` is regular and applied mechanically, including gemination after a final `d` (`Samarqand` → `Samarqandda`).
+
+Every unit is checked for locative completeness at build time, so `locatives` is a total (non-optional) field: it is always present in all four languages and needs no runtime guard.
 
 ## Region reference
 
