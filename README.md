@@ -93,6 +93,45 @@ const regions = getAllRegions();
 const fergana = getDistrictsByRegionId("fergana");
 ```
 
+### Per-locale entry points
+
+The main entry ships every name in all four languages. When your app renders
+one language at a time, import from a per-locale subpath instead — same
+functions, but each entity carries single-language `name`, `title`, and
+`locative` strings, and the bundle carries roughly half the bytes (one
+language instead of four):
+
+```ts
+import { getRegion, getDistrictsByRegionId } from "uzbgeo/ru";
+
+getRegion("bukhara")?.title;          // "Бухарская область"
+getRegion("bukhara")?.locative.title; // "в Бухарской области"
+```
+
+Available for all four languages — `uzbgeo/en`, `uzbgeo/uz`, `uzbgeo/uzc`,
+`uzbgeo/ru` — and for the metro: `uzbgeo/metro/en`, `uzbgeo/metro/uz`,
+`uzbgeo/metro/uzc`, `uzbgeo/metro/ru`.
+
+When the locale is only known at runtime (per-request i18n), use a dynamic
+import map so your bundler splits each language into its own chunk and the
+client fetches exactly one:
+
+```ts
+const geoByLocale = {
+  en: () => import("uzbgeo/en"),
+  uz: () => import("uzbgeo/uz"),
+  ru: () => import("uzbgeo/ru"),
+};
+
+const geo = await geoByLocale[locale]();
+geo.getRegion("bukhara")?.title;
+```
+
+The localized shapes are exported from each subpath as `LocalizedRegion`,
+`LocalizedDistrict`, `LocalizedCity` (and `LocalizedLine`,
+`LocalizedStation` for the metro), and each entry exports its language as a
+`locale` constant.
+
 ## API
 
 All functions are pure and operate on frozen data. Lookups by region accept either the snake_case slug (`"bukhara"`) or the ISO 3166-2:UZ code (`"UZ-BU"`).

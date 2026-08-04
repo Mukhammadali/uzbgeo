@@ -4,6 +4,46 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/), and this project adheres to
 [Semantic Versioning](https://semver.org/).
 
+## [2.2.0]
+
+### Summary
+
+Per-locale entry points: `uzbgeo/en`, `uzbgeo/uz`, `uzbgeo/uzc`, `uzbgeo/ru`,
+and the metro equivalents `uzbgeo/metro/<locale>`. Each mirrors its parent
+entry function-for-function but ships exactly one language, so a browser
+bundle that renders a single locale carries roughly half the bytes of the
+four-language entry. Purely additive: the main entries are unchanged.
+
+### Added
+
+- **Per-locale geo entries** — same ten query functions as `uzbgeo`, with
+  entities projected to single-language strings: `names`/`titles`/`locatives`
+  collapse to `name`/`title`/`locative`:
+
+  ```ts
+  import { getRegion } from "uzbgeo/ru";
+
+  getRegion("bukhara")?.title;          // "Бухарская область"
+  getRegion("bukhara")?.locative.title; // "в Бухарской области"
+  ```
+
+- **Per-locale metro entries** — same seven functions as `uzbgeo/metro`, with
+  `transfers` baked in at build time.
+- **Localized types** exported from each subpath: `LocalizedRegion`,
+  `LocalizedDistrict`, `LocalizedCity`, `LocalizedSubdivision`,
+  `LocalizedLocatives`, `LocalizedLine`, `LocalizedStation`.
+- **`locale` constant** on every per-locale entry (typed as the literal, e.g.
+  `"ru"`), so a dynamic-import map can discriminate what it loaded.
+
+### Notes
+
+- The per-locale datasets are generated at build time from the same canonical
+  data as the main entry and are verified against it entity-by-entity in the
+  test suite — they cannot drift.
+- Identifiers (`slug`, `iso`, `parentSlug`, `regionSlug`, `districtSlug`,
+  station `id`s, transfer pairs) are identical across all locales, so slugs
+  from one locale's entry can be looked up in another's.
+
 ## [2.1.0]
 
 ### Summary

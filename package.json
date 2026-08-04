@@ -1,6 +1,6 @@
 {
   "name": "uzbgeo",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Uzbekistan geographical data — regions, districts, cities, and the Tashkent Metro, with names in 4 languages (English, Uzbek Latin, Uzbek Cyrillic, Russian)",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -16,6 +16,46 @@
       "types": "./dist/metro/index.d.ts",
       "import": "./dist/metro/index.js",
       "require": "./dist/metro/index.cjs"
+    },
+    "./en": {
+      "types": "./dist/locales/en.d.ts",
+      "import": "./dist/locales/en.js",
+      "require": "./dist/locales/en.cjs"
+    },
+    "./uz": {
+      "types": "./dist/locales/uz.d.ts",
+      "import": "./dist/locales/uz.js",
+      "require": "./dist/locales/uz.cjs"
+    },
+    "./uzc": {
+      "types": "./dist/locales/uzc.d.ts",
+      "import": "./dist/locales/uzc.js",
+      "require": "./dist/locales/uzc.cjs"
+    },
+    "./ru": {
+      "types": "./dist/locales/ru.d.ts",
+      "import": "./dist/locales/ru.js",
+      "require": "./dist/locales/ru.cjs"
+    },
+    "./metro/en": {
+      "types": "./dist/locales/metro/en.d.ts",
+      "import": "./dist/locales/metro/en.js",
+      "require": "./dist/locales/metro/en.cjs"
+    },
+    "./metro/uz": {
+      "types": "./dist/locales/metro/uz.d.ts",
+      "import": "./dist/locales/metro/uz.js",
+      "require": "./dist/locales/metro/uz.cjs"
+    },
+    "./metro/uzc": {
+      "types": "./dist/locales/metro/uzc.d.ts",
+      "import": "./dist/locales/metro/uzc.js",
+      "require": "./dist/locales/metro/uzc.cjs"
+    },
+    "./metro/ru": {
+      "types": "./dist/locales/metro/ru.d.ts",
+      "import": "./dist/locales/metro/ru.js",
+      "require": "./dist/locales/metro/ru.cjs"
     }
   },
   "files": [
@@ -27,13 +67,15 @@
   ],
   "scripts": {
     "validate": "bun run scripts/validate.ts",
+    "generate:locales": "bun run scripts/generate-locales.ts",
+    "build:js:locales": "bun run scripts/build-locales.ts",
     "build:js:esm": "bun build ./src/index.ts --outdir dist --format esm --target node",
     "build:js:cjs": "bun build ./src/index.ts --outdir dist --format cjs --target node --entry-naming [name].cjs",
     "build:js:esm:metro": "bun build ./src/metro/index.ts --outdir dist/metro --format esm --target node",
     "build:js:cjs:metro": "bun build ./src/metro/index.ts --outdir dist/metro --format cjs --target node --entry-naming [name].cjs",
     "build:types": "tsc --emitDeclarationOnly --declaration --outDir dist",
-    "build": "bun run validate && bun run build:js:esm && bun run build:js:cjs && bun run build:js:esm:metro && bun run build:js:cjs:metro && bun run build:types",
-    "test": "bun test",
+    "build": "bun run validate && bun run generate:locales && bun run build:js:esm && bun run build:js:cjs && bun run build:js:esm:metro && bun run build:js:cjs:metro && bun run build:js:locales && bun run build:types",
+    "test": "bun run generate:locales && bun test",
     "prepublishOnly": "bun run build && bun test"
   },
   "keywords": [
